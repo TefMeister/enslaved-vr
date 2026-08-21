@@ -4,12 +4,25 @@
 > finding graduates from session notes to established fact. The chronological
 > record lives in `enslaved-vr-dev-archive` and `enslaved-vr-modding-notes`.
 
-**Status line (2026-08-21):** Initial static recon complete. Engine identified,
-renderer confirmed, foothold route chosen. Verdict so far: **one of the
-friendliest VR-conversion targets we have assessed** — unpacked 32-bit D3D9
-Unreal Engine 3 with debug assert strings intact and the developer console
-still bound. Next step: live capture to confirm how the view-projection matrix
-reaches the GPU.
+**Status line (2026-08-21):** Foothold built. The logging `d3d9.dll` proxy is
+written, validated off-game, and deployed to `Binaries\Win32`. Engine
+identified, renderer confirmed. Verdict so far: **one of the friendliest
+VR-conversion targets we have assessed** — unpacked 32-bit D3D9 Unreal Engine 3
+with debug assert strings intact and the developer console still bound. Next
+step: run the proxy in-game and read the per-frame VS-constant histogram to
+confirm which register carries the view-projection matrix.
+
+**Confirmed d3d9 imports (from the exe's import table):** only
+`Direct3DCreate9`, `D3DPERF_BeginEvent`, `D3DPERF_EndEvent`,
+`D3DPERF_SetOptions`. The proxy exports these plus the rest of the standard
+d3d9 surface, all undecorated.
+
+**Instrument in place:** fail-safe `d3d9.dll` proxy (source in staging
+`proxy-d3d9/`) hooks `IDirect3D9::CreateDevice` (vtable 16), then device
+`Present` (17), `Reset` (16), and `SetVertexShaderConstantF` (94). Logs
+CreateDevice params, a per-frame register-upload histogram, and an optional 4×4
+watch-register dump. Off-game smoke test passed (HAL device, 3 frames, no
+crash).
 
 ---
 
