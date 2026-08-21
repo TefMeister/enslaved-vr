@@ -79,6 +79,18 @@ Standard UE3-on-D3D9 mechanism, until proven otherwise:
 - FOV is data-driven in the camera INIs; the chase camera has speed-based FOV
   code (disabled by default: `m_useSpeedFoV=false`).
 
+**First in-game capture (2026-08-21).** Device: 1920x1080, D3DFMT_A8R8G8B8,
+fullscreen, PresentInterval IMMEDIATE. VS-constant histogram (gameplay frame
+~600) shows per-object 4x4 matrices at `c0` (47 draws/frame), `c6` (189),
+`c10` (19), and `c231` (124, paired with a 4x3 `c235` LocalToWorld — a separate,
+likely skinned, vertex factory). Scalar params occupy c4/c5, c11-c21,
+c236-c248. **No 4x4 register was uploaded once-per-frame**, so the camera is
+likely folded into a per-draw World x ViewProjection rather than a shared
+view-projection register. The proxy now auto-flags any register whose 4x4 is
+constant across all draws in a frame (SHARED = view-projection candidate); the
+next capture will settle shared-VP vs per-object-WVP, which decides the
+injection strategy.
+
 **Two candidate altitudes for owning the camera:**
 1. **RHI level (D3D9 proxy):** intercept `SetVertexShaderConstantF` /
    `SetTransform` and re-derive or replace view/projection per eye. Proven
