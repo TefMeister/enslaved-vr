@@ -6,6 +6,52 @@
 
 ---
 
+## 2026-08-21 — Session 3: first in-game capture, windowed mode, instrument upgrade
+
+**Done:**
+- Confirmed the proxy runs **in-game**: it produced a 2890-line log of real
+  gameplay. Device created at 1920x1080, fullscreen (windowed=0), fmt=21
+  (D3DFMT_A8R8G8B8), PresentInterval=0x80000000 (IMMEDIATE, i.e. vsync off,
+  matches `UseVsync=False`).
+- **Switched the game to windowed 1280x720** by editing the per-user config
+  `Documents\My Games\UnrealEngine3\MonkeyGame\Config\MonkeyEngine.ini`
+  ([SystemSettings] `Fullscreen=False`, `ResX=1280`, `ResY=720`). This is the
+  authoritative config (the in-repo game-dir INIs are defaults); no competing
+  `StartupFullscreen` key exists. Windowed mode also makes RE far easier
+  (alt-tab, console, debugger).
+- **Analysed the VS-constant histogram** (gameplay frame ~600):
+  - Per-object 4x4 matrices at `c0` (x4, 47 draws), `c6` (x4, 189 draws),
+    `c10` (x4, 19), and `c231` (x4, 124) — the last paired with `c235` (x3,
+    124 = a 4x3 LocalToWorld). High registers (c231/c235) = a distinct vertex
+    factory, likely skinned characters.
+  - Many x1 scalars (c4/c5, c11-c21, c236-c248) = light/fog/colour params.
+  - **Key point:** in gameplay, every 4x4 upload is per-object; none appears
+    once-per-frame. That means the camera is probably folded into a per-draw
+    World x ViewProjection, not sitting in one shared register. Deciding
+    shared-VP vs per-object-WVP is the pivotal question for the injection
+    strategy.
+- **Upgraded the instrument** to answer that directly: the proxy now
+  fingerprints each matrix register per frame and flags any register whose 4x4
+  value is **identical across all draws in the frame** as a SHARED
+  view-projection candidate, auto-dumping its matrix. Validated off-game (a
+  constant register flags SHARED + dumps; a per-draw register does not).
+  Rebuilt and redeployed.
+
+**Resume point:** relaunch (now windowed) and play a few seconds of real
+gameplay. In `Binaries\Win32\d3d9_proxy_log.txt` look for any
+`<== SHARED matrix` line:
+  - If a register is flagged SHARED, that is very likely the pure
+    view-projection — the clean single injection point. Note it and its dumped
+    values; move the camera and re-capture to confirm the numbers track the
+    camera.
+  - If NOTHING is flagged SHARED, the camera is baked into per-object WVP
+    matrices (c0/c6/c231). Then the plan shifts to intercepting those per-draw
+    matrices and decomposing/replacing the view portion — workable, just more
+    involved. Either way this capture is the go/no-go input for the keystone.
+Also still worth trying the Tilde console now that we are windowed.
+
+---
+
 ## 2026-08-21 — Session 2: d3d9 logging proxy built and validated
 
 **Done:**
