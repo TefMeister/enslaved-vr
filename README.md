@@ -28,3 +28,10 @@ conversion.
 - **No original game assets are redistributed** — only files we create.
 - We credit everyone whose work this builds on and honour correction and
   removal requests from rights holders. See the research repo's `CREDITS.md`.
+
+## Contributing & policy
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) — how we credit and link sources, our
+**study-everything-public but write-our-own-code** rule (we copy no one else's
+source code or files, any license or price), the terms for reusing our work
+(free, with credit), and how to request a correction or removal.
