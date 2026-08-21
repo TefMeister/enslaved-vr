@@ -7,5 +7,8 @@ happened. For the readable version of events, see
 for distilled engine knowledge, see
 [`enslaved-vr-engine-research`](https://github.com/TefMeister/enslaved-vr-engine-research).
 
+**Start here:** [`notes/00-status.md`](notes/00-status.md) — the chronological
+session index. Raw dumps live in [`recon/`](recon/).
+
 No original game files are stored here — only files we create. Non-commercial
 fan project; requires owning a legitimate copy of the game.
