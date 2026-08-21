@@ -20,3 +20,10 @@ Sibling repositories:
 
 No original game files are stored here — only files we create. Non-commercial
 fan project; requires owning a legitimate copy of the game.
+
+## Contributing & policy
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) — how we credit and link sources, our
+**study-everything-public but write-our-own-code** rule (we copy no one else's
+source code or files, any license or price), the terms for reusing our work
+(free, with credit), and how to request a correction or removal.
