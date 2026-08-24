@@ -34,6 +34,11 @@ project's repositories.**
 | Ghidra (static analysis) | NSA Research | https://ghidra-sre.org |
 | OpenVR / SteamVR and OpenXR (VR runtimes) | Valve; The Khronos Group | https://github.com/ValveSoftware/openvr |
 | UE3 community documentation (INI/console/cvar knowledge) | Epic Games and the wider UE3 modding community | https://docs.unrealengine.com |
+| NVIDIA 3D Vision / UE3 stereo announcement (background research) | NVIDIA | https://www.nvidia.com |
+| Epic Developer Community Forums (UE3 3D Vision failure-mode research) | Epic Games forum community | https://forums.unrealengine.com |
+| PCGamingWiki (game-specific config/fix research) | PCGamingWiki contributors | https://www.pcgamingwiki.com |
+| FearLess Revolution / CheatHappens / Plitch / GameCopyWorld (trainer prior-art research) | Respective site communities | https://fearlessrevolution.com |
+| 3d-fixes (checked for UE3 stereo prior art) | DarkStarSword | https://github.com/DarkStarSword/3d-fixes |
 
 (Matches the credit list already established in `enslaved-vr-engine-research`
 as of this repo's creation — kept in sync going forward.)

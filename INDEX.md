@@ -10,6 +10,7 @@ write-up in `topics/`. Status tags:
 
 | Date | Topic | Status | Summary |
 | --- | --- | --- | --- |
+| 2026-08-24 | [UE3 native stereo + community tooling recon](topics/2026-08-24-ue3-native-stereo-and-community-tooling.md) | 🆕 new | UE3's built-in `AllowNvidiaStereo3d` is driver-side automatic parallax (no head tracking, known to break shaders in sibling UE3 titles) — not a shortcut, skip it. No public camera/stereo mod exists for this game; only a config-based FOV/HUD fix and stock cheat trainers (no camera hack) were found. Confirms greenfield: the live d3d9 capture remains the only path to the SHARED-vs-per-object-matrix answer. |
 
 ## How to add a topic
 
