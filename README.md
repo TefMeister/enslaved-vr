@@ -21,6 +21,7 @@ conversion.
 - Research and engine knowledge: [`enslaved-vr-engine-research`](https://github.com/TefMeister/enslaved-vr-engine-research)
 - Readable field notes and progress ledger: [`enslaved-vr-modding-notes`](https://github.com/TefMeister/enslaved-vr-modding-notes)
 - In-progress history, probes, and dead ends: [`enslaved-vr-dev-archive`](https://github.com/TefMeister/enslaved-vr-dev-archive)
+- Ongoing public-research leads, gathered separately from hands-on modding work: [`enslaved-vr-external-research`](https://github.com/TefMeister/enslaved-vr-external-research)
 
 ## Scope, ethics, and legality
 
