@@ -16,12 +16,19 @@ conversion.
 > **This notice will be changed only when the mod genuinely renders the game
 > in a headset.**
 
-## The project
+## The six repositories for Enslaved VR
 
-- Research and engine knowledge: [`enslaved-vr-engine-research`](https://github.com/TefMeister/enslaved-vr-engine-research)
-- Readable field notes and progress ledger: [`enslaved-vr-modding-notes`](https://github.com/TefMeister/enslaved-vr-modding-notes)
-- In-progress history, probes, and dead ends: [`enslaved-vr-dev-archive`](https://github.com/TefMeister/enslaved-vr-dev-archive)
-- Ongoing public-research leads, gathered separately from hands-on modding work: [`enslaved-vr-external-research`](https://github.com/TefMeister/enslaved-vr-external-research)
+Everything for this project lives in six repositories, each with one job — so
+you always know where to look. You are in **enslaved-vr-mod**.
+
+| Repository | What lives here |
+| --- | --- |
+| **enslaved-vr-mod** ← you are here | The mod itself — releases only (not yet playable in VR). |
+| [enslaved-vr-dev-archive](https://github.com/TefMeister/enslaved-vr-dev-archive) | Full development history — snapshots, probes, dead ends, raw recon. |
+| [enslaved-vr-modding-notes](https://github.com/TefMeister/enslaved-vr-modding-notes) | Readable field notes / progress ledger. |
+| [enslaved-vr-staging](https://github.com/TefMeister/enslaved-vr-staging) 🔒 | **Private** — unverified WIP builds, cross-machine handoff. |
+| [enslaved-vr-engine-research](https://github.com/TefMeister/enslaved-vr-engine-research) | Distilled engine reference (dossier) + reusable VR RE playbook. |
+| [enslaved-vr-external-research](https://github.com/TefMeister/enslaved-vr-external-research) | Ongoing public-research leads, gathered separately from hands-on modding work. |
 
 ## Scope, ethics, and legality
 
