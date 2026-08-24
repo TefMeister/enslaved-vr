@@ -23,6 +23,20 @@ The blow-by-blow development history lives in the sibling repositories
 `enslaved-vr-modding-notes` for readable field notes). This repo is the
 consolidated engine knowledge, not the diary.
 
+## The six repositories for Enslaved VR
+
+Everything for this project lives in six repositories, each with one job — so
+you always know where to look. You are in **enslaved-vr-engine-research**.
+
+| Repository | What lives here |
+| --- | --- |
+| [enslaved-vr-mod](https://github.com/TefMeister/enslaved-vr-mod) | The mod itself — releases only (not yet playable in VR). |
+| [enslaved-vr-dev-archive](https://github.com/TefMeister/enslaved-vr-dev-archive) | Full development history — snapshots, probes, dead ends, raw recon. |
+| [enslaved-vr-modding-notes](https://github.com/TefMeister/enslaved-vr-modding-notes) | Readable field notes / progress ledger. |
+| [enslaved-vr-staging](https://github.com/TefMeister/enslaved-vr-staging) 🔒 | **Private** — unverified WIP builds, cross-machine handoff. |
+| **enslaved-vr-engine-research** ← you are here | Distilled engine reference (dossier) + reusable VR RE playbook. |
+| [enslaved-vr-external-research](https://github.com/TefMeister/enslaved-vr-external-research) | Ongoing public-research leads, gathered separately from hands-on modding work. |
+
 ## Status
 
 Initial static recon complete (2026-08-21). The target looks unusually
