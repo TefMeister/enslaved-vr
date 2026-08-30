@@ -1,0 +1,14 @@
+Enslaved.exe — d3d9.dll imports
+(parsed from the import table; interface metadata we generated, no game content)
+
+DLL: d3d9.dll
+  D3DPERF_EndEvent
+  Direct3DCreate9
+  D3DPERF_SetOptions
+  D3DPERF_BeginEvent
+
+Notes:
+- Only four names are imported from d3d9. Direct3DCreate9 is the interception
+  point; the three D3DPERF_* are debug-event markers, forwarded verbatim.
+- The real 32-bit d3d9.dll exports 17 named functions; the proxy re-exports the
+  common subset (9 named) and forwards them to the genuine system DLL.
