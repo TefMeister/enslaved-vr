@@ -1,4 +1,4 @@
-# enslaved-vr-mod
+# enslaved-vr — `mod/`
 
 A work-in-progress VR mod for **Enslaved: Odyssey to the West — Premium
 Edition** (Ninja Theory, 2010; PC port 2013, BANDAI NAMCO), a game built on
@@ -16,19 +16,19 @@ conversion.
 > **This notice will be changed only when the mod genuinely renders the game
 > in a headset.**
 
-## The six repositories for Enslaved VR
+## The folders for Enslaved VR
 
-Everything for this project lives in six repositories, each with one job — so
-you always know where to look. You are in **enslaved-vr-mod**.
+Everything for this project lives in six folders, each with one job — so
+you always know where to look. You are in **`mod/`**.
 
-| Repository | What lives here |
+| Folder | What lives here |
 | --- | --- |
-| **enslaved-vr-mod** ← you are here | The mod itself — releases only (not yet playable in VR). |
-| [enslaved-vr-dev-archive](https://github.com/TefMeister/enslaved-vr-dev-archive) | Full development history — snapshots, probes, dead ends, raw recon. |
-| [enslaved-vr-modding-notes](https://github.com/TefMeister/enslaved-vr-modding-notes) | Readable field notes / progress ledger. |
-| [enslaved-vr-staging](https://github.com/TefMeister/enslaved-vr-staging) 🔒 | **Private** — unverified WIP builds, cross-machine handoff. |
-| [enslaved-vr-engine-research](https://github.com/TefMeister/enslaved-vr-engine-research) | Distilled engine reference (dossier) + reusable VR RE playbook. |
-| [enslaved-vr-external-research](https://github.com/TefMeister/enslaved-vr-external-research) | Ongoing public-research leads, gathered separately from hands-on modding work. |
+| **`mod/`** ← you are here | The mod itself — releases only (not yet playable in VR). |
+| [`dev-archive/`](../dev-archive/) | Full development history — snapshots, probes, dead ends, raw recon. |
+| [`modding-notes/`](../modding-notes/) | Readable field notes / progress ledger. |
+| [staging/enslaved-vr](https://github.com/TefMeister/staging/tree/main/enslaved-vr) 🔒 | **Private** — unverified WIP builds, cross-machine handoff. |
+| [`engine-research/`](../engine-research/) | Distilled engine reference (dossier) + reusable VR RE playbook. |
+| [`external-research/`](../external-research/) | Ongoing public-research leads, gathered separately from hands-on modding work. |
 
 ## Scope, ethics, and legality
 

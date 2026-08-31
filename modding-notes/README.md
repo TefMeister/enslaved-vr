@@ -1,4 +1,4 @@
-# enslaved-vr-modding-notes
+# enslaved-vr — `modding-notes/`
 
 Readable field notes and the progress ledger for the **Enslaved: Odyssey to
 the West VR mod** — an attempt to bring Ninja Theory's 2010 Unreal Engine 3
@@ -10,19 +10,19 @@ tracking.
   session.
 - Numbered notes document each area of work as it happens.
 
-## The six repositories for Enslaved VR
+## The folders for Enslaved VR
 
-Everything for this project lives in six repositories, each with one job — so
-you always know where to look. You are in **enslaved-vr-modding-notes**.
+Everything for this project lives in six folders, each with one job — so
+you always know where to look. You are in **`modding-notes/`**.
 
-| Repository | What lives here |
+| Folder | What lives here |
 | --- | --- |
-| [enslaved-vr-mod](https://github.com/TefMeister/enslaved-vr-mod) | The mod itself — releases only (not yet playable in VR). |
-| [enslaved-vr-dev-archive](https://github.com/TefMeister/enslaved-vr-dev-archive) | Full development history — snapshots, probes, dead ends, raw recon. |
-| **enslaved-vr-modding-notes** ← you are here | Readable field notes / progress ledger. |
-| [enslaved-vr-staging](https://github.com/TefMeister/enslaved-vr-staging) 🔒 | **Private** — unverified WIP builds, cross-machine handoff. |
-| [enslaved-vr-engine-research](https://github.com/TefMeister/enslaved-vr-engine-research) | Distilled engine reference (dossier) + reusable VR RE playbook. |
-| [enslaved-vr-external-research](https://github.com/TefMeister/enslaved-vr-external-research) | Ongoing public-research leads, gathered separately from hands-on modding work. |
+| [`mod/`](../mod/) | The mod itself — releases only (not yet playable in VR). |
+| [`dev-archive/`](../dev-archive/) | Full development history — snapshots, probes, dead ends, raw recon. |
+| **`modding-notes/`** ← you are here | Readable field notes / progress ledger. |
+| [staging/enslaved-vr](https://github.com/TefMeister/staging/tree/main/enslaved-vr) 🔒 | **Private** — unverified WIP builds, cross-machine handoff. |
+| [`engine-research/`](../engine-research/) | Distilled engine reference (dossier) + reusable VR RE playbook. |
+| [`external-research/`](../external-research/) | Ongoing public-research leads, gathered separately from hands-on modding work. |
 
 No original game files are stored here — only files we create. Non-commercial
 fan project; requires owning a legitimate copy of the game.
