@@ -64,9 +64,47 @@ crash).
 | Steamworks | `steam_api.dll`, `steam_appid.txt` | Overlay also hooks D3D9 Present — load-order awareness |
 | EasyHook | `EasyHook32.dll` **ships with the game** | The game itself uses an injection framework; hooking is demonstrably tolerated by its runtime |
 
-## 4. Camera / projection delivery (hypothesis — to verify by capture)
+## 4. Camera / projection delivery — SETTLED STATICALLY (2026-09-01)
 
-Standard UE3-on-D3D9 mechanism, until proven otherwise:
+> ### There IS a shared view-projection, and it is at `c0`. The per-object-WVP reading was wrong.
+>
+> `[inferred-static 2026-09-01, n=1 — from the game's own shipped `Engine/Shaders/*.usf`]`
+>
+> **Enslaved ships its UE3 HLSL sources**, and `Common.usf` reserves the engine registers
+> explicitly, noting they must match `EVertexShaderRegister` in `RHI.h`:
+>
+> | Register | Contents |
+> |---|---|
+> | **`c0`–`c3`** | **`ViewProjectionMatrix`** — world space to projection space |
+> | **`c4`** | **`CameraPosition` / `ViewOrigin`** — world-space camera position |
+> | **`c5`** | **`PreViewTranslation`** — offset applied to `LocalToWorld` for far-from-origin precision |
+>
+> `LocalToWorld` / `PreviousLocalToWorld` are ordinary `float4x4`s declared in the **vertex
+> factories** (`LocalVertexFactory.usf`, `GpuSkinVertexFactory.usf`, which also has a
+> `float4x3 WorldToLocal` and `float4x3 BoneMatrices[]`) — i.e. compiler-allocated, which is what
+> `c6` / `c10` / `c231` / `c235` are.
+>
+> **Why the capture below reads as if it disproved this:** it measured how often a register was
+> **written**, not what was written to it. UE3's D3D9 RHI re-applies the reserved view registers
+> around bound-shader-state changes, so `c0`'s 47 uploads/frame are 47 writes of the *same* value.
+> Upload frequency was never evidence about shared-ness. **The capture actually corroborates the
+> mapping**: it records "scalar params occupy c4/c5", which are exactly `CameraPosition` and
+> `PreViewTranslation`.
+>
+> **What this unlocks:** `SetVertexShaderConstantF(StartRegister == 0, Vector4fCount == 4)` is a
+> clean single injection point for a per-eye offset, and **`c4` hands us the camera world position
+> directly** — no solving it out of the matrix.
+>
+> **⚠️ The trap: `PreViewTranslation` (`c5`).** UE3 pre-translates the world so the camera sits near
+> the origin for float precision — vertices arrive in *translated* world space and `c0` is built to
+> match. An eye offset must be consistent with `c5`, and anything reasoning about absolute world
+> positions must add `PreViewTranslation` back. Ignoring it looks correct near the origin and drifts
+> as the player moves away — presenting as "stereo breaks in some levels".
+>
+> Full write-up: `modding-notes/2026-09-01-shared-viewprojection-confirmed-at-c0.md`.
+> Still to confirm live (cheap): that the SHARED-matrix detector flags `c0` and nothing else.
+
+The original hypothesis, kept for the record:
 
 - UE3 D3D9 RHI delivers transforms to shaders via
   `IDirect3DDevice9::SetVertexShaderConstantF`. The `ViewProjectionMatrix` is a
