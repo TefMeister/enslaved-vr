@@ -32,9 +32,16 @@ explicitly, with a comment stating they must match `EVertexShaderRegister` in `R
 factories** (`LocalVertexFactory.usf`, `GpuSkinVertexFactory.usf`), i.e. compiler-allocated, and
 `GpuSkinVertexFactory.usf` also carries a `float4x3 WorldToLocal` and a `float4x3 BoneMatrices[]`.
 
-**So `c0` is a shared, engine-reserved view-projection — by definition, not by inference — and the
-per-object matrices the histogram saw at `c6`, `c10`, `c231` (and the 4×3 at `c235`) are the vertex
-factories' `LocalToWorld` / `PreviousLocalToWorld` / `WorldToLocal` / bone matrices.**
+**So `c0` is a shared, engine-reserved view-projection — by definition, not by inference.** That is
+the load-bearing claim and it rests directly on the shipped source.
+
+The follow-on reading — that the per-object matrices at `c6`, `c10`, `c231` and the 4×3 at `c235`
+are the vertex factories' `LocalToWorld` / `PreviousLocalToWorld` / `WorldToLocal` / bone matrices —
+is **weaker, and should be labelled as such: `[hypothesis]`.** Those registers are
+compiler-allocated per shader, so nothing in the `.usf` sources fixes them to particular numbers;
+the mapping is a plausible fit to the shapes and counts, not a derivation. **It does not matter for
+the injection plan**, which only needs `c0`, but it should not be quoted as established. Settling it
+would mean reading register assignments out of the cooked shader cache.
 
 `[inferred-static 2026-09-01, n=1 — from `Engine/Shaders/Common.usf`, `LocalVertexFactory.usf` and
 `GpuSkinVertexFactory.usf` as shipped]`. Not observed live.

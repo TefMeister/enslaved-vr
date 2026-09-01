@@ -81,8 +81,13 @@ crash).
 >
 > `LocalToWorld` / `PreviousLocalToWorld` are ordinary `float4x4`s declared in the **vertex
 > factories** (`LocalVertexFactory.usf`, `GpuSkinVertexFactory.usf`, which also has a
-> `float4x3 WorldToLocal` and `float4x3 BoneMatrices[]`) — i.e. compiler-allocated, which is what
-> `c6` / `c10` / `c231` / `c235` are.
+> `float4x3 WorldToLocal` and `float4x3 BoneMatrices[]`) — i.e. **compiler-allocated**.
+>
+> Matching those specifically to `c6` / `c10` / `c231` / `c235` is **`[hypothesis]`, not
+> established**: being compiler-allocated, nothing in the `.usf` sources pins them to particular
+> register numbers, so that mapping is a plausible fit to the observed shapes and counts rather than
+> a derivation. It does not affect the injection plan, which needs only `c0`. Settling it would mean
+> reading register assignments out of the cooked shader cache.
 >
 > **Why the capture below reads as if it disproved this:** it measured how often a register was
 > **written**, not what was written to it. UE3's D3D9 RHI re-applies the reserved view registers
