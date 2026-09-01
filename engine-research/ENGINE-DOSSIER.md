@@ -216,9 +216,49 @@ To fill in from a frame capture.
 
 - **Third-person game:** VR comfort/design questions (chase camera vs.
   first-person conversion) — deferred until the North Star renders.
-- **D3D9 + modern VR runtimes:** the compositor submission path from a D3D9
-  game needs a D3D9Ex/D3D11 texture-sharing bridge — known-solvable (prior art
-  exists), but it is extra plumbing to plan for.
+- **D3D9 + modern VR runtimes — the bridge is understood, and the game is on the
+  awkward side of it.** `/gr` pointed out (2026-09-01) that `far-cry-2-vr` already
+  researched the D3D9→compositor path, so the technique is not ours to invent:
+  create the texture on the **D3D11** side with `D3D11_RESOURCE_MISC_SHARED`, take
+  its `HANDLE` from `IDXGIResource::GetSharedHandle`, and open it from D3D9Ex via
+  `IDirect3DDevice9Ex::CreateTexture(..., pSharedHandle)` — a documented Windows
+  interop path with no CPU round-trip. `[reported]`
+
+  **But it requires a D3D9Ex device, and Enslaved does not create one.**
+  `[inferred-static 2026-09-01, n=3 independent checks]` — three checks that fail
+  in different ways, so agreement is meaningful:
+  1. the import table names **`Direct3DCreate9` only** (with three `D3DPERF_*`
+     markers) and no `…Ex` in the normal *or* delay-import directory — this
+     matches `dev-archive/recon/enslaved_exe_imports_d3d9.txt`, dumped by an
+     earlier session with a different tool;
+  2. the string `Direct3DCreate9Ex` does not occur anywhere in the 34 MB
+     executable, which rules out a runtime `GetProcAddress`;
+  3. the `IDirect3D9Ex`, `IDirect3DDevice9Ex` and `IDirect3DSwapChain9Ex` IIDs
+     occur **zero** times, which rules out a `QueryInterface` upgrade on a
+     device created the legacy way.
+
+  **The route that remains, and it is cheap:** our proxy already owns `d3d9.dll`
+  and its `.def` already exports `Direct3DCreate9Ex`. Because `IDirect3D9Ex`
+  derives from `IDirect3D9` (and `IDirect3DDevice9Ex` from `IDirect3DDevice9`),
+  the proxy can call `Direct3DCreate9Ex` itself and hand the game the Ex object
+  through the legacy interface; the game is compiled against the base vtable and
+  need not know. `[reported]` — interface inheritance, not yet built or run here.
+
+  **🪤 Two traps, both of which decide the design rather than tune it:**
+  - **`D3DPOOL_MANAGED` does not exist on a D3D9Ex device.** Any
+    `CreateTexture`/`CreateVertexBuffer`/`CreateIndexBuffer` asking for it fails.
+    So the upgrade above is only viable if UE3's D3D9 RHI never asks for MANAGED
+    on this build — **unverified, and it is the first thing to establish**, because
+    it is the difference between a one-line proxy change and a resource-remapping
+    project. `[reported]`
+  - **`D3D11_RESOURCE_MISC_SHARED_KEYEDMUTEX` has no D3D9 equivalent** — there is
+    no `IDirect3D9KeyedMutex`, so the synchronisation primitive every tutorial
+    recommends is unavailable to a D3D9Ex producer. The established substitute is
+    an `IDirect3DQuery9` event query plus double/triple buffering. `[reported]`
+
+  One more for whatever submits: **OpenVR issue #1253** (open) — SteamVR keeps only
+  the pose from the *last* `Submit`, so per-eye `Submit_TextureWithPose` ghosts.
+  Submit both eyes together rather than racing per-eye pose timing. `[reported]`
 - **NTEngine divergence:** Ninja Theory's layer may have moved camera logic out
   of stock UE3 paths; the `NTReplayGameViewportClient` name suggests a replay
   system wrapping the viewport.
