@@ -83,11 +83,29 @@ crash).
 > factories** (`LocalVertexFactory.usf`, `GpuSkinVertexFactory.usf`, which also has a
 > `float4x3 WorldToLocal` and `float4x3 BoneMatrices[]`) — i.e. **compiler-allocated**.
 >
-> Matching those specifically to `c6` / `c10` / `c231` / `c235` is **`[hypothesis]`, not
-> established**: being compiler-allocated, nothing in the `.usf` sources pins them to particular
-> register numbers, so that mapping is a plausible fit to the observed shapes and counts rather than
-> a derivation. It does not affect the injection plan, which needs only `c0`. Settling it would mean
-> reading register assignments out of the cooked shader cache.
+> **CONFIRMED 2026-09-01 (upgraded from `[hypothesis]` the same day) by reading the register
+> assignments out of the cooked shader cache**, exactly as the hypothesis said would be needed.
+> `RefShaderCache-PC-D3D-SM3.upk` carries **34,046 D3D9 constant tables (`CTAB`)** with names and
+> register indices intact; `flat-to-vr-RE-toolkit/tools/d3d9-ctab.py` reads them.
+> `[inferred-static 2026-09-01, n=34046 tables]`
+>
+> | Constant | Registers, by shader count |
+> |---|---|
+> | `ViewProjectionMatrix` | **c0 x4 (3325)**, c3 x4 (288), c10 x4 (22) |
+> | `CameraPosition` | c4 (2824) |
+> | `PreViewTranslation` | c5 (1089) |
+> | `LocalToWorld` | c6 x4 (2308), **c231 x4 (469)**, c10 x4 (264) |
+> | `LocalToView` | c14 x4 (132), c10 x4 (103) |
+>
+> **The 2026-08-21 histogram's unexplained 4x4s at `c6`, `c10` and `c231` are all now named**, and
+> `c0`/`c4`/`c5` match the reserved registers `Common.usf` declares.
+>
+> **⚠️ And a consequence that matters more than the tidiness:** the view-projection is **not only at
+> `c0`** — about 9% of shader variants read it from `c3` or `c10`. A stereo offset applied to `c0`
+> alone leaves those draws unshifted, which in a stereo build is geometry at the wrong per-eye
+> position. The proxy therefore also accepts `c3`/`c10`, but **only when the uploaded 4x4 is
+> bit-identical to the `c0` view-projection seen that frame** — `c10` also carries `LocalToView` and
+> `LocalToWorld`, and shifting a per-object matrix would tear the world apart.
 >
 > **Why the capture below reads as if it disproved this:** it measured how often a register was
 > **written**, not what was written to it. UE3's D3D9 RHI re-applies the reserved view registers
