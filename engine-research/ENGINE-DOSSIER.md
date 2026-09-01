@@ -100,11 +100,23 @@ crash).
 > clean single injection point for a per-eye offset, and **`c4` hands us the camera world position
 > directly** — no solving it out of the matrix.
 >
-> **⚠️ The trap: `PreViewTranslation` (`c5`).** UE3 pre-translates the world so the camera sits near
-> the origin for float precision — vertices arrive in *translated* world space and `c0` is built to
-> match. An eye offset must be consistent with `c5`, and anything reasoning about absolute world
-> positions must add `PreViewTranslation` back. Ignoring it looks correct near the origin and drifts
-> as the player moves away — presenting as "stereo breaks in some levels".
+> **`PreViewTranslation` (`c5`) — narrowed 2026-09-01.** UE3 pre-translates the world so the camera
+> sits near the origin for float precision; vertices arrive in *translated* world space and `c0` is
+> built to match. **This does NOT complicate a per-eye offset**: a relative offset is a translation
+> and translations commute, so the same `t` is correct in translated world space. The trap is real
+> but narrower than first written — it applies to anything reasoning about **absolute** world
+> positions (comparing `c4` against the matrix, for instance), not to the offset itself.
+>
+> **Matrix layout, also from the shipped source:** on PC `Common.usf` defines
+> `MulMatrix(Mtx,Vect)` as `mul(Mtx,Vect)` (column vectors) and the shaders do
+> `MulMatrix(ViewProjectionMatrix, WorldPosition)`. So the 16 uploaded floats are the matrix's
+> **rows** and the translation is **column 3**, making `M' = M * T(t)` a column-3-only edit that
+> needs no P/V split.
+>
+> **Implemented 2026-09-01** in `staging/enslaved-vr/proxy-d3d9/` behind `[stereo] Enabled` in
+> `d3d9_proxy.ini` (default off). `[compile-verified]`, `[untested]`. See
+> `modding-notes/2026-09-01b-...` — which also records that the committed **build recipe was broken**
+> in two ways and could not produce a loadable proxy.
 >
 > Full write-up: `modding-notes/2026-09-01-shared-viewprojection-confirmed-at-c0.md`.
 > Still to confirm live (cheap): that the SHARED-matrix detector flags `c0` and nothing else.
