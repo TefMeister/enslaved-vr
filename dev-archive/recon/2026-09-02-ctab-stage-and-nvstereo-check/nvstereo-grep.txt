@@ -1,0 +1,11 @@
+# case-insensitive byte grep for nvstereo (grep -c -a -i), 2026-09-02, home PC
+RefShaderCache-PC-D3D-SM2.upk: 0
+RefShaderCache-PC-D3D-SM3.upk: 0
+RefShaderCache-PC-D3D-SM4.upk: 0
+GlobalShaderCache-PC-D3D-SM2.bin: 0
+GlobalShaderCache-PC-D3D-SM3.bin: 0
+GlobalShaderCache-PC-D3D-SM4.bin: 0
+Enslaved.exe: 0
+Engine/Shaders/*.usf files containing nvstereo: 0
+files under the game folder containing AllowNvidiaStereo3d: 0
+NVCHANGE markers: only Engine/Shaders/MeshInstancedVertexFactory.usf (Jiayuan - Color Over Life, a particle change, not stereo)

@@ -89,23 +89,41 @@ crash).
 > register indices intact; `flat-to-vr-RE-toolkit/tools/d3d9-ctab.py` reads them.
 > `[inferred-static 2026-09-01, n=34046 tables]`
 >
-> | Constant | Registers, by shader count |
-> |---|---|
-> | `ViewProjectionMatrix` | **c0 x4 (3325)**, c3 x4 (288), c10 x4 (22) |
-> | `CameraPosition` | c4 (2824) |
-> | `PreViewTranslation` | c5 (1089) |
-> | `LocalToWorld` | c6 x4 (2308), **c231 x4 (469)**, c10 x4 (264) |
-> | `LocalToView` | c14 x4 (132), c10 x4 (103) |
+> | Constant | **Vertex** shaders | **Pixel** shaders |
+> |---|---|---|
+> | `ViewProjectionMatrix` | **vs c0 x4 (3325 — every one)** | ps c3 x4 (288), ps c10 x4 (22) |
+> | `CameraPosition` | vs c4 (2824) | — |
+> | `PreViewTranslation` | vs c5 (1089) | — |
+> | `LocalToWorld` | vs c6 x4 (2308), **vs c231 x4 (469)**, vs c10 x4 (264) | — |
+> | `LocalToView` | vs c14 x4 (132), vs c10 x4 (103) | — |
+> | `ScreenPositionScaleBias` / `MinZ_MaxZRatio` | — | ps c1 (11644) / ps c2 (12849) |
+>
+> **Stage column added 2026-09-02** `[inferred-static 2026-09-02, n=34046 tables; SM2 cache agrees]`
+> — the 2026-09-01 reading omitted it, and that mattered (next paragraph). **Write the stage next to
+> every register in this project**: `c3` is a view-projection in a pixel shader here and a stereo
+> parameter in Alice's pixel shaders, and a stage-blind rule cannot tell them apart.
 >
 > **The 2026-08-21 histogram's unexplained 4x4s at `c6`, `c10` and `c231` are all now named**, and
 > `c0`/`c4`/`c5` match the reserved registers `Common.usf` declares.
 >
-> **⚠️ And a consequence that matters more than the tidiness:** the view-projection is **not only at
-> `c0`** — about 9% of shader variants read it from `c3` or `c10`. A stereo offset applied to `c0`
-> alone leaves those draws unshifted, which in a stereo build is geometry at the wrong per-eye
-> position. The proxy therefore also accepts `c3`/`c10`, but **only when the uploaded 4x4 is
-> bit-identical to the `c0` view-projection seen that frame** — `c10` also carries `LocalToView` and
-> `LocalToWorld`, and shifting a per-object matrix would tear the world apart.
+> **⚠️ CORRECTED 2026-09-02: the "9% read it from `c3`/`c10`" paragraph that stood here was
+> mis-staged.** Those 310 tables are **pixel** shaders. On the vertex side — the only side a
+> `SetVertexShaderConstantF` hook sees — **the view-projection is at `c0` and nowhere else**, so a
+> per-eye offset at vs `c0` covers every vertex position. The proxy's `c3`/`c10` acceptance (guarded
+> by bit-identity with that frame's `c0`) is therefore unreachable for its intended matrix; kept as a
+> harmless fallback, comment corrected. `[inferred-static 2026-09-02]`
+>
+> **What that leaves open instead:** 310 pixel shaders read the view-projection at **ps `c3` / ps
+> `c10`**, and the proxy does not hook `SetPixelShaderConstantF`. In a stereo build whatever they
+> project (screen-space effects, reflections, decals — which is unknown from the table) uses the
+> un-offset matrix while geometry is per-eye correct. Visible or not is a live question; the fix, if
+> needed, is the same hook + same guard on the pixel stage. `[hypothesis]`
+>
+> **NVIDIA's 3D Vision UE3 branch is NOT in this build** `[inferred-static 2026-09-02, n=8 files]` —
+> `nvstereo` occurs zero times in all three `RefShaderCache` caches (SM4 included, via raw byte
+> search), all three `GlobalShaderCache` bins, the exe and the shipped `.usf`; `AllowNvidiaStereo3d`
+> is in no file. The only `NVCHANGE` markers are a particle-colour edit. Unlike Alice, there is no
+> shipped stereo path to drive. Note `modding-notes/2026-09-02-viewprojection-c3-c10-are-pixel-shaders-no-nvidia-stereo-branch.md`.
 >
 > **Why the capture below reads as if it disproved this:** it measured how often a register was
 > **written**, not what was written to it. UE3's D3D9 RHI re-applies the reserved view registers
@@ -132,7 +150,9 @@ crash).
 > needs no P/V split.
 >
 > **Implemented 2026-09-01** in `staging/enslaved-vr/proxy-d3d9/` behind `[stereo] Enabled` in
-> `d3d9_proxy.ini` (default off). `[compile-verified]`, `[untested]`. See
+> `d3d9_proxy.ini` (default off). `[compile-verified]`, `[untested]`. **Also built on the home PC and
+> deployed there 2026-09-02** (llvm-mingw i686, 9 exports; the home install had no proxy before, so
+> deleting `d3d9.dll` + `d3d9_proxy.ini` from `Binaries\Win32` restores stock). See
 > `modding-notes/2026-09-01b-...` — which also records that the committed **build recipe was broken**
 > in two ways and could not produce a loadable proxy.
 >
@@ -266,7 +286,15 @@ To fill in from a frame capture.
   fallback in VR.
 - Shipping build may have the console class stripped despite the binding
   (common in UE3 releases); fallback is exec via injected native calls.
+- **Pixel-side view-projection is not offset** (§4, 2026-09-02): 310 pixel shaders read
+  `ViewProjectionMatrix` at ps `c3`/`c10`; the proxy hooks only the vertex stage. Unknown whether
+  visible; watch reflections/decals during the first rock test. `[hypothesis]`
 
 ## 10. Dead ends
 
-None yet.
+- **NVIDIA 3D Vision UE3 branch as a shipped stereo path — absent from this build.**
+  `[inferred-static 2026-09-02]` No `NvStereoEnabled`/`NvStereoFixTexture` in any shader cache or
+  source, no `AllowNvidiaStereo3d` in any INI (§4). Sibling Alice has it; Enslaved does not.
+- Related, for anyone testing 3D-Vision-style tricks on a UE3 title here: UE3's 3D Vision
+  integration is **fullscreen-only and does not run in the editor** `[reported 2026-09-01, via /gr
+  from Epic's UDK page]` — a windowed negative is not a negative.

@@ -6,6 +6,22 @@
 
 ---
 
+## 2026-09-02 — `/pd` static pass (home PC, no launch)
+
+**Done:**
+- `/gr` inbox check answered: **no NVIDIA 3D Vision branch** in this build (zero `nvstereo` in every
+  shader cache, the exe and the `.usf`; no `AllowNvidiaStereo3d`).
+- Re-read the SM3/SM2 `CTAB` tables **with the shader stage**: every vertex-shader
+  `ViewProjectionMatrix` is at `c0`; the `c3`/`c10` ones (310) are **pixel** shaders. Dossier §4
+  corrected, proxy comment corrected (no behaviour change).
+- Proxy **built here** (llvm-mingw i686, 9 exports) and **deployed** to `Binaries\Win32` — the home
+  install had none; two files added, nothing overwritten.
+
+**Resume point:** launch once with stereo off (log must appear), then `[stereo] Enabled=1` and look
+for the rock. Full order in `2026-09-02-viewprojection-c3-c10-are-pixel-shaders-no-nvidia-stereo-branch.md` §4.
+
+---
+
 ## 2026-08-21 — Session 3: first in-game capture, windowed mode, instrument upgrade
 
 **Done:**
