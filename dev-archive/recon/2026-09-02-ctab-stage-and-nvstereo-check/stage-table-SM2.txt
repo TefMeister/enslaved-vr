@@ -1,0 +1,10 @@
+tables by stage: {'PS': 18141, 'VS': 2346}
+1841 ('CameraPosition', 'VS', 'c4', 'x1')
+81 ('LocalToView', 'VS', 'c10', 'x4')
+56 ('LocalToView', 'VS', 'c14', 'x4')
+110 ('LocalToWorld', 'VS', 'c10', 'x4')
+224 ('LocalToWorld', 'VS', 'c231', 'x4')
+1509 ('LocalToWorld', 'VS', 'c6', 'x4')
+850 ('PreViewTranslation', 'VS', 'c5', 'x1')
+152 ('ViewProjectionMatrix', 'PS', 'c3', 'x4')
+1977 ('ViewProjectionMatrix', 'VS', 'c0', 'x4')
