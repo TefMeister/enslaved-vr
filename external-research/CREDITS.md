@@ -41,6 +41,10 @@ project's repositories.**
 | 3d-fixes (checked for UE3 stereo prior art) | DarkStarSword | https://github.com/DarkStarSword/3d-fixes |
 | "Surface Sharing Between Windows Graphics APIs" and the `D3DPOOL` reference | Microsoft Learn | https://learn.microsoft.com/en-us/windows/win32/direct3darticles/surface-sharing-between-windows-graphics-apis |
 | Special K wiki (D3D9 wrapper compatibility notes; not readable by automated fetch this pass) | Kaldaien and the Special K community | https://wiki.special-k.info/ |
+| 3D Vision fix for ENSLAVED (the effects that break in stereo; the motion-blur requirement) — studied, nothing copied | eqzitara, via the Helix Mod blog | https://helixmod.blogspot.com/2013/10/enslaved-odyssey-to-west.html |
+| vorpX community profile and reports for this game | vorpX forum community | https://www.vorpx.com/forums/topic/enslaved-odyssey-to-the-west/ |
+| UDK/UE3 world-unit scale discussions (1 UU = 1-2 cm, the 96-UU character, the licensee variation) | Polycount community | https://polycount.com/discussion/74537/udk-player-scale |
+| Community config findings: `MonkeyChaseCamera.ini` / `useAutoTiltup`, `FOVAngle`, `FOV` key bindings | Steam Community discussion participants | https://steamcommunity.com/app/245280/discussions/0/3829691612498924840/ |
 
 (Matches the credit list already established in `enslaved-vr-engine-research`
 as of this repo's creation — kept in sync going forward.)

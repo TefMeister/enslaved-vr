@@ -88,3 +88,19 @@ resume point) remains the only path to the SHARED-vs-per-object answer.
 - FearLess Revolution, CheatHappens, Plitch, GameCopyWorld — Enslaved trainer feature listings (via
   search snippets only).
 - DarkStarSword — `3d-fixes` GitHub repo (checked for prior art; no Enslaved entry found).
+
+---
+
+## ⛔️ CORRECTION 2026-09-02 — §2's "no stereo-3D fix exists for this game" is wrong
+
+`[disproved 2026-09-02]` §2 above concluded that no Helix Mod / 3DMigoto / `3d-fixes` entry exists
+for Enslaved. **A Helix Mod 3D Vision fix for this exact build has existed since 2013-10-28**
+(updated 2013-12-21), by **eqzitara**, installed into the same `Binaries\Win32\` folder our proxy
+uses. The earlier pass searched DarkStarSword's GitHub repository and missed the Helix Mod blog,
+where the fix actually lives.
+
+What survives from §2: the **camera**-level conclusion. Nobody has published camera or free-cam work
+on this game; the fix is stereo *correction* over the existing camera, not a camera override. What
+does not survive: the framing that this game had no stereo prior art at all. It had a published one,
+and it names the effects that break — see
+`topics/2026-09-02b-a-3d-vision-fix-for-this-exact-game-exists-and-it-names-the-effects-that-break.md`.
