@@ -279,6 +279,18 @@ To fill in from a frame capture.
   One more for whatever submits: **OpenVR issue #1253** (open) — SteamVR keeps only
   the pose from the *last* `Submit`, so per-eye `Submit_TextureWithPose` ghosts.
   Submit both eyes together rather than racing per-eye pose timing. `[reported]`
+
+  **The D3D10 path sidesteps this whole trap, at a different cost.** `[reported 2026-09-02, via
+  /gr]` `-d3d10` is a public launch argument for this game (same switch as `AllowD3D10`; PCGamingWiki
+  summary — the page itself 403s). On that RHI a shared texture is an ordinary DXGI resource
+  (`D3D10_RESOURCE_MISC_SHARED`), keyed mutexes exist, and no Ex upgrade is needed at all — no public
+  source says whether `D3DPOOL_MANAGED` is used either way, so the instrumented launch stays the only
+  answer to that question regardless of route. The cost: the camera injection would have to become a
+  constant-buffer patch (SM4 shader cache on disk as the reflection source) instead of the proven
+  `SetVertexShaderConstantF(0,…,4)` hook — undesigned. **Two named routes now, decide after the
+  `D3DPOOL_MANAGED` instrumented launch:** (a) D3D9 + Ex upgrade, blocked on that one check; (b) D3D10,
+  blocked on nothing known but with the injection point still to design. Check `-d3d10` on a separate
+  launch so the stereo run stays clean.
 - **NTEngine divergence:** Ninja Theory's layer may have moved camera logic out
   of stock UE3 paths; the `NTReplayGameViewportClient` name suggests a replay
   system wrapping the viewport.
@@ -289,6 +301,37 @@ To fill in from a frame capture.
 - **Pixel-side view-projection is not offset** (§4, 2026-09-02): 310 pixel shaders read
   `ViewProjectionMatrix` at ps `c3`/`c10`; the proxy hooks only the vertex stage. Unknown whether
   visible; watch reflections/decals during the first rock test. `[hypothesis]`
+
+## 10a. A public 3D Vision fix for this exact binary exists — corroboration and practical setup (2026-09-02, via `/gr`)
+
+`[reported 2026-09-02]` unless noted; study material only (what the fix had to address), nothing
+copied, and its DLL must never be installed beside our proxy. **Supersedes the 2026-08-24
+external-research claim that no Helix Mod / 3DMigoto entry exists for Enslaved — that was wrong**:
+eqzitara shipped one for the Premium Edition, 2013-10-28 (updated 2013-12-21).
+
+- **Independent corroboration of the separation scale.** UE3 is conventionally 1 UU ≈ 1–2 cm (Epic's
+  own guidance: don't vary beyond ×2), so this project's own `Separation=6.0` sits at 6–12 cm —
+  already at or above a real IPD (~6.4 cm). That matches the run-6/7 finding (§ status file: "2
+  monkeys with a little gap" at 60 ⇒ ~6.5 the fitted value) from a completely different method — the
+  small-hop symptom at 6.0 was a correct-magnitude value read on a flat screen, not a wrong one.
+- **⭐ Motion blur must be OFF for any stereo judgement** (`MotionBlur=False` in `MonkeyEngine.ini`, or
+  the in-game option). Motion blur reprojects using the view-projection at the **pixel stage** — the
+  copy this project's vertex hook does not touch (§4, §9's 310-pixel-shader risk) — so a stereo run
+  judged with motion blur on is judging an uncorrected pass, not the fix.
+- **What the public fix had to correct, independently arriving at the same 310-shader shape this
+  project predicted from the CTAB reflection:** shadows, crosshairs, "visual effects", menu screens.
+  **HUD depth stayed broken even in that fix** — consistent with this project's ortho-`c0` finding
+  (§ modding-notes 2026-09-02, now handled: the proxy skips offsetting orthographic `c0` uploads).
+  Shadows are the highest-prior thing to watch on the next stereo run, ahead of a generic "watch for
+  anything odd".
+- **Two convergence regimes**: F3 cinematic, F4 gameplay, auto-switches after the tutorial — the
+  cutscene and chase cameras sit at different depth scales and likely need tuning separately.
+- **`useAutoTiltup` can be disabled** in the chase-camera ini — an automatic camera tilt is a VR
+  comfort hazard and the game ships the off-switch (same class as Alan Wake's `-rigidcamera`).
+- **Exec commands confirmed reaching this build via key bindings** —
+  `Bindings=(Name="F1",Command="FOV 0")` under `[MonkeyGame.MKInput]` in `MonkeyInput.ini` is reported
+  working, so §7's "console class may be stripped" risk has a working fallback channel regardless of
+  whether Tilde itself is live.
 
 ## 10. Dead ends
 
