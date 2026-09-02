@@ -39,6 +39,8 @@ project's repositories.**
 | PCGamingWiki (game-specific config/fix research) | PCGamingWiki contributors | https://www.pcgamingwiki.com |
 | FearLess Revolution / CheatHappens / Plitch / GameCopyWorld (trainer prior-art research) | Respective site communities | https://fearlessrevolution.com |
 | 3d-fixes (checked for UE3 stereo prior art) | DarkStarSword | https://github.com/DarkStarSword/3d-fixes |
+| "Surface Sharing Between Windows Graphics APIs" and the `D3DPOOL` reference | Microsoft Learn | https://learn.microsoft.com/en-us/windows/win32/direct3darticles/surface-sharing-between-windows-graphics-apis |
+| Special K wiki (D3D9 wrapper compatibility notes; not readable by automated fetch this pass) | Kaldaien and the Special K community | https://wiki.special-k.info/ |
 
 (Matches the credit list already established in `enslaved-vr-engine-research`
 as of this repo's creation — kept in sync going forward.)
