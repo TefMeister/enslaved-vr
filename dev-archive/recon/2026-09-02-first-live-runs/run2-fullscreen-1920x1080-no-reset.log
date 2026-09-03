@@ -1,0 +1,2977 @@
+=== Enslaved d3d9 logging proxy ===
+PID=17544  frameInterval=120  dumpRegister=-1  maxLogFrames=0
+[init] real d3d9 resolved at 6B650000
+[Direct3DCreate9] SDKVersion=32 -> 1329F240
+[hook] IDirect3D9::CreateDevice patched (orig=6B544DD0)
+[Direct3DCreate9] SDKVersion=32 -> 20547208
+[CreateDevice] adapter=0 devtype=1 behavior=0x00000142
+   BackBuffer 1920x1080 fmt=21 count=1 windowed=0 swap=1
+   MultiSample=0 hDeviceWindow=00090586 RefreshHz=0 PresentInterval=0x1
+[hook] device vtable patched: Present=6B736120 Reset=6B736500 SetVSConstF=6B6B7420
+[frame 120] VS-const uploads (startReg x vec4count : calls):
+   c0   x128 : 1   
+   c128 x128 : 1   
+[frame 240] VS-const uploads (startReg x vec4count : calls):
+[frame 360] VS-const uploads (startReg x vec4count : calls):
+[frame 480] VS-const uploads (startReg x vec4count : calls):
+[frame 600] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.0066 -549.7061 -11228.9385    1.0000]
+[frame 720] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.0354 -549.7651 -11228.9531    1.0000]
+[frame 840] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 189 
+   c10  x4  : 19    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 19 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[frame 960] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.0945 -549.8828 -11228.9824    1.0000]
+[frame 1080] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 189 
+   c10  x4  : 19    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 19 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[frame 1200] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.1526 -550.0000 -11229.0117    1.0000]
+[frame 1320] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.1821 -550.0581 -11229.0264    1.0000]
+[frame 1440] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.2114 -550.1167 -11229.0410    1.0000]
+[frame 1560] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 189 
+   c10  x4  : 19    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 19 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[frame 1680] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.2700 -550.2339 -11229.0703    1.0000]
+[frame 1800] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 189 
+   c10  x4  : 19    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 19 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[frame 1920] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 189 
+   c10  x4  : 19    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 19 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[frame 2040] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.3579 -550.4097 -11229.1143    1.0000]
+[frame 2160] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.3877 -550.4683 -11229.1289    1.0000]
+[frame 2280] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.4163 -550.5259 -11229.1436    1.0000]
+[frame 2400] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.4458 -550.5850 -11229.1582    1.0000]
+[frame 2520] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 189 
+   c10  x4  : 19    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 19 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[frame 2640] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 189 
+   c10  x4  : 19    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 19 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[frame 2760] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 189 
+   c10  x4  : 19    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 19 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[frame 2880] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.5630 -550.8193 -11229.2168    1.0000]
+[frame 3000] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 189 
+   c10  x4  : 19    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 19 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[frame 3120] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.6218 -550.9360 -11229.2461    1.0000]
+[frame 3240] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 146 
+   c10  x4  : 27    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 27 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-416.6846 -563.1470 -11228.3984    1.0000]
+[frame 3360] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 56  
+   c4   x1  : 54  
+   c5   x1  : 54  
+   c6   x4  : 237 
+   c10  x4  : 40    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 40 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[frame 3480] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 158 
+   c10  x4  : 35    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 17  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 35 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 327.8867 -868.3408 -11192.8711    1.0000]
+[frame 3600] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 57  
+   c4   x1  : 55  
+   c5   x1  : 55  
+   c6   x4  : 242 
+   c10  x4  : 41    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 21  
+   c14  x3  : 19  
+   c17  x1  : 18  
+   c18  x1  : 18  
+   c19  x1  : 18  
+   c20  x1  : 18  
+   c21  x1  : 18  
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 41 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[frame 3720] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 169 
+   c10  x4  : 40    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 19  
+   c17  x1  : 18  
+   c18  x1  : 18  
+   c19  x1  : 18  
+   c20  x1  : 18  
+   c21  x1  : 18  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 40 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 327.2388 -875.4131 -11208.5293    1.0000]
+[frame 3840] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 163 
+   c10  x4  : 36    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 17  
+   c14  x3  : 19  
+   c17  x1  : 18  
+   c18  x1  : 18  
+   c19  x1  : 18  
+   c20  x1  : 18  
+   c21  x1  : 18  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 36 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.2666 -870.2715 -11213.1533    1.0000]
+[frame 3960] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 169 
+   c10  x4  : 40    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 19  
+   c17  x1  : 18  
+   c18  x1  : 18  
+   c19  x1  : 18  
+   c20  x1  : 18  
+   c21  x1  : 18  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 40 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.7688 -884.2324 -11190.6709    1.0000]
+[frame 4080] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 36  
+   c4   x1  : 34  
+   c5   x1  : 34  
+   c6   x4  : 157 
+   c10  x4  : 38    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 17  
+   c17  x1  : 16  
+   c18  x1  : 16  
+   c19  x1  : 16  
+   c20  x1  : 16  
+   c21  x1  : 16  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 38 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 327.4438 -886.5278 -11205.4277    1.0000]
+[frame 4200] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 21  
+   c4   x1  : 19  
+   c5   x1  : 19  
+   c6   x4  : 130 
+   c10  x4  : 23    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 2   
+   c17  x1  : 1   
+   c18  x1  : 1   
+   c19  x1  : 1   
+   c20  x1  : 1   
+   c21  x1  : 1   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 23 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 327.8010 -874.3774 -11215.2969    1.0000]
+[frame 4320] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 21  
+   c4   x1  : 19  
+   c5   x1  : 19  
+   c6   x4  : 130 
+   c10  x4  : 23    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 2   
+   c17  x1  : 1   
+   c18  x1  : 1   
+   c19  x1  : 1   
+   c20  x1  : 1   
+   c21  x1  : 1   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 23 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 327.8010 -874.3774 -11215.2969    1.0000]
+[frame 4440] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 21  
+   c4   x1  : 19  
+   c5   x1  : 19  
+   c6   x4  : 120 
+   c10  x4  : 23    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 2   
+   c17  x1  : 1   
+   c18  x1  : 1   
+   c19  x1  : 1   
+   c20  x1  : 1   
+   c21  x1  : 1   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 23 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 327.8010 -874.3774 -11215.2969    1.0000]
+[frame 4560] VS-const uploads (startReg x vec4count : calls):
+   c6   x4  : 1   
+[frame 4680] VS-const uploads (startReg x vec4count : calls):
+   c6   x4  : 1   
+[frame 4800] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 26  
+   c4   x1  : 24  
+   c5   x1  : 24  
+   c6   x4  : 2033
+   c9   x1  : 1   
+   c10  x3  : 1426
+   c11  x1  : 13  
+   c12  x1  : 2   
+   c13  x1  : 1370
+   c14  x4  : 555   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 74  
+   c16  x1  : 113 
+   c17  x1  : 74  
+   c18  x1  : 68  
+   c19  x1  : 124 
+   c20  x1  : 25  
+   c21  x1  : 5   
+   c23  x1  : 16  
+   c24  x1  : 16  
+   c25  x1  : 16  
+   c26  x1  : 16  
+   c27  x1  : 16  
+   c28  x1  : 16  
+   c231 x4  : 199 
+   c235 x4  : 199 
+   c236 x1  : 50  
+   c238 x1  : 104 
+   c239 x4  : 149   <== SHARED matrix (view-projection candidate)
+   c240 x1  : 67  
+   c241 x1  : 30  
+   c242 x1  : 34  
+   c243 x1  : 16  
+   c244 x1  : 15  
+   c245 x1  : 15  
+   c246 x1  : 13  
+   c247 x1  : 4   
+   c248 x1  : 4   
+   [SHARED] c14 4x4 (same across all 555 draws):
+     [  -0.1772    0.4499    0.9795    0.9804]
+     [   1.5597    0.0511    0.1113    0.1114]
+     [   0.0000    2.7536   -0.1621   -0.1623]
+     [80654.8359 8767.3594 20805.6680 20836.4941]
+   [SHARED] c239 4x4 (same across all 149 draws):
+     [  -0.1772    0.4499    0.9795    0.9804]
+     [   1.5597    0.0511    0.1113    0.1114]
+     [   0.0000    2.7536   -0.1621   -0.1623]
+     [80654.8359 8767.3594 20805.6680 20836.4941]
+[frame 4920] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 26  
+   c4   x1  : 24  
+   c5   x1  : 24  
+   c6   x4  : 2040
+   c9   x1  : 1   
+   c10  x3  : 1433
+   c11  x1  : 13  
+   c12  x1  : 2   
+   c13  x1  : 1370
+   c14  x4  : 555   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 74  
+   c16  x1  : 120 
+   c17  x1  : 81  
+   c18  x1  : 75  
+   c19  x1  : 131 
+   c20  x1  : 25  
+   c21  x1  : 5   
+   c23  x1  : 23  
+   c24  x1  : 23  
+   c25  x1  : 23  
+   c26  x1  : 23  
+   c27  x1  : 23  
+   c28  x1  : 23  
+   c231 x4  : 199 
+   c235 x4  : 199 
+   c236 x1  : 50  
+   c238 x1  : 104 
+   c239 x4  : 149   <== SHARED matrix (view-projection candidate)
+   c240 x1  : 67  
+   c241 x1  : 30  
+   c242 x1  : 34  
+   c243 x1  : 16  
+   c244 x1  : 15  
+   c245 x1  : 15  
+   c246 x1  : 13  
+   c247 x1  : 4   
+   c248 x1  : 4   
+   [SHARED] c14 4x4 (same across all 555 draws):
+     [  -0.1772    0.4499    0.9795    0.9804]
+     [   1.5597    0.0511    0.1113    0.1114]
+     [   0.0000    2.7536   -0.1621   -0.1623]
+     [80654.8359 8767.3594 20805.6680 20836.4941]
+   [SHARED] c239 4x4 (same across all 149 draws):
+     [  -0.1772    0.4499    0.9795    0.9804]
+     [   1.5597    0.0511    0.1113    0.1114]
+     [   0.0000    2.7536   -0.1621   -0.1623]
+     [80654.8359 8767.3594 20805.6680 20836.4941]
+[frame 5040] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 21  
+   c4   x1  : 19  
+   c5   x1  : 19  
+   c6   x4  : 173 
+   c9   x1  : 1   
+   c10  x3  : 124 
+   c11  x1  : 1   
+   c13  x1  : 111 
+   c14  x1  : 62  
+   c15  x1  : 5   
+   c16  x1  : 5   
+   c17  x1  : 8   
+   c18  x1  : 9   
+   c19  x1  : 9   
+   c20  x1  : 8   
+   c21  x1  : 3   
+[frame 5160] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 21  
+   c4   x1  : 19  
+   c5   x1  : 19  
+   c6   x4  : 170 
+   c9   x1  : 1   
+   c10  x3  : 124 
+   c11  x1  : 1   
+   c13  x1  : 111 
+   c14  x1  : 62  
+   c15  x1  : 5   
+   c16  x1  : 5   
+   c17  x1  : 8   
+   c18  x1  : 9   
+   c19  x1  : 9   
+   c20  x1  : 8   
+   c21  x1  : 3   
+[frame 5280] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 20  
+   c4   x1  : 18  
+   c5   x1  : 18  
+   c6   x4  : 223 
+   c9   x1  : 1   
+   c10  x3  : 146 
+   c11  x1  : 1   
+   c13  x1  : 139 
+   c14  x4  : 59    <== SHARED matrix (view-projection candidate)
+   c15  x1  : 2   
+   c16  x1  : 2   
+   c17  x1  : 4   
+   c18  x1  : 5   
+   c19  x1  : 8   
+   c20  x1  : 3   
+   c21  x1  : 2   
+   [SHARED] c14 4x4 (same across all 59 draws):
+     [  -1.6034   -0.4577   -0.5495   -0.5500]
+     [  -1.1001    0.6671    0.8009    0.8017]
+     [   0.0000    3.3608   -0.2338   -0.2340]
+     [-82411.7109 26967.6465 34518.2617 34562.8125]
+[frame 5400] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 20  
+   c4   x1  : 18  
+   c5   x1  : 18  
+   c6   x4  : 223 
+   c9   x1  : 1   
+   c10  x3  : 146 
+   c11  x1  : 1   
+   c13  x1  : 139 
+   c14  x4  : 59    <== SHARED matrix (view-projection candidate)
+   c15  x1  : 2   
+   c16  x1  : 2   
+   c17  x1  : 4   
+   c18  x1  : 5   
+   c19  x1  : 8   
+   c20  x1  : 3   
+   c21  x1  : 2   
+   [SHARED] c14 4x4 (same across all 59 draws):
+     [  -1.6034   -0.4577   -0.5495   -0.5500]
+     [  -1.1001    0.6671    0.8009    0.8017]
+     [   0.0000    3.3608   -0.2338   -0.2340]
+     [-82411.7578 26967.6836 34512.1250 34556.6680]
+[frame 5520] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 25  
+   c4   x1  : 23  
+   c5   x1  : 23  
+   c6   x4  : 1224
+   c9   x1  : 1   
+   c10  x3  : 780 
+   c11  x1  : 9   
+   c12  x1  : 2   
+   c13  x1  : 745 
+   c14  x4  : 310   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 63  
+   c16  x1  : 83  
+   c17  x1  : 60  
+   c18  x1  : 55  
+   c19  x1  : 75  
+   c20  x1  : 22  
+   c21  x1  : 3   
+   c23  x1  : 12  
+   c24  x1  : 12  
+   c25  x1  : 12  
+   c26  x1  : 12  
+   c27  x1  : 12  
+   c28  x1  : 12  
+   c231 x4  : 149 
+   c235 x3  : 149 
+   c236 x1  : 26  
+   c238 x1  : 93  
+   c239 x1  : 123 
+   c240 x1  : 60  
+   c241 x1  : 28  
+   c242 x1  : 30  
+   c243 x1  : 3   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c14 4x4 (same across all 310 draws):
+     [  -0.6485    0.6423   -0.8443   -0.8452]
+     [  -1.2282   -0.3381    0.4459    0.4464]
+     [   0.0005    2.3601    0.2937    0.2940]
+     [-71999.0625 -13128.4756 16987.5625 17014.5664]
+[frame 5640] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 23  
+   c4   x1  : 21  
+   c5   x1  : 21  
+   c6   x4  : 773 
+   c9   x1  : 1   
+   c10  x3  : 557 
+   c11  x1  : 10  
+   c12  x1  : 2   
+   c13  x1  : 516 
+   c14  x4  : 248   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 54  
+   c16  x1  : 60  
+   c17  x1  : 45  
+   c18  x1  : 42  
+   c19  x1  : 62  
+   c20  x1  : 20  
+   c21  x1  : 4   
+   c23  x1  : 4   
+   c24  x1  : 4   
+   c25  x1  : 4   
+   c26  x1  : 4   
+   c27  x1  : 4   
+   c28  x1  : 4   
+   c231 x4  : 21  
+   c235 x3  : 21  
+   c236 x1  : 4   
+   c238 x1  : 14  
+   c239 x1  : 17  
+   c240 x1  : 10  
+   c241 x1  : 3   
+   c242 x1  : 3   
+   [SHARED] c14 4x4 (same across all 248 draws):
+     [   0.7259   -0.5052    0.8268    0.8276]
+     [   1.1841    0.3097   -0.5068   -0.5074]
+     [   0.0000    2.3970    0.2398    0.2400]
+     [70939.7188 9629.5488 -16698.3965 -16705.1113]
+[frame 5760] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 23  
+   c4   x1  : 21  
+   c5   x1  : 21  
+   c6   x4  : 780 
+   c9   x1  : 1   
+   c10  x3  : 565 
+   c11  x1  : 10  
+   c12  x1  : 2   
+   c13  x1  : 516 
+   c14  x4  : 247   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 55  
+   c16  x1  : 69  
+   c17  x1  : 54  
+   c18  x1  : 51  
+   c19  x1  : 76  
+   c20  x1  : 20  
+   c21  x1  : 4   
+   c23  x1  : 12  
+   c24  x1  : 12  
+   c25  x1  : 12  
+   c26  x1  : 12  
+   c27  x1  : 12  
+   c28  x1  : 12  
+   c231 x4  : 21  
+   c235 x3  : 21  
+   c236 x1  : 4   
+   c238 x1  : 14  
+   c239 x1  : 17  
+   c240 x1  : 10  
+   c241 x1  : 3   
+   c242 x1  : 3   
+   [SHARED] c14 4x4 (same across all 247 draws):
+     [   0.7140   -0.5012    0.8325    0.8334]
+     [   1.1913    0.3004   -0.4990   -0.4995]
+     [   0.0000    2.3990    0.2364    0.2367]
+     [71173.7344 9189.0498 -16216.6133 -16222.8457]
+[frame 5880] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 22  
+   c4   x1  : 20  
+   c5   x1  : 20  
+   c6   x4  : 1639
+   c9   x1  : 1   
+   c10  x3  : 1240
+   c11  x1  : 1   
+   c13  x1  : 1203
+   c14  x4  : 492   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 27  
+   c16  x1  : 49  
+   c17  x1  : 44  
+   c18  x1  : 43  
+   c19  x1  : 48  
+   c20  x1  : 13  
+   c21  x1  : 6   
+   c23  x1  : 22  
+   c24  x1  : 22  
+   c25  x1  : 22  
+   c26  x1  : 22  
+   c27  x1  : 22  
+   c28  x1  : 22  
+   c231 x4  : 2     <== SHARED matrix (view-projection candidate)
+   c235 x3  : 2   
+   c238 x1  : 2   
+   c239 x1  : 2   
+   c240 x1  : 1   
+   [SHARED] c14 4x4 (same across all 492 draws):
+     [  -0.3950   -0.3671    0.9462    0.9471]
+     [   1.3316   -0.1089    0.2807    0.2810]
+     [   0.0000    2.4393    0.1549    0.1551]
+     [66837.4922 -10933.5400 32012.6543 32054.6992]
+   [SHARED] c231 4x4 (same across all 2 draws):
+     [  -0.9569   -0.2903    0.0000    0.0000]
+     [   0.0000   -0.0000   -1.0000    0.0000]
+     [   0.2903   -0.9569    0.0000    0.0000]
+     [5176.1875 1936.5469 1008.2972    1.0000]
+[frame 6000] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 25  
+   c4   x1  : 23  
+   c5   x1  : 23  
+   c6   x4  : 1747
+   c9   x1  : 1   
+   c10  x3  : 1243
+   c11  x1  : 1   
+   c13  x1  : 1196
+   c14  x4  : 490   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 27  
+   c16  x1  : 49  
+   c17  x1  : 44  
+   c18  x1  : 43  
+   c19  x1  : 48  
+   c20  x1  : 13  
+   c21  x1  : 6   
+   c23  x1  : 22  
+   c24  x1  : 22  
+   c25  x1  : 22  
+   c26  x1  : 22  
+   c27  x1  : 22  
+   c28  x1  : 22  
+   c231 x4  : 102 
+   c235 x3  : 102 
+   c236 x1  : 15  
+   c238 x1  : 61  
+   c239 x1  : 87  
+   c240 x1  : 45  
+   c241 x1  : 24  
+   c242 x1  : 26  
+   c243 x1  : 3   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c14 4x4 (same across all 490 draws):
+     [  -0.2699   -0.3434    0.9701    0.9710]
+     [   1.3624   -0.0680    0.1922    0.1924]
+     [   0.0000    2.4442    0.1417    0.1418]
+     [70714.2422 -8260.0674 27521.1836 27558.7324]
+[frame 6120] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 26  
+   c4   x1  : 24  
+   c5   x1  : 24  
+   c6   x4  : 2114
+   c9   x1  : 1   
+   c10  x3  : 1466
+   c11  x1  : 11  
+   c12  x1  : 2   
+   c13  x1  : 1411
+   c14  x4  : 572   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 56  
+   c16  x1  : 87  
+   c17  x1  : 68  
+   c18  x1  : 63  
+   c19  x1  : 93  
+   c20  x1  : 23  
+   c21  x1  : 7   
+   c23  x1  : 20  
+   c24  x1  : 20  
+   c25  x1  : 20  
+   c26  x1  : 20  
+   c27  x1  : 20  
+   c28  x1  : 20  
+   c231 x4  : 180 
+   c235 x4  : 180 
+   c236 x1  : 46  
+   c238 x1  : 95  
+   c239 x4  : 134   <== SHARED matrix (view-projection candidate)
+   c240 x1  : 59  
+   c241 x1  : 26  
+   c242 x1  : 28  
+   c243 x1  : 14  
+   c244 x1  : 13  
+   c245 x1  : 13  
+   c246 x1  : 11  
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c14 4x4 (same across all 572 draws):
+     [  -0.6432   -0.4423    0.9341    0.9350]
+     [   1.8350   -0.1564    0.3274    0.3277]
+     [   0.0007    3.4249    0.1356    0.1357]
+     [90455.1719 -15001.7490 30738.1172 30778.8867]
+   [SHARED] c239 4x4 (same across all 134 draws):
+     [  -0.6432   -0.4423    0.9341    0.9350]
+     [   1.8350   -0.1564    0.3274    0.3277]
+     [   0.0007    3.4249    0.1356    0.1357]
+     [90455.1719 -15001.7490 30738.1172 30778.8867]
+[frame 6240] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 26  
+   c4   x1  : 24  
+   c5   x1  : 24  
+   c6   x4  : 2090
+   c9   x1  : 1   
+   c10  x3  : 1452
+   c11  x1  : 10  
+   c12  x1  : 2   
+   c13  x1  : 1389
+   c14  x4  : 556   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 53  
+   c16  x1  : 90  
+   c17  x1  : 74  
+   c18  x1  : 69  
+   c19  x1  : 96  
+   c20  x1  : 23  
+   c21  x1  : 8   
+   c23  x1  : 28  
+   c24  x1  : 28  
+   c25  x1  : 28  
+   c26  x1  : 28  
+   c27  x1  : 28  
+   c28  x1  : 28  
+   c231 x4  : 180 
+   c235 x4  : 180 
+   c236 x1  : 46  
+   c238 x1  : 95  
+   c239 x4  : 134   <== SHARED matrix (view-projection candidate)
+   c240 x1  : 59  
+   c241 x1  : 26  
+   c242 x1  : 28  
+   c243 x1  : 14  
+   c244 x1  : 13  
+   c245 x1  : 13  
+   c246 x1  : 11  
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c14 4x4 (same across all 556 draws):
+     [  -0.4950   -0.4292    0.9581    0.9591]
+     [   1.8804   -0.1143    0.2521    0.2524]
+     [   0.0007    3.4282    0.1284    0.1285]
+     [94983.4141 -12538.7402 26998.3496 27035.3750]
+   [SHARED] c239 4x4 (same across all 134 draws):
+     [  -0.4950   -0.4292    0.9581    0.9591]
+     [   1.8804   -0.1143    0.2521    0.2524]
+     [   0.0007    3.4282    0.1284    0.1285]
+     [94983.4141 -12538.7402 26998.3496 27035.3750]
+[frame 6360] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 26  
+   c4   x1  : 24  
+   c5   x1  : 24  
+   c6   x4  : 2044
+   c9   x1  : 1   
+   c10  x3  : 1422
+   c11  x1  : 10  
+   c12  x1  : 2   
+   c13  x1  : 1360
+   c14  x4  : 550   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 53  
+   c16  x1  : 90  
+   c17  x1  : 75  
+   c18  x1  : 70  
+   c19  x1  : 96  
+   c20  x1  : 24  
+   c21  x1  : 9   
+   c23  x1  : 28  
+   c24  x1  : 28  
+   c25  x1  : 28  
+   c26  x1  : 28  
+   c27  x1  : 28  
+   c28  x1  : 28  
+   c231 x4  : 180 
+   c235 x4  : 180 
+   c236 x1  : 46  
+   c238 x1  : 95  
+   c239 x4  : 134   <== SHARED matrix (view-projection candidate)
+   c240 x1  : 59  
+   c241 x1  : 26  
+   c242 x1  : 28  
+   c243 x1  : 14  
+   c244 x1  : 13  
+   c245 x1  : 13  
+   c246 x1  : 11  
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c14 4x4 (same across all 550 draws):
+     [  -0.4848   -0.4222    0.9597    0.9607]
+     [   1.8831   -0.1101    0.2471    0.2473]
+     [   0.0007    3.4292    0.1261    0.1262]
+     [95266.8359 -12209.2705 26746.2656 26783.0391]
+   [SHARED] c239 4x4 (same across all 134 draws):
+     [  -0.4848   -0.4222    0.9597    0.9607]
+     [   1.8831   -0.1101    0.2471    0.2473]
+     [   0.0007    3.4292    0.1261    0.1262]
+     [95266.8359 -12209.2705 26746.2656 26783.0391]
+[frame 6480] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 25  
+   c4   x1  : 23  
+   c5   x1  : 23  
+   c6   x4  : 405 
+   c9   x1  : 1   
+   c10  x3  : 197 
+   c11  x1  : 3   
+   c12  x1  : 1   
+   c13  x1  : 171 
+   c14  x4  : 70    <== SHARED matrix (view-projection candidate)
+   c15  x1  : 14  
+   c16  x1  : 25  
+   c17  x1  : 25  
+   c18  x1  : 24  
+   c19  x1  : 39  
+   c20  x1  : 7   
+   c21  x1  : 2   
+   c23  x1  : 11  
+   c24  x1  : 11  
+   c25  x1  : 11  
+   c26  x1  : 11  
+   c27  x1  : 11  
+   c28  x1  : 11  
+   c231 x4  : 128 
+   c235 x4  : 128 
+   c236 x1  : 34  
+   c238 x1  : 65  
+   c239 x4  : 94    <== SHARED matrix (view-projection candidate)
+   c240 x1  : 46  
+   c241 x1  : 24  
+   c242 x1  : 26  
+   c243 x1  : 6   
+   c244 x1  : 5   
+   c245 x1  : 5   
+   c246 x1  : 5   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c14 4x4 (same across all 70 draws):
+     [  -1.7149   -0.6847   -0.8488   -0.8497]
+     [  -2.8584    0.4134    0.5092    0.5097]
+     [   0.0013    5.8718   -0.1348   -0.1350]
+     [-177025.8906 11742.2676 16317.9561 16344.2900]
+   [SHARED] c239 4x4 (same across all 94 draws):
+     [  -1.7149   -0.6847   -0.8488   -0.8497]
+     [  -2.8584    0.4134    0.5092    0.5097]
+     [   0.0013    5.8718   -0.1348   -0.1350]
+     [-177025.8906 11742.2676 16317.9561 16344.2900]
+[frame 6600] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 20  
+   c4   x1  : 18  
+   c5   x1  : 18  
+   c6   x4  : 188 
+   c9   x1  : 1   
+   c10  x3  : 131 
+   c11  x1  : 1   
+   c13  x1  : 121 
+   c14  x4  : 56    <== SHARED matrix (view-projection candidate)
+   c16  x1  : 1   
+   c17  x1  : 3   
+   c18  x1  : 5   
+   c19  x1  : 4   
+   c20  x1  : 2   
+   c21  x1  : 2   
+   c23  x1  : 1   
+   c24  x1  : 1   
+   c25  x1  : 1   
+   c26  x1  : 1   
+   c27  x1  : 1   
+   c28  x1  : 1   
+   [SHARED] c14 4x4 (same across all 56 draws):
+     [   0.4677   -0.8963    0.9870    0.9880]
+     [   4.4198    0.0918   -0.1045   -0.1046]
+     [   0.0017    7.8498    0.1139    0.1140]
+     [246450.8594 -7936.8560   -3.4113    6.5852]
+[frame 6720] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 20  
+   c4   x1  : 18  
+   c5   x1  : 18  
+   c6   x4  : 209 
+   c9   x1  : 1   
+   c10  x3  : 147 
+   c11  x1  : 1   
+   c13  x1  : 137 
+   c14  x4  : 62    <== SHARED matrix (view-projection candidate)
+   c16  x1  : 1   
+   c17  x1  : 3   
+   c18  x1  : 5   
+   c19  x1  : 4   
+   c20  x1  : 2   
+   c21  x1  : 2   
+   c23  x1  : 1   
+   c24  x1  : 1   
+   c25  x1  : 1   
+   c26  x1  : 1   
+   c27  x1  : 1   
+   c28  x1  : 1   
+   [SHARED] c14 4x4 (same across all 62 draws):
+     [   0.4356   -0.8967    0.9877    0.9887]
+     [   4.4231    0.0883   -0.0973   -0.0974]
+     [   0.0000    7.8498    0.1139    0.1140]
+     [246270.3750 -8138.3979  397.4472  407.8451]
+[frame 6840] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 25  
+   c4   x1  : 23  
+   c5   x1  : 23  
+   c6   x4  : 623 
+   c9   x1  : 1   
+   c10  x3  : 330 
+   c11  x1  : 4   
+   c12  x1  : 1   
+   c13  x1  : 300 
+   c14  x4  : 118   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 18  
+   c16  x1  : 34  
+   c17  x1  : 32  
+   c18  x1  : 31  
+   c19  x1  : 54  
+   c20  x1  : 9   
+   c21  x1  : 2   
+   c23  x1  : 14  
+   c24  x1  : 14  
+   c25  x1  : 14  
+   c26  x1  : 14  
+   c27  x1  : 14  
+   c28  x1  : 14  
+   c231 x4  : 159 
+   c235 x4  : 159 
+   c236 x1  : 44  
+   c238 x1  : 80  
+   c239 x4  : 115   <== SHARED matrix (view-projection candidate)
+   c240 x1  : 51  
+   c241 x1  : 24  
+   c242 x1  : 26  
+   c243 x1  : 12  
+   c244 x1  : 11  
+   c245 x1  : 11  
+   c246 x1  : 10  
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c14 4x4 (same across all 118 draws):
+     [  -1.0049   -0.3830   -0.8481   -0.8489]
+     [  -1.6647    0.2327    0.5119    0.5124]
+     [   0.0007    3.4277   -0.1295   -0.1296]
+     [-103194.0156 6625.4731 16473.5625 16500.0527]
+   [SHARED] c239 4x4 (same across all 115 draws):
+     [  -1.0049   -0.3830   -0.8481   -0.8489]
+     [  -1.6647    0.2327    0.5119    0.5124]
+     [   0.0007    3.4277   -0.1295   -0.1296]
+     [-103194.0156 6625.4731 16473.5625 16500.0527]
+[frame 6960] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 23  
+   c4   x1  : 21  
+   c5   x1  : 21  
+   c6   x4  : 689 
+   c9   x1  : 1   
+   c10  x3  : 425 
+   c11  x1  : 6   
+   c12  x1  : 1   
+   c13  x1  : 395 
+   c14  x4  : 154   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 24  
+   c16  x1  : 44  
+   c17  x1  : 38  
+   c18  x1  : 37  
+   c19  x1  : 53  
+   c20  x1  : 12  
+   c21  x1  : 2   
+   c23  x1  : 14  
+   c24  x1  : 14  
+   c25  x1  : 14  
+   c26  x1  : 14  
+   c27  x1  : 14  
+   c28  x1  : 14  
+   c231 x4  : 89  
+   c235 x4  : 89  
+   c236 x1  : 27  
+   c238 x1  : 46  
+   c239 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c240 x1  : 27  
+   c241 x1  : 11  
+   c242 x1  : 12  
+   c243 x1  : 5   
+   c244 x1  : 5   
+   c245 x1  : 5   
+   c246 x1  : 4   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c14 4x4 (same across all 154 draws):
+     [  -1.9211   -0.0274   -0.1543   -0.1545]
+     [  -0.3008    0.1835    0.9856    0.9865]
+     [   0.0007    3.4519   -0.0536   -0.0537]
+     [-42145.7383 8687.9814 51154.5547 51215.7578]
+   [SHARED] c239 4x4 (same across all 62 draws):
+     [  -1.9211   -0.0274   -0.1543   -0.1545]
+     [  -0.3008    0.1835    0.9856    0.9865]
+     [   0.0007    3.4519   -0.0536   -0.0537]
+     [-42145.7383 8687.9814 51154.5547 51215.7578]
+[frame 7080] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 25  
+   c4   x1  : 23  
+   c5   x1  : 23  
+   c6   x4  : 821 
+   c9   x1  : 1   
+   c10  x3  : 475 
+   c11  x1  : 7   
+   c12  x1  : 1   
+   c13  x1  : 429 
+   c14  x4  : 184   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 30  
+   c16  x1  : 63  
+   c17  x1  : 50  
+   c18  x1  : 48  
+   c19  x1  : 70  
+   c20  x1  : 15  
+   c21  x1  : 3   
+   c23  x1  : 20  
+   c24  x1  : 20  
+   c25  x1  : 20  
+   c26  x1  : 20  
+   c27  x1  : 20  
+   c28  x1  : 20  
+   c231 x4  : 175 
+   c235 x4  : 175 
+   c236 x1  : 47  
+   c238 x1  : 89  
+   c239 x4  : 128   <== SHARED matrix (view-projection candidate)
+   c240 x1  : 54  
+   c241 x1  : 24  
+   c242 x1  : 28  
+   c243 x1  : 16  
+   c244 x1  : 15  
+   c245 x1  : 15  
+   c246 x1  : 13  
+   c247 x1  : 4   
+   c248 x1  : 4   
+   [SHARED] c14 4x4 (same across all 184 draws):
+     [  -1.8944    0.0798    0.2241    0.2243]
+     [   0.4385    0.3388    0.9683    0.9693]
+     [   0.0007    3.4393   -0.1006   -0.1007]
+     [-1580.9054 18687.5332 55610.9961 55676.6602]
+   [SHARED] c239 4x4 (same across all 128 draws):
+     [  -1.8944    0.0798    0.2241    0.2243]
+     [   0.4385    0.3388    0.9683    0.9693]
+     [   0.0007    3.4393   -0.1006   -0.1007]
+     [-1580.9054 18687.5332 55610.9961 55676.6602]
+[frame 7200] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 25  
+   c4   x1  : 23  
+   c5   x1  : 23  
+   c6   x4  : 1716
+   c9   x1  : 1   
+   c10  x3  : 1268
+   c11  x1  : 9   
+   c12  x1  : 2   
+   c13  x1  : 1196
+   c14  x4  : 502   <== SHARED matrix (view-projection candidate)
+   c15  x1  : 63  
+   c16  x1  : 110 
+   c17  x1  : 90  
+   c18  x1  : 85  
+   c19  x1  : 122 
+   c20  x1  : 30  
+   c21  x1  : 11  
+   c23  x1  : 33  
+   c24  x1  : 33  
+   c25  x1  : 33  
+   c26  x1  : 33  
+   c27  x1  : 33  
+   c28  x1  : 33  
+   c231 x4  : 100 
+   c235 x4  : 100 
+   c236 x1  : 26  
+   c238 x1  : 55  
+   c239 x4  : 74    <== SHARED matrix (view-projection candidate)
+   c240 x1  : 34  
+   c241 x1  : 13  
+   c242 x1  : 16  
+   c243 x1  : 6   
+   c244 x1  : 6   
+   c245 x1  : 6   
+   c246 x1  : 5   
+   c247 x1  : 3   
+   c248 x1  : 3   
+   [SHARED] c14 4x4 (same across all 502 draws):
+     [  -0.2560   -0.0336    0.9655    0.9665]
+     [   0.9667   -0.0089    0.2557    0.2559]
+     [   0.0000    1.7774    0.0195    0.0196]
+     [48109.8711 -1257.2842 26250.3223 26286.5996]
+   [SHARED] c239 4x4 (same across all 74 draws):
+     [  -0.2560   -0.0336    0.9655    0.9665]
+     [   0.9667   -0.0089    0.2557    0.2559]
+     [   0.0000    1.7774    0.0195    0.0196]
+     [48109.8711 -1257.2842 26250.3223 26286.5996]
+[frame 7320] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 24  
+   c4   x1  : 24  
+   c5   x1  : 24  
+   c6   x4  : 1656
+   c9   x1  : 1   
+   c10  x3  : 1252
+   c11  x1  : 1   
+   c13  x1  : 1213
+   c14  x3  : 408 
+   c15  x1  : 13  
+   c16  x1  : 32  
+   c17  x1  : 37  
+   c18  x1  : 37  
+   c19  x1  : 51  
+   c20  x1  : 11  
+   c21  x1  : 5   
+   c22  x1  : 1   
+   c23  x1  : 22  
+   c24  x1  : 21  
+   c25  x1  : 21  
+   c26  x1  : 21  
+   c27  x1  : 21  
+   c28  x1  : 21  
+   c231 x4  : 10  
+   c235 x3  : 10  
+   c238 x1  : 6   
+   c239 x1  : 10  
+   c240 x1  : 6   
+   c241 x1  : 4   
+   c242 x1  : 4   
+[frame 7440] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 21  
+   c4   x1  : 21  
+   c5   x1  : 21  
+   c6   x4  : 1512
+   c9   x1  : 1   
+   c10  x3  : 1049
+   c11  x1  : 2   
+   c12  x1  : 1   
+   c13  x1  : 1015
+   c14  x3  : 364 
+   c15  x1  : 10  
+   c16  x1  : 16  
+   c17  x1  : 20  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 11  
+   c21  x1  : 9   
+   c22  x1  : 1   
+   c23  x1  : 5   
+   c24  x1  : 4   
+   c25  x1  : 4   
+   c26  x1  : 4   
+   c27  x1  : 4   
+   c28  x1  : 4   
+   c231 x4  : 21  
+   c235 x3  : 21  
+   c236 x1  : 4   
+   c238 x1  : 13  
+   c239 x1  : 17  
+   c240 x1  : 8   
+   c241 x1  : 4   
+   c242 x1  : 4   
+[frame 7560] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 24  
+   c4   x1  : 24  
+   c5   x1  : 24  
+   c6   x4  : 1554
+   c9   x1  : 1   
+   c10  x4  : 1152
+   c11  x1  : 1   
+   c13  x1  : 1110
+   c14  x3  : 402 
+   c15  x1  : 15  
+   c16  x1  : 27  
+   c17  x1  : 32  
+   c18  x1  : 29  
+   c19  x1  : 37  
+   c20  x1  : 15  
+   c21  x1  : 10  
+   c23  x1  : 10  
+   c24  x1  : 10  
+   c25  x1  : 10  
+   c26  x1  : 10  
+   c27  x1  : 10  
+   c28  x1  : 10  
+   c231 x4  : 23  
+   c235 x3  : 23  
+   c236 x1  : 2   
+   c238 x1  : 13  
+   c239 x1  : 21  
+   c240 x1  : 12  
+   c241 x1  : 8   
+   c242 x1  : 8   
+[frame 7680] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 25  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1372
+   c9   x1  : 1   
+   c10  x4  : 992 
+   c11  x1  : 1   
+   c13  x1  : 948 
+   c14  x3  : 340 
+   c15  x1  : 16  
+   c16  x1  : 32  
+   c17  x1  : 35  
+   c18  x1  : 31  
+   c19  x1  : 41  
+   c20  x1  : 15  
+   c21  x1  : 11  
+   c23  x1  : 12  
+   c24  x1  : 12  
+   c25  x1  : 12  
+   c26  x1  : 12  
+   c27  x1  : 12  
+   c28  x1  : 12  
+   c231 x4  : 41  
+   c235 x3  : 41  
+   c236 x1  : 8   
+   c238 x1  : 25  
+   c239 x1  : 33  
+   c240 x1  : 16  
+   c241 x1  : 8   
+   c242 x1  : 8   
+[frame 7800] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 25  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1261
+   c9   x1  : 1   
+   c10  x4  : 894 
+   c11  x1  : 1   
+   c13  x1  : 844 
+   c14  x3  : 312 
+   c15  x1  : 16  
+   c16  x1  : 36  
+   c17  x1  : 41  
+   c18  x1  : 37  
+   c19  x1  : 47  
+   c20  x1  : 19  
+   c21  x1  : 15  
+   c22  x1  : 1   
+   c23  x1  : 15  
+   c24  x1  : 14  
+   c25  x1  : 14  
+   c26  x1  : 14  
+   c27  x1  : 14  
+   c28  x1  : 14  
+   c231 x4  : 41  
+   c235 x3  : 41  
+   c236 x1  : 8   
+   c238 x1  : 25  
+   c239 x1  : 33  
+   c240 x1  : 16  
+   c241 x1  : 8   
+   c242 x1  : 8   
+[frame 7920] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 23  
+   c4   x1  : 23  
+   c5   x1  : 23  
+   c6   x4  : 440 
+   c9   x1  : 1   
+   c10  x4  : 285 
+   c11  x1  : 1   
+   c13  x1  : 264 
+   c14  x3  : 112 
+   c15  x1  : 4   
+   c16  x1  : 12  
+   c17  x1  : 21  
+   c18  x1  : 21  
+   c19  x1  : 29  
+   c20  x1  : 11  
+   c21  x1  : 9   
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 30  
+   c235 x3  : 30  
+   c236 x1  : 6   
+   c238 x1  : 18  
+   c239 x1  : 24  
+   c240 x1  : 12  
+   c241 x1  : 6   
+   c242 x1  : 6   
+[frame 8040] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 21  
+   c4   x1  : 21  
+   c5   x1  : 21  
+   c6   x4  : 341 
+   c9   x1  : 1   
+   c10  x4  : 219 
+   c11  x1  : 1   
+   c13  x1  : 203 
+   c14  x3  : 93  
+   c15  x1  : 4   
+   c16  x1  : 5   
+   c17  x1  : 15  
+   c18  x1  : 15  
+   c19  x1  : 17  
+   c20  x1  : 12  
+   c21  x1  : 10  
+   c23  x1  : 1   
+   c24  x1  : 1   
+   c25  x1  : 1   
+   c26  x1  : 1   
+   c27  x1  : 1   
+   c28  x1  : 1   
+   c231 x4  : 22  
+   c235 x4  : 22  
+   c236 x1  : 4   
+   c238 x1  : 12  
+   c239 x3  : 18  
+   c240 x1  : 8   
+   c241 x1  : 4   
+   c242 x1  : 6   
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+[frame 8160] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 23  
+   c4   x1  : 23  
+   c5   x1  : 23  
+   c6   x4  : 944 
+   c9   x1  : 1   
+   c10  x4  : 640 
+   c11  x1  : 5   
+   c12  x1  : 2   
+   c13  x1  : 587 
+   c14  x3  : 234 
+   c15  x1  : 18  
+   c16  x1  : 31  
+   c17  x1  : 40  
+   c18  x1  : 36  
+   c19  x1  : 54  
+   c20  x1  : 23  
+   c21  x1  : 19  
+   c22  x1  : 1   
+   c23  x1  : 10  
+   c24  x1  : 9   
+   c25  x1  : 9   
+   c26  x1  : 9   
+   c27  x1  : 9   
+   c28  x1  : 9   
+   c231 x4  : 11    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 11  
+   c236 x1  : 2   
+   c238 x1  : 7   
+   c239 x1  : 9   
+   c240 x1  : 4   
+   c241 x1  : 2   
+   c242 x1  : 2   
+   [SHARED] c231 4x4 (same across all 11 draws):
+     [  -0.9972    0.0747    0.0000    0.0000]
+     [  -0.0000   -0.0000   -1.0000    0.0000]
+     [  -0.0747   -0.9972    0.0000    0.0000]
+     [5202.4121  761.6484 -1028.2339    1.0000]
+[frame 8280] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 2359
+   c9   x1  : 1   
+   c10  x4  : 1694
+   c11  x1  : 11  
+   c12  x1  : 2   
+   c13  x1  : 1570
+   c14  x3  : 652 
+   c15  x1  : 75  
+   c16  x1  : 164 
+   c17  x1  : 149 
+   c18  x1  : 140 
+   c19  x1  : 188 
+   c20  x1  : 48  
+   c21  x1  : 28  
+   c23  x1  : 67  
+   c24  x1  : 67  
+   c25  x1  : 67  
+   c26  x1  : 67  
+   c27  x1  : 67  
+   c28  x1  : 67  
+   c231 x4  : 194 
+   c235 x4  : 194 
+   c236 x1  : 46  
+   c238 x1  : 99  
+   c239 x4  : 148   <== SHARED matrix (view-projection candidate)
+   c240 x1  : 59  
+   c241 x1  : 24  
+   c242 x1  : 28  
+   c243 x1  : 26  
+   c244 x1  : 25  
+   c245 x1  : 25  
+   c246 x1  : 19  
+   c247 x1  : 4   
+   c248 x1  : 4   
+   [SHARED] c239 4x4 (same across all 148 draws):
+     [  -0.1764    0.4509    0.9795    0.9804]
+     [   1.5597    0.0426    0.1113    0.1114]
+     [   0.0048    2.7536   -0.1621   -0.1623]
+     [80298.3828 7663.7305 19306.8418 19336.1680]
+[frame 8400] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 39  
+   c4   x1  : 37  
+   c5   x1  : 37  
+   c6   x4  : 2265
+   c9   x1  : 1   
+   c10  x4  : 1609
+   c11  x1  : 11  
+   c12  x1  : 2   
+   c13  x1  : 1526
+   c14  x3  : 634 
+   c15  x1  : 72  
+   c16  x1  : 120 
+   c17  x1  : 106 
+   c18  x1  : 99  
+   c19  x1  : 150 
+   c20  x1  : 46  
+   c21  x1  : 25  
+   c23  x1  : 28  
+   c24  x1  : 28  
+   c25  x1  : 28  
+   c26  x1  : 28  
+   c27  x1  : 28  
+   c28  x1  : 28  
+   c231 x4  : 197 
+   c235 x4  : 197 
+   c236 x1  : 43  
+   c238 x1  : 105 
+   c239 x4  : 154   <== SHARED matrix (view-projection candidate)
+   c240 x1  : 65  
+   c241 x1  : 28  
+   c242 x1  : 32  
+   c243 x1  : 22  
+   c244 x1  : 21  
+   c245 x1  : 21  
+   c246 x1  : 16  
+   c247 x1  : 4   
+   c248 x1  : 4   
+   [SHARED] c239 4x4 (same across all 154 draws):
+     [   0.3674    0.1705    0.9693    0.9703]
+     [   1.5261   -0.0410   -0.2333   -0.2336]
+     [   0.0000    2.7850   -0.0628   -0.0629]
+     [85728.5781 -509.0896  853.0571  863.9110]
+[frame 8520] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 2199
+   c9   x1  : 1   
+   c10  x4  : 1568
+   c11  x1  : 13  
+   c12  x1  : 2   
+   c13  x1  : 1479
+   c14  x3  : 619 
+   c15  x1  : 77  
+   c16  x1  : 135 
+   c17  x1  : 111 
+   c18  x1  : 103 
+   c19  x1  : 156 
+   c20  x1  : 44  
+   c21  x1  : 22  
+   c23  x1  : 33  
+   c24  x1  : 33  
+   c25  x1  : 33  
+   c26  x1  : 33  
+   c27  x1  : 33  
+   c28  x1  : 33  
+   c231 x4  : 204 
+   c235 x4  : 204 
+   c236 x1  : 45  
+   c238 x1  : 112 
+   c239 x4  : 159   <== SHARED matrix (view-projection candidate)
+   c240 x1  : 69  
+   c241 x1  : 30  
+   c242 x1  : 34  
+   c243 x1  : 18  
+   c244 x1  : 17  
+   c245 x1  : 17  
+   c246 x1  : 15  
+   c247 x1  : 4   
+   c248 x1  : 4   
+   [SHARED] c239 4x4 (same across all 159 draws):
+     [   0.5313    0.2872    0.9344    0.9353]
+     [   1.4770   -0.0977   -0.3364   -0.3367]
+     [  -0.0030    2.7740   -0.1086   -0.1087]
+     [85524.1016 -1878.1478 -4606.9897 -4601.6011]
+[frame 8640] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 35  
+   c4   x1  : 33  
+   c5   x1  : 33  
+   c6   x4  : 271 
+   c9   x1  : 1   
+   c10  x4  : 144 
+   c11  x1  : 4   
+   c12  x1  : 1   
+   c13  x1  : 116 
+   c14  x3  : 74  
+   c15  x1  : 12  
+   c16  x1  : 20  
+   c17  x1  : 30  
+   c18  x1  : 29  
+   c19  x1  : 31  
+   c20  x1  : 18  
+   c21  x1  : 14  
+   c23  x1  : 6   
+   c24  x1  : 6   
+   c25  x1  : 6   
+   c26  x1  : 6   
+   c27  x1  : 6   
+   c28  x1  : 6   
+   c231 x4  : 77  
+   c235 x4  : 77  
+   c236 x1  : 10  
+   c238 x1  : 40  
+   c239 x4  : 67    <== SHARED matrix (view-projection candidate)
+   c240 x1  : 27  
+   c241 x1  : 13  
+   c242 x1  : 14  
+   c243 x1  : 15  
+   c244 x1  : 14  
+   c245 x1  : 14  
+   c246 x1  : 12  
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c239 4x4 (same across all 67 draws):
+     [   1.5662   -0.0166   -0.0658   -0.0659]
+     [  -0.1038   -0.3146   -0.9904   -0.9914]
+     [  -0.0024    2.7727   -0.1128   -0.1129]
+     [15597.2832 -17726.2832 -53589.3047 -53632.9492]
+[frame 8760] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 2427
+   c9   x1  : 1   
+   c10  x4  : 1728
+   c11  x1  : 13  
+   c12  x1  : 2   
+   c13  x1  : 1649
+   c14  x3  : 675 
+   c15  x1  : 78  
+   c16  x1  : 124 
+   c17  x1  : 100 
+   c18  x1  : 91  
+   c19  x1  : 133 
+   c20  x1  : 40  
+   c21  x1  : 19  
+   c23  x1  : 25  
+   c24  x1  : 25  
+   c25  x1  : 25  
+   c26  x1  : 25  
+   c27  x1  : 25  
+   c28  x1  : 25  
+   c231 x4  : 196 
+   c235 x4  : 196 
+   c236 x1  : 42  
+   c238 x1  : 105 
+   c239 x4  : 154   <== SHARED matrix (view-projection candidate)
+   c240 x1  : 69  
+   c241 x1  : 32  
+   c242 x1  : 36  
+   c243 x1  : 18  
+   c244 x1  : 17  
+   c245 x1  : 17  
+   c246 x1  : 15  
+   c247 x1  : 4   
+   c248 x1  : 4   
+   [SHARED] c239 4x4 (same across all 154 draws):
+     [  -0.3341    0.3064    0.9699    0.9709]
+     [   1.5337    0.0786    0.2108    0.2110]
+     [  -0.0066    2.7726   -0.1132   -0.1133]
+     [76976.7500 7488.5405 24164.4766 24198.6660]
+[frame 8880] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 2240
+   c9   x1  : 1   
+   c10  x4  : 1559
+   c11  x1  : 12  
+   c12  x1  : 2   
+   c13  x1  : 1479
+   c14  x3  : 612 
+   c15  x1  : 68  
+   c16  x1  : 105 
+   c17  x1  : 92  
+   c18  x1  : 86  
+   c19  x1  : 121 
+   c20  x1  : 39  
+   c21  x1  : 20  
+   c23  x1  : 24  
+   c24  x1  : 24  
+   c25  x1  : 24  
+   c26  x1  : 24  
+   c27  x1  : 24  
+   c28  x1  : 24  
+   c231 x4  : 201 
+   c235 x4  : 201 
+   c236 x1  : 43  
+   c238 x1  : 101 
+   c239 x4  : 158   <== SHARED matrix (view-projection candidate)
+   c240 x1  : 65  
+   c241 x1  : 30  
+   c242 x1  : 34  
+   c243 x1  : 28  
+   c244 x1  : 27  
+   c245 x1  : 27  
+   c246 x1  : 21  
+   c247 x1  : 4   
+   c248 x1  : 4   
+   [SHARED] c239 4x4 (same across all 158 draws):
+     [  -0.1130    0.3147    0.9900    0.9910]
+     [   1.5656    0.0312    0.0711    0.0712]
+     [  -0.0048    2.7726   -0.1132   -0.1133]
+     [81550.3750 4654.4697 15703.5547 15729.2744]
+[frame 9000] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 2065
+   c9   x1  : 1   
+   c10  x4  : 1416
+   c11  x1  : 3   
+   c12  x1  : 1   
+   c13  x1  : 1350
+   c14  x3  : 537 
+   c15  x1  : 40  
+   c16  x1  : 65  
+   c17  x1  : 74  
+   c18  x1  : 72  
+   c19  x1  : 92  
+   c20  x1  : 33  
+   c21  x1  : 22  
+   c23  x1  : 24  
+   c24  x1  : 24  
+   c25  x1  : 24  
+   c26  x1  : 24  
+   c27  x1  : 24  
+   c28  x1  : 24  
+   c231 x4  : 188 
+   c235 x4  : 188 
+   c236 x1  : 32  
+   c238 x1  : 101 
+   c239 x4  : 156   <== SHARED matrix (view-projection candidate)
+   c240 x1  : 62  
+   c241 x1  : 28  
+   c242 x1  : 32  
+   c243 x1  : 28  
+   c244 x1  : 27  
+   c245 x1  : 27  
+   c246 x1  : 21  
+   c247 x1  : 4   
+   c248 x1  : 4   
+   [SHARED] c239 4x4 (same across all 156 draws):
+     [   0.1690    0.3139    0.9868    0.9878]
+     [   1.5606   -0.0372   -0.1068   -0.1069]
+     [   0.0018    2.7726   -0.1132   -0.1133]
+     [85164.4375  561.4954 4938.6577 4953.6016]
+[frame 9120] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 35  
+   c4   x1  : 33  
+   c5   x1  : 33  
+   c6   x4  : 895 
+   c9   x1  : 1   
+   c10  x4  : 575 
+   c11  x1  : 8   
+   c12  x1  : 1   
+   c13  x1  : 531 
+   c14  x3  : 251 
+   c15  x1  : 36  
+   c16  x1  : 48  
+   c17  x1  : 53  
+   c18  x1  : 51  
+   c19  x1  : 68  
+   c20  x1  : 29  
+   c21  x1  : 19  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 92  
+   c235 x4  : 92  
+   c236 x1  : 20  
+   c238 x1  : 45  
+   c239 x4  : 72    <== SHARED matrix (view-projection candidate)
+   c240 x1  : 28  
+   c241 x1  : 13  
+   c242 x1  : 14  
+   c243 x1  : 15  
+   c244 x1  : 14  
+   c245 x1  : 14  
+   c246 x1  : 12  
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c239 4x4 (same across all 72 draws):
+     [  -1.1954    0.2016    0.6434    0.6441]
+     [   1.0173    0.2435    0.7558    0.7566]
+     [  -0.0024    2.7726   -0.1132   -0.1133]
+     [41506.6602 14446.1436 47652.9492 47710.6484]
+[frame 9240] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 34  
+   c4   x1  : 32  
+   c5   x1  : 32  
+   c6   x4  : 428 
+   c9   x1  : 1   
+   c10  x4  : 248 
+   c11  x1  : 3   
+   c12  x1  : 1   
+   c13  x1  : 220 
+   c14  x3  : 115 
+   c15  x1  : 15  
+   c16  x1  : 24  
+   c17  x1  : 35  
+   c18  x1  : 34  
+   c19  x1  : 35  
+   c20  x1  : 18  
+   c21  x1  : 13  
+   c23  x1  : 9   
+   c24  x1  : 9   
+   c25  x1  : 9   
+   c26  x1  : 9   
+   c27  x1  : 9   
+   c28  x1  : 9   
+   c231 x4  : 77  
+   c235 x4  : 77  
+   c236 x1  : 10  
+   c238 x1  : 40  
+   c239 x4  : 67    <== SHARED matrix (view-projection candidate)
+   c240 x1  : 27  
+   c241 x1  : 13  
+   c242 x1  : 14  
+   c243 x1  : 15  
+   c244 x1  : 14  
+   c245 x1  : 14  
+   c246 x1  : 12  
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c239 4x4 (same across all 67 draws):
+     [  -1.5624    0.0305    0.0958    0.0959]
+     [   0.1515    0.3146    0.9879    0.9889]
+     [   0.0000    2.7726   -0.1132   -0.1133]
+     [-8821.6387 16079.1611 53052.5000 53115.6016]
+[frame 9360] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 35  
+   c4   x1  : 33  
+   c5   x1  : 33  
+   c6   x4  : 386 
+   c9   x1  : 1   
+   c10  x4  : 218 
+   c11  x1  : 2   
+   c12  x1  : 1   
+   c13  x1  : 196 
+   c14  x3  : 107 
+   c15  x1  : 5   
+   c16  x1  : 7   
+   c17  x1  : 20  
+   c18  x1  : 20  
+   c19  x1  : 21  
+   c20  x1  : 15  
+   c21  x1  : 14  
+   c23  x1  : 2   
+   c24  x1  : 2   
+   c25  x1  : 2   
+   c26  x1  : 2   
+   c27  x1  : 2   
+   c28  x1  : 2   
+   c231 x4  : 77  
+   c235 x4  : 77  
+   c236 x1  : 10  
+   c238 x1  : 40  
+   c239 x4  : 67    <== SHARED matrix (view-projection candidate)
+   c240 x1  : 27  
+   c241 x1  : 13  
+   c242 x1  : 14  
+   c243 x1  : 15  
+   c244 x1  : 14  
+   c245 x1  : 14  
+   c246 x1  : 12  
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c239 4x4 (same across all 67 draws):
+     [  -1.5537    0.0451    0.1415    0.1416]
+     [   0.2238    0.3129    0.9824    0.9834]
+     [   0.0000    2.7726   -0.1132   -0.1133]
+     [-4833.8994 15958.1113 52624.4570 52687.1328]
+[frame 9480] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 749 
+   c9   x1  : 1   
+   c10  x4  : 484 
+   c11  x1  : 9   
+   c12  x1  : 2   
+   c13  x1  : 412 
+   c14  x3  : 188 
+   c15  x1  : 34  
+   c16  x1  : 84  
+   c17  x1  : 84  
+   c18  x1  : 80  
+   c19  x1  : 103 
+   c20  x1  : 27  
+   c21  x1  : 16  
+   c23  x1  : 39  
+   c24  x1  : 39  
+   c25  x1  : 39  
+   c26  x1  : 39  
+   c27  x1  : 39  
+   c28  x1  : 39  
+   c231 x4  : 92  
+   c235 x4  : 92  
+   c236 x1  : 20  
+   c238 x1  : 45  
+   c239 x4  : 72    <== SHARED matrix (view-projection candidate)
+   c240 x1  : 28  
+   c241 x1  : 13  
+   c242 x1  : 14  
+   c243 x1  : 15  
+   c244 x1  : 14  
+   c245 x1  : 14  
+   c246 x1  : 12  
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c239 4x4 (same across all 72 draws):
+     [  -0.6090   -0.2913   -0.9148   -0.9157]
+     [  -1.4467    0.1226    0.3851    0.3855]
+     [   0.0000    2.7726   -0.1132   -0.1133]
+     [-82578.3359 2473.7139 10208.9492 10229.1689]
+[frame 9600] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 388 
+   c9   x1  : 1   
+   c10  x4  : 208 
+   c11  x1  : 4   
+   c12  x1  : 2   
+   c13  x1  : 167 
+   c14  x3  : 102 
+   c15  x1  : 23  
+   c16  x1  : 30  
+   c17  x1  : 40  
+   c18  x1  : 39  
+   c19  x1  : 43  
+   c20  x1  : 23  
+   c21  x1  : 16  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 98  
+   c235 x4  : 98  
+   c236 x1  : 22  
+   c238 x1  : 49  
+   c239 x4  : 76    <== SHARED matrix (view-projection candidate)
+   c240 x1  : 30  
+   c241 x1  : 13  
+   c242 x1  : 14  
+   c243 x1  : 15  
+   c244 x1  : 14  
+   c245 x1  : 14  
+   c246 x1  : 12  
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c239 4x4 (same across all 76 draws):
+     [   1.5648    0.0249    0.0783    0.0784]
+     [   0.1239   -0.3151   -0.9895   -0.9905]
+     [   0.0000    2.7726   -0.1132   -0.1133]
+     [23491.3945 -17113.9375 -51192.7930 -51234.0391]
+[frame 9720] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 25  
+   c4   x1  : 23  
+   c5   x1  : 23  
+   c6   x4  : 385 
+   c9   x1  : 1   
+   c10  x4  : 188 
+   c11  x1  : 4   
+   c12  x1  : 2   
+   c13  x1  : 166 
+   c14  x3  : 85  
+   c15  x1  : 23  
+   c16  x1  : 26  
+   c17  x1  : 23  
+   c18  x1  : 22  
+   c19  x1  : 34  
+   c20  x1  : 10  
+   c21  x1  : 3   
+   c23  x1  : 4   
+   c24  x1  : 4   
+   c25  x1  : 4   
+   c26  x1  : 4   
+   c27  x1  : 4   
+   c28  x1  : 4   
+   c231 x4  : 98  
+   c235 x4  : 98  
+   c236 x1  : 22  
+   c238 x1  : 49  
+   c239 x4  : 76    <== SHARED matrix (view-projection candidate)
+   c240 x1  : 30  
+   c241 x1  : 13  
+   c242 x1  : 14  
+   c243 x1  : 15  
+   c244 x1  : 14  
+   c245 x1  : 14  
+   c246 x1  : 12  
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c239 4x4 (same across all 76 draws):
+     [   1.4289    0.1309    0.4109    0.4113]
+     [   0.6498   -0.2877   -0.9035   -0.9044]
+     [   0.0000    2.7726   -0.1132   -0.1133]
+     [49937.7617 -14542.4648 -43218.1016 -43251.3633]
+[frame 9840] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 25  
+   c4   x1  : 23  
+   c5   x1  : 23  
+   c6   x4  : 361 
+   c9   x1  : 1   
+   c10  x4  : 188 
+   c11  x1  : 4   
+   c12  x1  : 2   
+   c13  x1  : 166 
+   c14  x3  : 85  
+   c15  x1  : 23  
+   c16  x1  : 26  
+   c17  x1  : 23  
+   c18  x1  : 22  
+   c19  x1  : 34  
+   c20  x1  : 10  
+   c21  x1  : 3   
+   c23  x1  : 4   
+   c24  x1  : 4   
+   c25  x1  : 4   
+   c26  x1  : 4   
+   c27  x1  : 4   
+   c28  x1  : 4   
+   c231 x4  : 98  
+   c235 x4  : 98  
+   c236 x1  : 22  
+   c238 x1  : 49  
+   c239 x4  : 76    <== SHARED matrix (view-projection candidate)
+   c240 x1  : 30  
+   c241 x1  : 13  
+   c242 x1  : 14  
+   c243 x1  : 15  
+   c244 x1  : 14  
+   c245 x1  : 14  
+   c246 x1  : 12  
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c239 4x4 (same across all 76 draws):
+     [   1.4289    0.1309    0.4109    0.4113]
+     [   0.6498   -0.2877   -0.9035   -0.9044]
+     [   0.0000    2.7726   -0.1132   -0.1133]
+     [49937.7617 -14542.4648 -43218.1016 -43251.3633]
+[frame 9960] VS-const uploads (startReg x vec4count : calls):
+   c6   x4  : 2     <== SHARED matrix (view-projection candidate)
+   [SHARED] c6 4x4 (same across all 2 draws):
+     [   0.0010    0.0000    0.0000    0.0000]
+     [   0.0000   -0.0019    0.0000    0.0000]
+     [   0.0000    0.0000    1.0000    0.0000]
+     [  -1.0005    1.0009    0.0000    1.0000]
+[frame 10080] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 164 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.0037 -872.3198 -11213.8564    1.0000]
+[frame 10200] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 159 
+   c10  x4  : 35    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 17  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 35 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.5552 -866.7339 -11192.4688    1.0000]
