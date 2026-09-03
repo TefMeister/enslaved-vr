@@ -218,11 +218,29 @@ To fill in from a frame capture.
   every time. **This confirms the "shipping build may have the console class stripped" risk below**
   and closes the "first session in-game should just press Tilde" item — it was pressed.
   ⚠️ `n=3` keys on one build rules out the *cheap* route, not every route.
-- **⭐ The remaining candidate is the key-binding exec channel (§10a), and it is untested.**
-  `Bindings=(Name="F1",Command="FOV 0")` under `[MonkeyGame.MKInput]` is a *different* mechanism
-  from the console — not a prompt to type into, but a bound key that runs a command string. A block
-  of pre-bound keys would give an arbitrary command vocabulary with no console at all. **Needs a
-  relaunch to test**, because input inis are read at load.
+- **❌ ANSWERED 2026-09-03b: the key-binding exec channel is DEAD TOO.** `[verified-live 2026-09-03,
+  n=3 commands]` Tested three ways: **F9=`shot`** — a **developer** binding shipped in
+  `MonkeyInput.ini`, not one we added — wrote no file anywhere; **F6=`FOV 120`** changed no framing;
+  **F5=`ToggleDebugCamera`** did nothing and `W` still walked the character. The added bindings were
+  verified still present in the live ini after launch (mtime unchanged), and F9 does not depend on
+  our edit, **so the test could have produced a positive.**
+- **⇒ THE COHERENT READING: this build kept its input/action bindings and STRIPPED ITS EXEC
+  DISPATCH.** Movement, menus, ESC/ENTER/arrows all drive the game; console-style exec commands
+  (`FOV`, `shot`, `ToggleDebugCamera`) dispatch nowhere. That is what a shipping UE3 build looks like
+  with the console/cheat-manager path compiled out. It also retires the shipped
+  `[NTGameFramework.NTCam_DebugInput]` debug-camera map as an input-reachable feature.
+  > **⚠️ Transferable lesson: a binding surviving in a shipped config is NOT evidence the feature is
+  > live.** This game ships console bindings with no console *and* a full debug-camera map with no
+  > reachable debug camera. Config is a lead; running it is the evidence. Six keys across two
+  > sessions is enough — stop trying keys.
+- **What remains for a command channel, best first:**
+  1. **⭐ In-process exec from our own proxy.** We already own `d3d9.dll` and run inside the process
+     every frame; locating the engine's exec entry point by pattern and calling it directly bypasses
+     input, bindings and the console entirely. **`[PD]` work** — static, no game needed.
+  2. **A virtual gamepad.** The debug camera's normal-play entry point is a controller thumbstick
+     chord (`CheckDebugCamChord`/`DoDebugCamChord` in `[Engine.PlayerInput]`), so an emulated pad
+     could send it. The estate already carries a `[USER]` ViGEmBus install item under
+     `doom-2016-vr` — the two projects now share that dependency.
 - Usual UE3 suspects to try once a console/exec channel exists: `FOV <deg>`,
   `Show <group>`, `ToggleDebugCamera`, `Stat FPS`, `Stat D3D9RHI`,
   `ViewMode <mode>`, `SloMo`.
@@ -331,6 +349,14 @@ To fill in from a frame capture.
 - **Pixel-side view-projection is not offset** (§4, 2026-09-02): 310 pixel shaders read
   `ViewProjectionMatrix` at ps `c3`/`c10`; the proxy hooks only the vertex stage. Unknown whether
   visible; watch reflections/decals during the first rock test. `[hypothesis]`
+  - **✅ NO SHADOW SWIM DETECTED, 2026-09-03b** `[measured 2026-09-03, n=2 scenes]`. Ground-band
+    tiles split by brightness (dark = shadow, bright = lit) and phase-correlated separately: shadow
+    tiles measured **−9 to −13 px, tracking the same depth gradient as the rest of the world**, not
+    sitting near zero. Shadows move WITH the world here.
+    ⚠️ Two daylight exteriors only, and no clean matched-depth lit-vs-shadow pair was available.
+    It says nothing about **screen-space** effects — reflections, water surfaces, decals — which are
+    the likelier home of the pixel-stage problem. The "get close to water / a wet floor / a decal"
+    item is **not** answered.
 
 ## 10a. A public 3D Vision fix for this exact binary exists — corroboration and practical setup (2026-09-02, via `/gr`)
 
