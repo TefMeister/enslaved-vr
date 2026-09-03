@@ -45,6 +45,9 @@ project's repositories.**
 | vorpX community profile and reports for this game | vorpX forum community | https://www.vorpx.com/forums/topic/enslaved-odyssey-to-the-west/ |
 | UDK/UE3 world-unit scale discussions (1 UU = 1-2 cm, the 96-UU character, the licensee variation) | Polycount community | https://polycount.com/discussion/74537/udk-player-scale |
 | Community config findings: `MonkeyChaseCamera.ini` / `useAutoTiltup`, `FOVAngle`, `FOV` key bindings | Steam Community discussion participants | https://steamcommunity.com/app/245280/discussions/0/3829691612498924840/ |
+| Microsoft Direct3D 9 reference — `D3DPOOL` (the 9-vs-9Ex differences box, DEFAULT lockability, pool×usage tables) and "Lost Devices (Direct3D 9)" (a 9Ex device never returns `D3DERR_DEVICELOST`) | Microsoft | https://learn.microsoft.com/en-us/windows/win32/direct3d9/d3dpool |
+| dxwrapper — the `D3d9to9Ex` conversion, its `D3DPOOL_MANAGED → DEFAULT + D3DUSAGE_DYNAMIC` strategy and the compatibility limits it reports (studied, nothing copied) | elishacloud | https://github.com/elishacloud/dxwrapper |
+| DirectX-Wrappers (the D3D9 interface wrapper headers the above builds on; studied, nothing copied) | elishacloud | https://github.com/elishacloud/DirectX-Wrappers |
 
 (Matches the credit list already established in `enslaved-vr-engine-research`
 as of this repo's creation — kept in sync going forward.)
