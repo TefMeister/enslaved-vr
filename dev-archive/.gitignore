@@ -20,3 +20,13 @@
 # Local scratch
 /tmp/
 *.log
+
+# ...but recon evidence logs are DERIVED DATA, not scratch run logs. The blanket
+# `*.log` above silently swallowed all three logs under
+# recon/2026-09-02-first-live-runs/ - including run7-stereo-sep60-two-monkeys.log,
+# the evidence behind "the stereo wiggle is proven". A session copied them in
+# believing they were saved; `git add` skipped them without complaint and they
+# stayed single-disk files. Same defect was found the same day in
+# the-evil-within-vr. Negate the rule for recon/ so evidence cannot be lost that way.
+!dev-archive/recon/**/*.log
+!recon/**/*.log

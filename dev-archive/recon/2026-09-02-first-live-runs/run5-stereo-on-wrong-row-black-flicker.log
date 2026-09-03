@@ -1,0 +1,276 @@
+=== Enslaved d3d9 logging proxy ===
+PID=12612  frameInterval=120  dumpRegister=-1  maxLogFrames=0
+[init] real d3d9 resolved at 6B650000
+[Direct3DCreate9] SDKVersion=32 -> 0EB95C68
+[hook] IDirect3D9::CreateDevice patched (orig=6B544DD0)
+[Direct3DCreate9] SDKVersion=32 -> 1508E280
+[CreateDevice] adapter=0 devtype=1 behavior=0x00000142
+   BackBuffer 1920x1080 fmt=21 count=1 windowed=0 swap=1
+   MultiSample=0 hDeviceWindow=0072058C RefreshHz=0 PresentInterval=0x1
+[window] createdevice: forcing windowed; window client 1280x720, backbuffer stays 1920x1080 (game asked windowed=0 hz=0)
+[window] createdevice: restyled (was style=0x94080000 client 1920x1080) -> 1280x720 client at 317,165
+[hook] device vtable patched: Present=6B736120 Reset=6B736500 SetVSConstF=6B6B7420
+[window] present#1: window already ok (1280x720 client, style=0x14CA0000)
+[window] present#60: window already ok (1280x720 client, style=0x14CA0000)
+[frame 120] VS-const uploads (startReg x vec4count : calls):
+   c0   x128 : 1   
+   c128 x128 : 1   
+[stereo] on=1 mode=0 sep=6.000 | offset 0 uploads, rejected 0 as not-a-viewproj (since last summary)
+[frame 240] VS-const uploads (startReg x vec4count : calls):
+[stereo] on=1 mode=0 sep=6.000 | offset 0 uploads, rejected 0 as not-a-viewproj (since last summary)
+[window] present#300: window already ok (1280x720 client, style=0x14CA0000)
+[frame 360] VS-const uploads (startReg x vec4count : calls):
+[stereo] on=1 mode=0 sep=6.000 | offset 0 uploads, rejected 0 as not-a-viewproj (since last summary)
+[frame 480] VS-const uploads (startReg x vec4count : calls):
+[stereo] on=1 mode=0 sep=6.000 | offset 0 uploads, rejected 0 as not-a-viewproj (since last summary)
+[frame 600] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 100 
+   c10  x4  : 8     <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c14  x3  : 7   
+   c17  x1  : 7   
+   c18  x1  : 7   
+   c19  x1  : 7   
+   c20  x1  : 7   
+   c21  x1  : 7   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 8 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.0088 -549.7104 -11228.9395    1.0000]
+[stereo] on=1 mode=0 sep=6.000 | offset 893 uploads, rejected 165 as not-a-viewproj (since last summary)
+[frame 720] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 173 
+   c10  x4  : 9     <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c14  x3  : 7   
+   c17  x1  : 7   
+   c18  x1  : 7   
+   c19  x1  : 7   
+   c20  x1  : 7   
+   c21  x1  : 7   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 9 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.000 | offset 4133 uploads, rejected 840 as not-a-viewproj (since last summary)
+[frame 840] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 173 
+   c10  x4  : 9     <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c14  x3  : 7   
+   c17  x1  : 7   
+   c18  x1  : 7   
+   c19  x1  : 7   
+   c20  x1  : 7   
+   c21  x1  : 7   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 9 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.000 | offset 4114 uploads, rejected 840 as not-a-viewproj (since last summary)
+[frame 960] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 100 
+   c10  x4  : 8     <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c14  x3  : 7   
+   c17  x1  : 7   
+   c18  x1  : 7   
+   c19  x1  : 7   
+   c20  x1  : 7   
+   c21  x1  : 7   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 8 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.0964 -549.8872 -11228.9834    1.0000]
+[stereo] on=1 mode=0 sep=6.000 | offset 4095 uploads, rejected 840 as not-a-viewproj (since last summary)
+[frame 1080] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 173 
+   c10  x4  : 9     <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c14  x3  : 7   
+   c17  x1  : 7   
+   c18  x1  : 7   
+   c19  x1  : 7   
+   c20  x1  : 7   
+   c21  x1  : 7   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 9 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.000 | offset 4209 uploads, rejected 840 as not-a-viewproj (since last summary)
+[frame 1200] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 100 
+   c10  x4  : 8     <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c14  x3  : 7   
+   c17  x1  : 7   
+   c18  x1  : 7   
+   c19  x1  : 7   
+   c20  x1  : 7   
+   c21  x1  : 7   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 8 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.1550 -550.0044 -11229.0137    1.0000]
+[stereo] on=1 mode=0 sep=6.000 | offset 4133 uploads, rejected 840 as not-a-viewproj (since last summary)
+[frame 1320] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 100 
+   c10  x4  : 8     <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c14  x3  : 7   
+   c17  x1  : 7   
+   c18  x1  : 7   
+   c19  x1  : 7   
+   c20  x1  : 7   
+   c21  x1  : 7   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 8 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.1843 -550.0625 -11229.0273    1.0000]
+[stereo] on=1 mode=0 sep=6.000 | offset 4133 uploads, rejected 840 as not-a-viewproj (since last summary)
