@@ -265,12 +265,31 @@ To fill in from a frame capture.
   need not know. `[reported]` — interface inheritance, not yet built or run here.
 
   **🪤 Two traps, both of which decide the design rather than tune it:**
-  - **`D3DPOOL_MANAGED` does not exist on a D3D9Ex device.** Any
+  - **`D3DPOOL_MANAGED` does not exist on a D3D9Ex device** — any
     `CreateTexture`/`CreateVertexBuffer`/`CreateIndexBuffer` asking for it fails.
-    So the upgrade above is only viable if UE3's D3D9 RHI never asks for MANAGED
-    on this build — **unverified, and it is the first thing to establish**, because
-    it is the difference between a one-line proxy change and a resource-remapping
-    project. `[reported]`
+    **✅ But this is SOLVED GENERICALLY, and is not a gate** (2026-09-03, via `/gr` — supersedes
+    this bullet's former "one-line proxy change vs. resource-remapping project" framing, and the
+    instruction to decide the route only after the instrumented launch):
+    **rewrite `MANAGED → DEFAULT + D3DUSAGE_DYNAMIC` in the proxy's existing `Create*` wrappers.**
+    `[reported 2026-09-03]`
+    - MANAGED exists to survive device loss, and **a 9Ex device never loses** (`D3DERR_DEVICELOST`
+      is never returned), so the pool has nothing left to do on Ex — rewriting it away is the
+      migration the design implies, not a violation of it.
+    - **The `D3DUSAGE_DYNAMIC` half is the load-bearing part:** DEFAULT textures cannot be locked
+      unless they are dynamic, whereas MANAGED ones can, so plain DEFAULT would break any
+      `Lock()`. DEFAULT × DYNAMIC is legal where MANAGED × DYNAMIC is not, so the rewrite can never
+      collide with a usage flag the engine already set.
+    - **Public prior art, twice:** `elishacloud/dxwrapper`'s `D3d9to9Ex` does exactly this upgrade
+      and overrides MANAGED → DEFAULT + DYNAMIC following Special K's strategy; its maintainer
+      reports **7 of 8 tested games working**.
+    - **⇒ Whether UE3 asks for MANAGED SIZES the change; it does not gate it.** The instrumented
+      launch is now a risk-sizing measurement (how much `Lock()` traffic gets re-pointed), worth
+      riding along on a launch that is happening anyway — not a prerequisite.
+  - **The real 9Ex risk list** (same source, `[reported 2026-09-03]`) — these, not MANAGED, are what
+    decide whether this build cooperates, and **all four are cheap to observe on the first Ex
+    launch**: no paletted textures on 9Ex; 16-bit textures only work in `SYSTEMMEM`; **D3DX
+    functions remain problematic** — directly relevant, this is a 2010-era UE3 build with a D3DX
+    dependency chain; and some titles simply fail at device creation.
   - **`D3D11_RESOURCE_MISC_SHARED_KEYEDMUTEX` has no D3D9 equivalent** — there is
     no `IDirect3D9KeyedMutex`, so the synchronisation primitive every tutorial
     recommends is unavailable to a D3D9Ex producer. The established substitute is
@@ -287,10 +306,12 @@ To fill in from a frame capture.
   source says whether `D3DPOOL_MANAGED` is used either way, so the instrumented launch stays the only
   answer to that question regardless of route. The cost: the camera injection would have to become a
   constant-buffer patch (SM4 shader cache on disk as the reflection source) instead of the proven
-  `SetVertexShaderConstantF(0,…,4)` hook — undesigned. **Two named routes now, decide after the
-  `D3DPOOL_MANAGED` instrumented launch:** (a) D3D9 + Ex upgrade, blocked on that one check; (b) D3D10,
-  blocked on nothing known but with the injection point still to design. Check `-d3d10` on a separate
-  launch so the stereo run stays clean.
+  `SetVertexShaderConstantF(0,…,4)` hook — undesigned. **⇒ TRY (a) FIRST; (b) IS THE FALLBACK** (revised 2026-09-03,
+  via `/gr`): route (a) D3D9+Ex keeps **the proven `SetVertexShaderConstantF(0,…,4)` hook that has
+  already produced a stereo picture**, whereas (b) `-d3d10` discards it for an undesigned cbuffer
+  injection point. (b)'s main appeal was that (a) looked blocked on the MANAGED unknown — **it is
+  not**, per the bullet above. Fall back to (b) only if one of the four named 9Ex limits bites.
+  Check `-d3d10` on a separate launch so the stereo run stays clean.
 - **NTEngine divergence:** Ninja Theory's layer may have moved camera logic out
   of stock UE3 paths; the `NTReplayGameViewportClient` name suggests a replay
   system wrapping the viewport.
