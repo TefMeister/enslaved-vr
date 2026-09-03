@@ -233,6 +233,18 @@ To fill in from a frame capture.
   > live.** This game ships console bindings with no console *and* a full debug-camera map with no
   > reachable debug camera. Config is a lead; running it is the evidence. Six keys across two
   > sessions is enough — stop trying keys.
+- **❌ THE CONTROLLER-CHORD ROUTE IS ALSO DEAD (2026-09-03c).** `[verified-live 2026-09-03]` LS+RS
+  held 1.2 s through a ViGEmBus virtual X360 pad produced no debug camera; `W` still walked the
+  character. **The control passed** — the same pad then moved the character with the left stick
+  (frame delta 48.9) and swung the camera with the right (62.5) against an idle baseline of ~2 — so
+  the game reads the pad and the chord genuinely does nothing.
+  **⇒ The debug camera is unreachable by ANY input route, pad or key**, for one reason:
+  `ToggleDebugCamera` is an exec command, exec dispatch is stripped, and the chord's job is to
+  *call* it. The input side works perfectly; nothing is left at the other end.
+- **⭐ A virtual XInput pad DOES drive this game** `[verified-live 2026-09-03]` — movement on the
+  left stick, camera on the right, hot-plugged into a running game with no restart. A third input
+  route worth keeping for anything gated behind a controller.
+  (`flat-to-vr-RE-toolkit/tools/virtual-pad.py`)
 - **What remains for a command channel, best first:**
   1. **⭐ In-process exec from our own proxy.** We already own `d3d9.dll` and run inside the process
      every frame; locating the engine's exec entry point by pattern and calling it directly bypasses
@@ -395,6 +407,11 @@ eqzitara shipped one for the Premium Edition, 2013-10-28 (updated 2013-12-21).
   whether Tilde itself is live.
 
 ## 10. Dead ends
+
+- **The barrel/fisheye warp with heavy vignetting on loading and transition screens is THE GAME'S
+  OWN EFFECT** — user-confirmed 2026-09-03. It is authored, not an artefact of the d3d9 proxy, the
+  stereo offset, or the forced windowed mode. **Do not chase it as a projection bug.** It is also a
+  useful state marker: a lens-warped frame means loading/transitioning, not gameplay.
 
 - **NVIDIA 3D Vision UE3 branch as a shipped stereo path — absent from this build.**
   `[inferred-static 2026-09-02]` No `NvStereoEnabled`/`NvStereoFixTexture` in any shader cache or
