@@ -104,9 +104,28 @@ band were split by brightness (dark = shadow, bright = lit) and correlated separ
 **shadow tiles measured −9 to −13 px, tracking the same depth gradient as everything else**, not
 sitting near zero `[measured 2026-09-03]`.
 
-⚠️ **What this does NOT prove.** Two scenes, both daylight exteriors, and no clean matched-depth
-lit-vs-shadow pair was available (the lower screen was almost entirely shadow, so the "lit" sample
-was n=3 and probably at a different depth). It also says nothing about **screen-space** effects —
+### ✅ UPGRADED, same session: the matched-depth test WAS obtained, and shadows pass it exactly
+
+Navigating on to a third area produced the frame the earlier test lacked: Monkey's own cast shadow
+hard against the camera, with lit grass beside it **on the same screen rows** (therefore the same
+depth), plus a second shadow/lit pair further back.
+
+`[measured 2026-09-03, n=2 depth bands x 3 eye-pairs]`
+
+| region | dx per eye-pair (px) |
+|---|---|
+| CLOSE cast shadow (own) | −14, −13, **+13** |
+| LIT grass, SAME rows | −14, −14, **+14** |
+| mid shadow band | −8, −8, **+8** |
+| mid LIT grass, SAME rows | −8, −8, **+8** |
+| bright reflective surface (further) | −5, −5, **+5** |
+
+**Shadow and lit ground at the same depth move identically — within 1 px at the near band and
+exactly at the mid band, with the sign flipping together.** Shadows are offset correctly; they do
+not swim. That closes the board's highest-prior watch item, which existed because a public 3D Vision
+fix for this exact game had to correct shadows.
+
+⚠️ **What this still does NOT prove.** Three scenes, all daylight exteriors. It also says nothing about **screen-space** effects —
 reflections, water surfaces, decals — which are the likelier home of the pixel-stage problem. The
 board's "get close to water / a wet floor / a decal" item is **not** answered by this.
 
