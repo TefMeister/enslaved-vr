@@ -406,6 +406,54 @@ eqzitara shipped one for the Premium Edition, 2013-10-28 (updated 2013-12-21).
   working, so §7's "console class may be stripped" risk has a working fallback channel regardless of
   whether Tilde itself is live.
 
+## 9a. ⚠️ A D3D9 device **Reset** disarms the stereo for the life of the process (2026-09-03d)
+
+**The single most important operational fact about this proxy.** After any `Reset`, the hook stops
+seeing vertex-shader constant uploads entirely — the per-frame histogram prints its header with no
+rows and the stereo summary reads `offset 0, ortho-skipped 0` — and it never recovers.
+`[verified-live 2026-09-03, n=2 resets]`
+
+- **Both a deliberate and an incidental reset do it.** One came from changing resolution in the
+  options menu; the other from an ordinary **checkpoint restart**. It is not avoidable by leaving
+  settings alone.
+- **Nothing else breaks.** `Present` keeps firing at a clean 60 fps, the `Reset` hook logs the
+  event, and the forced-window logic correctly re-applies. Only `SetVertexShaderConstantF` stops
+  being reached.
+- **⭐ It is not instantaneous.** One MORE healthy summary prints after the reset, and only the next
+  one is dead — so the cause runs roughly **120–240 frames after `Reset` returns**, not inside it.
+  Prime suspect: UE3 re-creating its RHI/device objects onto a vtable the patch no longer covers.
+- **Recovery is a relaunch.** A fresh process always reads healthy (`offset 2690`/`3360`/`4000`).
+
+**⚠️ Operational rule for every session: read `offset` in the log before trusting any stereo
+observation.** Nothing on screen indicates the mod has been disarmed.
+
+### The game ignores its own saved resolution at startup `[verified-live 2026-09-03, n=2 launches]`
+
+`MonkeyEngine.ini` holds `ResX=1280 ResY=720`; `CreateDevice` asks for **3440x1440** (the desktop
+size) every launch, and the options menu displayed `1920x1080` while the device was 3440x1440. Only
+the *Reset* ever applies the stored value — which means **a matched-resolution backbuffer and a live
+stereo are currently mutually exclusive**. Not a blocker for per-region tests: a uniform downscale
+shifts every tile equally.
+
+## 9b. Stereo correctness — what has now been measured, and what has not
+
+| surface | verdict | strength |
+| --- | --- | --- |
+| depth-parallax curve | monotonic with distance | `[measured 2026-09-03, n=2 scenes]` |
+| HUD / ortho | exactly 0 offset, as designed | `[measured 2026-09-03]` |
+| shadows at matched depth | track the depth gradient | `[measured 2026-09-03]` |
+| wet floor + caustics (Ch2) | clean, no un-offset region | `[measured 2026-09-03, n=4 eye-pairs]` |
+| **reflective water, glancing angle (Ch4 pool)** | **clean — largest parallax in frame** | `[measured 2026-09-03, n=16 eye-pairs, 1 scene]` |
+| **decals** | **NOT TESTED** | — |
+
+⚠️ **The magnitude on the water is softer than the verdict.** The blocks standing in that pool are a
+strongly repetitive ridged pattern and phase correlation can lock onto the wrong period; `+18`/`+19`
+px should be read as "much larger than the `+2.01` frame median", not as a calibrated number.
+
+⚠️ **Two tiles read exactly 0 and both were HUD** — the ability radial and the item counters. That is
+the ortho fix working, not a defect. **Check what is behind a probe region before believing it**; this
+is the second time that rule has paid on this project.
+
 ## 10. Dead ends
 
 - **The barrel/fisheye warp with heavy vignetting on loading and transition screens is THE GAME'S
