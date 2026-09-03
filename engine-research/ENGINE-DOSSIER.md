@@ -353,7 +353,12 @@ To fill in from a frame capture.
     tiles split by brightness (dark = shadow, bright = lit) and phase-correlated separately: shadow
     tiles measured **−9 to −13 px, tracking the same depth gradient as the rest of the world**, not
     sitting near zero. Shadows move WITH the world here.
-    ⚠️ Two daylight exteriors only, and no clean matched-depth lit-vs-shadow pair was available.
+    - **✅ UPGRADED to a MATCHED-DEPTH test, same day** `[measured 2026-09-03, n=2 depth bands x 3
+      eye-pairs]`: a close cast shadow and lit grass **on the same screen rows** measured
+      −14/−13/+13 vs −14/−14/+14, and a mid-distance pair measured −8/−8/+8 vs −8/−8/+8.
+      **Identical within 1 px, signs flipping together — shadows are offset correctly and do not
+      swim.** Closes the highest-prior watch item.
+    ⚠️ Three daylight exteriors only.
     It says nothing about **screen-space** effects — reflections, water surfaces, decals — which are
     the likelier home of the pixel-stage problem. The "get close to water / a wet floor / a decal"
     item is **not** answered.
