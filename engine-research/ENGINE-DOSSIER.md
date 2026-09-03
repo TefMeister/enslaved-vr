@@ -212,8 +212,17 @@ To fill in from a frame capture.
 
 - `ConsoleKey=Tilde`, `TypeKey=Tab` are **already bound** in
   `MonkeyGame\Config\MonkeyInput.ini` and `Engine\Config\BaseInput.ini`.
-  Whether the shipping build strips the console class is untested — first
-  session in-game should just press Tilde.
+- **❌ ANSWERED 2026-09-03: the console does NOT open by keypress in this build.**
+  `[verified-live 2026-09-03, n=3 keys]` Tilde (`0x29`), Tab (`0x0F`) and F10 (`0x44`) were each
+  sent as scancodes to the focused window with a screen capture taken after; the scene was unchanged
+  every time. **This confirms the "shipping build may have the console class stripped" risk below**
+  and closes the "first session in-game should just press Tilde" item — it was pressed.
+  ⚠️ `n=3` keys on one build rules out the *cheap* route, not every route.
+- **⭐ The remaining candidate is the key-binding exec channel (§10a), and it is untested.**
+  `Bindings=(Name="F1",Command="FOV 0")` under `[MonkeyGame.MKInput]` is a *different* mechanism
+  from the console — not a prompt to type into, but a bound key that runs a command string. A block
+  of pre-bound keys would give an arbitrary command vocabulary with no console at all. **Needs a
+  relaunch to test**, because input inis are read at load.
 - Usual UE3 suspects to try once a console/exec channel exists: `FOV <deg>`,
   `Show <group>`, `ToggleDebugCamera`, `Stat FPS`, `Stat D3D9RHI`,
   `ViewMode <mode>`, `SloMo`.
