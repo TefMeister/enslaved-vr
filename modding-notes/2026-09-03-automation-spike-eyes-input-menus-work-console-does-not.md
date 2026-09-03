@@ -9,8 +9,9 @@ Rather than build a harness and discover it could not reach the menu, this sessi
 foundations first, with **no DLL rebuild**, against a live level the user had loaded. All of it is
 external tooling driving the game window.
 
-**Result: 3 of the 4 required capabilities are proven. The 4th (console) is blocked, with one named
-untested alternative.**
+**Result: 3 of the 4 required capabilities are proven — eyes, input, menus (both directions) and
+the self-quit. The 4th (console commands) is NOT reachable by keypress, but a promising alternative
+was found and is staged for the next launch. See Part 2.**
 
 ---
 
@@ -128,12 +129,100 @@ That remains unjudged.
 
 - **Whether `PostMessage` input works.** The mean-luma method that scored it was unsound, and it
   was never re-tested visually. Treat its "no effect" as unmeasured, not as a negative.
-- **Whether the game can be driven from the START menu**, as opposed to the pause menu. Only the
-  pause menu was exercised. `EXIT TO MAIN MENU` exists, so the path is plausible, untested.
+- ~~**Whether the game can be driven from the START menu**~~ — **answered in Part 2 below: yes,
+  both directions, gameplay → main menu → gameplay.**
 - **Whether the keybinding exec channel works** — needs a relaunch.
 - **Whether the game pauses on focus loss.** Suspected from an early sample but never isolated,
   because the pause menu confounded it. The practical rule stands regardless: foreground the window
   before acting.
 - **Nothing about VR, comfort, or how any of this looks.** No headset involved.
+- **Everything in Part 2 §8 (the debug free camera) is read from CONFIG, not run** —
+  `[inferred-static 2026-09-03]`. The console's bindings also survive in the ini and the console is
+  dead, so shipped bindings are not evidence a feature is live.
 - The scripts used here are **spike code** in the session scratchpad, not a harness. Their value is
   the four facts above, not the code.
+
+---
+
+# Part 2 (same session) — menus driven end to end, the game closed itself, and **the engine ships a debug free camera**
+
+## 7. ✅ Full menu navigation, both directions, and a graceful self-quit
+
+Driven entirely by Claude, verified by reading each screen `[verified-live 2026-09-03, n=1 run]`:
+
+**gameplay → `ESC` → pause menu → ↓↓↓ → `EXIT TO MAIN MENU` → `ENTER` → confirm → main menu →
+`CONTINUE JOURNEY` → `ENTER` → load → back in gameplay → `ESC` → … → main menu → ↓×6 → `QUIT` →
+process exits in ~4 s.**
+
+- **The pause menu**: `RESUME GAME` / `OPTIONS` / `RESTART FROM LAST CHECKPOINT` / `EXIT TO MAIN
+  MENU`, and it prints its own controls: `ENTER` SELECT, `ESCAPE` BACK.
+- **The main menu**: `CONTINUE JOURNEY` / `CHAPTER SELECT` / `NEW JOURNEY` / `EXTRAS` / `OPTIONS` /
+  `CREDITS` / `QUIT`. **`CHAPTER SELECT` matters for RE** — arbitrary chapters on demand means
+  varied scenes without hunting for them.
+- **Closing is a graceful menu quit, not a force-kill** — which is the disposition the RE Village
+  incident argued for.
+
+> ### ⚠️ Arrow keys need `KEYEVENTF_EXTENDEDKEY`, or the menu ignores them
+> Three `Down` presses as bare scancode `0x50` moved the selection **not at all** (delta `0.00`
+> each). Arrows are *extended* keys: without the flag, scancode `0x50` is numpad-2, which this menu
+> does not bind. With `KEYEVENTF_EXTENDEDKEY` the selection moved on the first try
+> `[verified-live 2026-09-03]`. `S` and non-extended `0x50` both stayed dead, so this is the flag
+> and not the key choice.
+>
+> This is the same family as DOOM's scancode/keyboard-layout trap: **the input reaches the OS
+> either way, so nothing errors — it simply does nothing**, which reads exactly like "the menu
+> ignores keyboard".
+
+**Safety note worth keeping:** on the main menu, `NEW JOURNEY` sits two rows below `CONTINUE
+JOURNEY`. A miscounted `Down` would overwrite the save. The sequence above therefore **navigates,
+captures, verifies the highlight visually, and only then sends `ENTER`.** Blind key-count
+navigation on a menu with a destructive item is not acceptable.
+
+## 8. ⭐ THE BIG ONE: `[NTGameFramework.NTCam_DebugInput]` — the engine ships a debug free camera
+
+Found in `MonkeyInput.ini` while preparing the exec-channel test. **This is shipped stock config,
+not something we added:**
+
+| binding | command | what it would give us |
+|---|---|---|
+| `Alt+C` | **`ToggleDebugCamera`** | a free camera, the engine's own |
+| `W`/`S`/`A`/`D`, `Q`/`E` | `MoveForward`/`Backward`, `Strafe`, `MoveDown`/`Up` | fly it, including vertically |
+| `MouseX`/`MouseY` | `Axis aMouseX`/`aMouseY` | look |
+| `LeftShift` | `MoreSpeed` / `NormalSpeed` on release | speed control |
+| `F` | **`FreezeRendering`** | freeze the render, fly out, inspect the frustum |
+| `End` / `PageDown` | **`Pause` / `Step`** | frame stepping |
+| `F9` | `shot` | screenshot |
+
+**If `ToggleDebugCamera` is live in this shipping build, most of the "move the camera to
+reverse-engineer the engine" requirement is already solved by the engine** — with speed control,
+render-freeze and frame-stepping thrown in — rather than needing a camera override built on top of
+the proxy's `c0` hook.
+
+**The entry point in normal gameplay is a CONTROLLER CHORD, not a key.** `[Engine.PlayerInput]`
+binds `XboxTypeS_RightThumbstick` → `CheckDebugCamChord | DoCloud` and `XboxTypeS_LeftThumbstick` →
+`DoDebugCamChord | …`; line 151 carries a commented-out `ToggleDebugCamera` on the left thumbstick.
+So the feature is wired for a pad, and the `Alt+C` binding lives *inside* the debug-camera input
+class — i.e. it toggles back off once you are already in it.
+
+**⚠️ All of this is `[inferred-static 2026-09-03]` — read from config, nothing run.** The shipping
+build may well have the debug camera stripped even though its bindings survive in the ini; that is
+exactly what happened to the console. **`F9="shot"` shipping in this same file is the encouraging
+sign**, because it is an ordinary exec command bound to a key by the developers.
+
+## 9. What is staged for the next launch
+
+The game is closed, so `MonkeyInput.ini` can be edited without the engine rewriting it on exit.
+Added to `[Engine.PlayerInput]` (live copy under `Documents\My Games\…`), inside a clearly marked
+`CLAUDE-EXEC-TEST` block with a removal note; backup `MonkeyInput.ini.bak-2026-09-03-pre-exectest`:
+
+| key | command | what its outcome means |
+|---|---|---|
+| **F5** | `ToggleDebugCamera` | ⭐ the whole question. A detached flyable camera = the RE camera is free |
+| F6 / F7 | `FOV 120` / `FOV 70` | a visible FOV change proves **arbitrary** exec, not just a whitelisted one |
+| F8 / F11 | `stat fps` / `stat unit` | an overlay appears = the `stat` family is live |
+| F12 | `FreezeRendering` | freeze = the render-debug family is live |
+| (F9) | `shot` — **already shipped** | a screenshot file appears = the channel works at all |
+
+**F9 is the cheapest and most decisive single test**, because it is the developers' own binding: if
+pressing F9 produces a screenshot file, the key-binding exec channel is live in this build and the
+console's absence stops mattering.
