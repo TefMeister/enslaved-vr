@@ -104,3 +104,14 @@ on this game; the fix is stereo *correction* over the existing camera, not a cam
 does not survive: the framing that this game had no stereo prior art at all. It had a published one,
 and it names the effects that break — see
 `topics/2026-09-02b-a-3d-vision-fix-for-this-exact-game-exists-and-it-names-the-effects-that-break.md`.
+
+## ⛔️ CORRECTION 2026-09-04 — §2's "no camera hack" half is wrong too
+
+dron_3 published a working **PC debug menu** for this game on 2020-11-02 (a `dinput8.dll` patch;
+BACKSPACE+ESC or BACK+START in play) and, on PS3 in 2017, a single-instruction patch that enables
+both the debug menu and the **debug camera** (L3+R3). vorpX also carries a geometry-3D profile for
+the game (RJK_, 2019). So the shipped builds keep their debug systems behind a gate, and there is
+public stereo prior art at the driver level. What survives from §2 is narrower than before: nobody
+public has shown a *VR* camera override on this game, and the PC debug **camera** specifically has
+not been demonstrated. See
+`topics/2026-09-04-the-debug-menu-ships-in-the-pc-build-and-a-dll-patch-opens-it.md`.

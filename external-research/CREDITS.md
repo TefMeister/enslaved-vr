@@ -48,6 +48,14 @@ project's repositories.**
 | Microsoft Direct3D 9 reference — `D3DPOOL` (the 9-vs-9Ex differences box, DEFAULT lockability, pool×usage tables) and "Lost Devices (Direct3D 9)" (a 9Ex device never returns `D3DERR_DEVICELOST`) | Microsoft | https://learn.microsoft.com/en-us/windows/win32/direct3d9/d3dpool |
 | dxwrapper — the `D3d9to9Ex` conversion, its `D3DPOOL_MANAGED → DEFAULT + D3DUSAGE_DYNAMIC` strategy and the compatibility limits it reports (studied, nothing copied) | elishacloud | https://github.com/elishacloud/dxwrapper |
 | DirectX-Wrappers (the D3D9 interface wrapper headers the above builds on; studied, nothing copied) | elishacloud | https://github.com/elishacloud/DirectX-Wrappers |
+| DxWnd discussion "d3d9 Device::Reset troubles!" — the observation that `BeginStateBlock` restores the device's COM method pointers and the re-hook fix | gho (DxWnd author) | https://sourceforge.net/p/dxwnd/discussion/general/thread/9b1c8171/ |
+| "Hooking D3Device8 by replacing the VTable fails" — the same state-block table reset described on D3D8 | Paul Roussin, via the Microsoft DirectX graphics newsgroup archive | https://microsoft.public.win32.programmer.directx.graphics.narkive.com/PbJcO31s/hooking-d3device8-by-replacing-the-vtable-fails-info-needed |
+| Enslaved PC debug menu (2020) and PS3 debug menu / debug camera (2017) — proof the shipped builds keep their debug systems (facts only; nothing downloaded) | dron_3 | https://dron-3.blogspot.com/2020/11/enslaved-odyssey-to-west-pc-debug-menu.html |
+| Public Unreal Engine 3 source mirror — `GameCheatManager.uc`, `PlayerController.uc`, `GameInfo.uc`, `UnPlayer.cpp`, `UnIn.cpp` (exec dispatch order, cheat-manager creation; read online, nothing copied) | Epic Games; mirror by CodeRedModding | https://github.com/CodeRedModding/UnrealEngine3 |
+| UDK `DebugCameraController.uc` (activation comment: Alt+C / both analogs) | Epic Games; mirror by snorrewb | https://github.com/snorrewb/IMT3601/blob/master/UDK/Development/Src/GameFramework/Classes/DebugCameraController.uc |
+| UE3SDKGenerator — the `GObjects`/`GNames`/`ProcessEvent` recipe for calling UnrealScript from inside a UE3 process (MIT; studied, nothing copied) | ItsBranK, after TheFeckless | https://github.com/ItsBranK/UE3SDKGenerator |
+| CodeRed Generator — modern UE3 SDK generator in the same lineage (MIT; studied, nothing copied) | CodeRedModding | https://github.com/CodeRedModding/CodeRed-Generator/ |
+| Enslaved 2013 manual PLP instructions — the `[MonkeyGame.MKInput]` FOV key-binding recipe | imusrt, via WSGF | https://www.wsgf.org/blog/imusrt/2015/04/18/enslaved-odyssey-west-2013-manual-plp-instructions |
 
 (Matches the credit list already established in `enslaved-vr-engine-research`
 as of this repo's creation — kept in sync going forward.)
