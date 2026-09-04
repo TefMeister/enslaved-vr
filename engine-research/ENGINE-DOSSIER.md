@@ -224,35 +224,80 @@ To fill in from a frame capture.
   **F5=`ToggleDebugCamera`** did nothing and `W` still walked the character. The added bindings were
   verified still present in the live ini after launch (mtime unchanged), and F9 does not depend on
   our edit, **so the test could have produced a positive.**
-- **⇒ THE COHERENT READING: this build kept its input/action bindings and STRIPPED ITS EXEC
-  DISPATCH.** Movement, menus, ESC/ENTER/arrows all drive the game; console-style exec commands
-  (`FOV`, `shot`, `ToggleDebugCamera`) dispatch nowhere. That is what a shipping UE3 build looks like
-  with the console/cheat-manager path compiled out. It also retires the shipped
-  `[NTGameFramework.NTCam_DebugInput]` debug-camera map as an input-reachable feature.
+- **⇒ THE 2026-09-03 READING — "this build kept its input/action bindings and STRIPPED ITS EXEC
+  DISPATCH" — IS DOWNGRADED TO `[hypothesis]` (2026-09-04, via `/gr`, folded by `/pd`).** It wore the
+  `[verified-live 2026-09-03, n=3 commands]` tag above, but none of the three negatives is a valid
+  negative, each for a cheaper reason `[inferred-static 2026-09-04, public UE3 source + the shipped
+  ini]`:
+  - **F9=`shot` is bound only inside `[NTGameFramework.NTCam_DebugInput]`** (live ini lines 129–183,
+    F9 at line 158, re-read on the dev PC 2026-09-04) — the debug camera controller's *own* input
+    class, which does not exist in normal play. "F9 does not depend on our edit" was true and
+    irrelevant: **that test could never have produced a positive.**
+  - **F5=`ToggleDebugCamera` is a `GameFramework.GameCheatManager` exec.** A CheatManager exists only
+    if `PlayerController.AddCheats()` ran, gated on `GameInfo.AllowCheats()`; the `EnableCheats` exec
+    that forces it is FINAL_RELEASE-guarded. The bound-command chain (`UnPlayer.cpp:2923–2954`) tries
+    PlayerInput → PlayerController → Pawn → InvManager → Weapon → HUD → GameInfo → CheatManager-if-
+    non-null and **returns false silently when no object owns the name — with dispatch fully alive.**
+    The pad chord (below) ends at the same missing object.
+  - **F6=`FOV 120` → `PlayerController.FOV` → `PlayerCamera.SetFOV`**, a one-shot the game's chase
+    camera (`MonkeyChaseCamera.ini`) can overwrite each tick. The community FOV recipe for this game
+    is that binding under `[MonkeyGame.MKInput]` (§10a), reported working. `[hypothesis]`
+  - **Section placement is an open variable:** our test lines went into `[Engine.PlayerInput]`; the
+    community uses `[MonkeyGame.MKInput]`, present in the game-folder ini (line 389) but absent from
+    the Documents copy the game loads.
+  - **The one-key re-test that settles it (`[FLAT]`):** bind `Pause` — an unguarded
+    `PlayerController` exec, no CheatManager needed, world visibly freezes — in **both** sections of
+    the Documents `MonkeyInput.ini`, plus the community `FOV` line verbatim. Pauses ⇒ dispatch is
+    alive, this reading is `[disproved]`, and the in-process rows become "construct a CheatManager".
+    Does not pause in either section ⇒ the first *valid* negative for stripped dispatch.
+  - What stands: movement, menus, ESC/ENTER/arrows all drive the game; the shipped
+    `[NTGameFramework.NTCam_DebugInput]` map is not input-reachable **in normal play** because its
+    owning controller does not exist there — not because dispatch is gone.
   > **⚠️ Transferable lesson: a binding surviving in a shipped config is NOT evidence the feature is
   > live.** This game ships console bindings with no console *and* a full debug-camera map with no
   > reachable debug camera. Config is a lead; running it is the evidence. Six keys across two
-  > sessions is enough — stop trying keys.
+  > sessions is enough — **one more is budgeted, and only one: the `Pause` re-test above**, because
+  > it is the first key whose negative would actually mean something.
 - **❌ THE CONTROLLER-CHORD ROUTE IS ALSO DEAD (2026-09-03c).** `[verified-live 2026-09-03]` LS+RS
   held 1.2 s through a ViGEmBus virtual X360 pad produced no debug camera; `W` still walked the
   character. **The control passed** — the same pad then moved the character with the left stick
   (frame delta 48.9) and swung the camera with the right (62.5) against an idle baseline of ~2 — so
   the game reads the pad and the chord genuinely does nothing.
-  **⇒ The debug camera is unreachable by ANY input route, pad or key**, for one reason:
-  `ToggleDebugCamera` is an exec command, exec dispatch is stripped, and the chord's job is to
-  *call* it. The input side works perfectly; nothing is left at the other end.
+  **⇒ The debug camera is unreachable by the routes tried — key and pad — none of which is yet a
+  valid negative** (corrected 2026-09-04, see above). The input side works perfectly; the chord's
+  job is to call `ToggleDebugCamera`, which lives on a CheatManager that normal play never builds.
+  **That the debug systems SHIP in this PC build is now `[reported 2026-09-04]`:** dron_3 (2020-11-02)
+  opened this game's **PC debug menu** with a `dinput8.dll` patch (Backspace+Escape during play), and
+  on PS3 (v1.01) a single `li r3,0` enables *both* the debug menu and the debug camera — one function
+  forced to return zero, the shape of a defeated "debug allowed" predicate. The earlier "no camera
+  hack exists for this game" (2026-08-24) is `[disproved 2026-09-04]` for the menu. Nothing was
+  downloaded or examined; only that it works.
 - **⭐ A virtual XInput pad DOES drive this game** `[verified-live 2026-09-03]` — movement on the
   left stick, camera on the right, hot-plugged into a running game with no restart. A third input
   route worth keeping for anything gated behind a controller.
   (`flat-to-vr-RE-toolkit/tools/virtual-pad.py`)
-- **What remains for a command channel, best first:**
-  1. **⭐ In-process exec from our own proxy.** We already own `d3d9.dll` and run inside the process
-     every frame; locating the engine's exec entry point by pattern and calling it directly bypasses
-     input, bindings and the console entirely. **`[PD]` work** — static, no game needed.
-  2. **A virtual gamepad.** The debug camera's normal-play entry point is a controller thumbstick
-     chord (`CheckDebugCamChord`/`DoDebugCamChord` in `[Engine.PlayerInput]`), so an emulated pad
-     could send it. The estate already carries a `[USER]` ViGEmBus install item under
-     `doom-2016-vr` — the two projects now share that dependency.
+- **What remains for a command channel, best first (re-shaped 2026-09-04):**
+  0. **The `Pause` re-test** (`[FLAT]`, one key, above) — decides whether exec dispatch is alive.
+  1. **⭐ In-process, route (B): call script functions directly through `UObject::ProcessEvent`.**
+     Not "locate the exec entry point by pattern" — the dispatcher is a chain of eight
+     `ScriptConsoleExec` calls, not a function. The public, MIT-licensed UE3 SDK-generator recipe
+     (ItsBranK's UE3SDKGenerator, the CodeRed Generator; both document 32-bit UE3): pattern-find
+     `GObjects`/`GNames`, walk to the live `PlayerController` and the `UFunction`s by name, call via
+     `ProcessEvent` (vtable index or pattern). Sequence: `ProcessEvent(PC, AddCheats, {bForce=true})`
+     (a plain script function, not FINAL_RELEASE-guarded) → `ProcessEvent(PC.CheatManager,
+     ToggleDebugCamera)`; and `ProcessEvent(PC, ConsoleCommand, "…")` restores the whole command
+     vocabulary through the engine's own chain. `[inferred-static]` **Anchors are in the binary**
+     `[measured 2026-09-04]`: `Enslaved.exe` contains `GObjObjects` (×7 ASCII), `ProcessEvent`,
+     `CheatManager` and `ConsoleCommand`. It does **not** contain `ToggleDebugCamera`/`AddCheats`/
+     `AllowCheats` — expected, not evidence: script names live in cooked packages whose name tables
+     are compressed. The one unknown is whether `CheatClass` still names a real class in this build;
+     if not, route (A). **This is the `[PD]` row.**
+  2. **In-process, route (A): find and defeat the gate** — `GameInfo.AllowCheats` or Ninja Theory's
+     override, which decides whether `AddCheats()` builds the `GameCheatManager` owning
+     `ToggleDebugCamera`; or the game-specific check behind `CheckDebugCamChord`/`DoDebugCamChord`,
+     whose exec-name strings are in the exe. dron_3's PS3 patch is exactly this shape.
+  3. **A virtual gamepad** already drives this game (2026-09-03c) — the chord itself is proven to
+     reach the engine, so once a CheatManager exists the pad route is live for free.
 - Usual UE3 suspects to try once a console/exec channel exists: `FOV <deg>`,
   `Show <group>`, `ToggleDebugCamera`, `Stat FPS`, `Stat D3D9RHI`,
   `ViewMode <mode>`, `SloMo`.
@@ -419,13 +464,46 @@ rows and the stereo summary reads `offset 0, ortho-skipped 0` — and it never r
 - **Nothing else breaks.** `Present` keeps firing at a clean 60 fps, the `Reset` hook logs the
   event, and the forced-window logic correctly re-applies. Only `SetVertexShaderConstantF` stops
   being reached.
-- **⭐ It is not instantaneous.** One MORE healthy summary prints after the reset, and only the next
-  one is dead — so the cause runs roughly **120–240 frames after `Reset` returns**, not inside it.
-  Prime suspect: UE3 re-creating its RHI/device objects onto a vtable the patch no longer covers.
+- ~~**⭐ It is not instantaneous.** One MORE healthy summary prints after the reset, and only the next
+  one is dead — so the cause runs roughly **120–240 frames after `Reset` returns**, not inside it.~~
+  **WITHDRAWN 2026-09-04:** the stereo summary counts "since last summary" over a `FrameInterval`
+  window (`dllmain.cpp` lines 423–443), so one healthy post-reset summary is expected **even if the
+  slot died inside `Reset` itself**. The figure was an artefact of the window, not a measurement
+  `[inferred-static 2026-09-04]`. The 2026-09-04 build stamps the moment to the frame instead.
+  ~~Prime suspect: UE3 re-creating its RHI/device objects onto a vtable the patch no longer covers.~~
+  **Excluded 2026-09-04** (`/gr`): D3D9 vtables are shared per runtime class, a second
+  `CreateDevice` would have been logged by our own hook, and slot 17 in the *same table* kept working
+  — only slot 94 was rewritten.
 - **Recovery is a relaunch.** A fresh process always reads healthy (`offset 2690`/`3360`/`4000`).
 
 **⚠️ Operational rule for every session: read `offset` in the log before trusting any stereo
-observation.** Nothing on screen indicates the mod has been disarmed.
+observation.** Nothing on screen indicates the mod has been disarmed. *(Since the 2026-09-04 build the
+summary line also prints `slot94=ours|NOT OURS`, which is the direct check.)*
+
+### 2026-09-04: the leading explanation, and a build that survives it either way
+
+- **Leading `[hypothesis]`: a recorded STATE BLOCK rewrites the vtable.** Two independent public
+  witnesses — gho (DxWnd, 2014): *"BeginStateBlock recover all COM method pointers invalidating the
+  hook patching"*; Paul Roussin (D3D8 newsgroup): *"BeginStateblock will reset the device table so you
+  have to … reset your modified addresses"* — describe the D3D9 runtime swapping the state-**setting**
+  methods for recording variants between `BeginStateBlock` and `EndStateBlock` and restoring its own
+  originals afterwards. Slot 94 is a state-setting method; `Present`/`Reset` are not. That is the
+  observed pattern exactly. `[reported]` in general; `[hypothesis]` for this game until the log says
+  so. UE3's own D3D9 RHI records no state blocks (public source, one search), so the caller would be
+  another resident — Steam overlay, driver overlay, anything on `ID3DXSprite`/`ID3DXFont` —
+  re-initialising after the reset. (Via `/gr` 2026-09-04; topic
+  `external-research/topics/2026-09-04-a-recorded-state-block-rewrites-the-device-vtable-and-kills-an-in-place-patch.md`.)
+- **The proxy now heals itself** `[compile-verified 2026-09-04]`, `-Wall -Wextra` clean, 9/9 exports,
+  **deployed on the dev PC** (`d3d9.dll` 78,336 B; previous kept as `d3d9.dll.bak-2026-09-04-pre-rearm`),
+  **not yet on the home PC** (pull `staging`, `build.ps1`). Every `Present` compares slots 94/16/17/60/61
+  against our functions and re-patches a slot that has reverted to **the runtime's original pointer** —
+  the only unambiguous case; a *foreign* pointer is logged once with its module and left alone, since it
+  might be a later hook that chains to us. `BeginStateBlock`/`EndStateBlock` (60/61, verified from the
+  SDK header) are hooked to log frame, caller module and whether slot 94 survived; `[reset] returned …
+  slot94=` is logged the instant `Reset` returns; `[liveness]` stamps the first frames with zero uploads.
+  `[hooks] Rearm=0` observes without healing. Full reading table: `modding-notes/2026-09-04-the-vtable-patch-heals-itself-and-exec-dispatch-stripped-is-downgraded.md` §4.
+- **Not run.** Whether state blocks are the rewriter here, and whether a re-armed slot yields a
+  *working* stereo, are the next launch's questions — one launch, one checkpoint restart.
 
 ### The game ignores its own saved resolution at startup `[verified-live 2026-09-03, n=2 launches]`
 
