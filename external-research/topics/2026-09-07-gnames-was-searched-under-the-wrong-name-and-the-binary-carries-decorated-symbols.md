@@ -58,14 +58,28 @@ shape:
 
 | fragment | what it matches |
 | --- | --- |
-| `@@0V?$TArray@` | **every private static `TArray` member in the binary** |
-| `?$TArrayNoInit@` | every `TArrayNoInit` — UE3's name table is one |
+| `@@0V?$TArray@` | every **private static** `TArray` **member of a class** |
+| `@@3V?$TArray@` | every **namespace-scope global** `TArray` — see the access-code note below |
+| `?$TArrayNoInit@` | every `TArrayNoInit` — a candidate type for the name table |
 | `FNameEntry` | the element type of the name table, wherever it is mentioned |
 | `@FName@@` | every member of class `FName` |
 
 Decoding the recorded symbol confirms the shape: `?GObjObjects@UObject@@` is `UObject::GObjObjects`,
 the `0` marks a **private static member**, and `V?$TArray@PAVUObject@@VFDefaultAllocator@@@@` is
-`TArray<UObject*, FDefaultAllocator>`.
+`TArray<UObject*, FDefaultAllocator>`; the trailing `A` is normal (non-const, non-volatile) storage.
+
+⚠️ **The access code matters, and searching only `0` would miss the case this is aimed at.** In MSVC
+decoration the character after the qualified name encodes storage: **`0`/`1`/`2`** are private /
+protected / public **static class members**, while **`3`** is a **namespace-scope variable**. So:
+
+- if the name table is `FName::Names` (a class static) the symbol carries `0`, `1` or `2`;
+- if it is a genuine free global — the `GNames` the SDK-generator community assumes — it carries
+  **`3`**, and a scan for `@@0V?$TArray@` alone would **not** find it.
+
+**Search all four codes.** The safest single fragment is the type itself — `?$TArray@` or
+`?$TArrayNoInit@` — with the access code read off each hit afterwards rather than assumed. That also
+sidesteps the question this whole topic is about, which is that we do not know which shape the global
+takes.
 
 **So a scan for `@@0V?$TArray@` enumerates every private static `TArray` in the executable — a small,
 bounded set that the name table is almost certainly a member of, whatever it is called.** You would
@@ -112,10 +126,12 @@ Both are static, need no launch, and use the tool that already exists:
 
 1. `python find_uobject_globals.py Enslaved.exe Names FName FNameEntry NameEntry appGetGName`
    — tests the wrong-token hypothesis directly.
-2. `python find_uobject_globals.py Enslaved.exe "@@0V?$TArray@" "?$TArrayNoInit@" "@FName@@"`
-   — enumerates the static `TArray`s structurally, independent of naming. ⚠️ These are substrings of
-   decorated symbols rather than identifiers, so check the tool treats the argument as a literal
-   substring and not as a whole-token match.
+2. `python find_uobject_globals.py Enslaved.exe "?$TArray@" "?$TArrayNoInit@" "FNameEntry" "@FName@@"`
+   — enumerates the `TArray`s structurally, independent of naming. **Search the bare type fragment
+   rather than `@@0V?$TArray@`**, and read the access code off each hit: `0`/`1`/`2` are static class
+   members, **`3` is a namespace-scope global**, and the free-global case is exactly the one a `0`-only
+   scan would miss. ⚠️ These are substrings of decorated symbols rather than identifiers, so check the
+   tool treats its argument as a literal substring and not as a whole-token match.
 3. Chase the single ASCII `ProcessEvent` occurrence and see whether it is a decorated symbol.
 
 ## Sources
