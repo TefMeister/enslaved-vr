@@ -1,8 +1,26 @@
 # `GNames` was searched under a name UE3 may not use — and this binary carries **decorated symbols**, which is a locator the scan has never tried
 
-**Status:** 🆕 new · **Priority:** high — the `[PD]` row says the `GNames` locator "needs a different
-locator"; this proposes two, both **one command each with the tool that already exists**, and both
-derived from evidence already in our own dossier rather than from the web.
+**Status:** 🆕 new · **Priority:** medium — **downgraded from high the same day.** This proposes two
+in-house routes, both one command with the tool that already exists. Its companion topic
+[*Public UE3 locators find `GNames` by code pattern*](2026-09-07b-public-ue3-locators-find-gnames-by-code-pattern-and-one-fork-ships-working-signatures.md)
+found what the public toolchain actually does, and **those routes have six games behind them while
+these have none.** Try them first; keep these as the cheap fallback.
+
+> ⚠️ **Two things below need correcting in light of that topic — read this before acting.**
+>
+> 1. **"No `GNames` string" is the normal case, not an anomaly.** *No public UE3 tool searches for a
+>    `GNames` symbol or string at all* — all six shipped locators are **code patterns** (an absolute
+>    load followed by a scale-4 indexed read). So the negative that prompted this topic did not need
+>    explaining; the wrong-token hypothesis below may still be true, but it is no longer needed to
+>    explain anything.
+> 2. **The decorated-symbol route has no public corroboration.** No public UE3 locator uses decorated
+>    symbols. That does not make it wrong — this binary is unusually generous with debug residue
+>    (`DO_CHECK` on, `__FILE__` intact, a decorated symbol present), which is precisely why tools
+>    written for normal binaries would not rely on it — but it is **ours alone and unvalidated**, and
+>    should be ranked below the byte-pattern and adjacency routes.
+>
+> ⭐ The companion topic's **adjacency probe** is the cheapest thing on either list: in two published
+> UE3 games `GNames` sits **below** `GObjects` by 0x30 and 0x48, and we have `GObjObjects` to the byte.
 
 ## The row this is aimed at
 
