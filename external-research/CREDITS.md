@@ -16,6 +16,13 @@ project's repositories.**
 
 | Work | Creator(s) | Note |
 |---|---|---|
+| `UnrealEngineSDKGenerator` — the fork that actually ships **working** UE3 `GNames`/`GObjects` byte signatures, for UT3, APB: Reloaded, Tribes: Ascend and Hawken (plus BL2 and Rocket League); the source of the convergent `8B 0D ?? ?? ?? ?? 83 3C 81 00` pattern and the `FNameEntry` layout (2026-09-07) | KN4CK3R (original), polivilas (fork) | https://github.com/polivilas/UnrealEngineSDKGenerator |
+| `bl-sdk/unrealsdk` — independent UE3 `GNames` signatures (Borderlands 1/2), the Borderlands address pair used for the adjacency figure, and the `ProcessEvent`/`CallFunction` **prologue-signature + detour** approach that needs no vtable index (2026-09-07) | apple1417 | https://github.com/bl-sdk/unrealsdk |
+| The original UE3 SDK Generator, ancestor of this whole family, and its Cheat Engine Lua dumper port (2026-09-07) | TheFeckless | — |
+| `RLSDK-Generator` — the Rocket League `GNames`/`GObjects` offsets used as the second adjacency data point, and `ProcessEventIndex = 67` (2026-09-07) | matix2 | https://github.com/matix2/RLSDK-Generator |
+| `Unreal-Library` — its `GameBuild` table of ~25 UE3 titles' package/licensee versions, and the route to read Enslaved's own version out of an `NTEngine.u` header (2026-09-07) | EliotVU | https://github.com/EliotVU/Unreal-Library |
+| `UPKUtils` — the companion tool for reading UE3 package headers (2026-09-07) | wghost | https://github.com/wghost/UPKUtils |
+| `GSpots`, `UE-Dumper`, Unreal Finder Tool and UE4-Function-Address-Finder — checked 2026-09-07 and **ruled out as UE4/UE5-only**; credited for saving the next session the same check | Do0ks; McDaived; kovidomi and CorrM (crediting KN4CK3R and harakirinox); patrickBakin | — |
 | Enslaved: Odyssey to the West, original game | Ninja Theory (developer); BANDAI NAMCO (publisher) | Built on Unreal Engine 3 with Ninja Theory's custom engine layer. |
 | Premium Edition PC port (2013) | QLOC (port work, as commonly credited); BANDAI NAMCO | The version this project targets. |
 | Unreal Engine 3 (the base engine) | Epic Games | The foundation Ninja Theory built on. |
