@@ -1,0 +1,131 @@
+# `GNames` was searched under a name UE3 may not use — and this binary carries **decorated symbols**, which is a locator the scan has never tried
+
+**Status:** 🆕 new · **Priority:** high — the `[PD]` row says the `GNames` locator "needs a different
+locator"; this proposes two, both **one command each with the tool that already exists**, and both
+derived from evidence already in our own dossier rather than from the web.
+
+## The row this is aimed at
+
+The board, 2026-09-07:
+
+> "`[PD]` **route (B), the remaining half: locate `GNames` and the `ProcessEvent` vtable slot.**
+> `GObjObjects` is DONE. ⚠️ **`GNames` has no string in the binary in either encoding**
+> `[measured 2026-09-07]`, so the assertion route does not reach it — it needs a different locator.
+> Scan BOTH encodings."
+
+And this lane owns the falsified prediction behind it: my 2026-09-05 topic said *"`GNames` by the
+same trick — it is `TArrayNoInit<FNameEntry*>` and appears in its own assertions."* The measurement
+says otherwise, and that half is now **`[disproved 2026-09-07]`**. The `GObjObjects` half worked and
+closed most of the row.
+
+## ⚠️ 1. The likely reason the scan found nothing: `GNames` may not be the symbol's name
+
+The scan table records the token searched for as **`GNames`** — 0 ASCII, 0 UTF-16.
+
+**`GNames` is the SDK-generator community's conventional name for the global, not necessarily UE3's
+own identifier for it.** In UE3 the name table is commonly a **static member of `FName`** rather than
+a free global — in which case the identifier appearing in an assertion string or a decorated symbol
+is **`Names`**, qualified by its class, and the token `GNames` would never appear anywhere in the
+binary no matter how much debug information survived.
+
+If that is right, then *"the assertion route does not reach `GNames`"* is a conclusion drawn from
+searching for the wrong string, and the assertion route may work perfectly. `[hypothesis 2026-09-07]`
+— stated as a hypothesis because I have not confirmed UE3's exact identifier for this generation.
+
+**The check is one command**, because `find_uobject_globals.py` already takes the symbols to scan for
+on its command line (`usage: find_uobject_globals.py <path to exe> [symbol ...]`) — no code change:
+
+```
+python find_uobject_globals.py Enslaved.exe Names FName FNameEntry NameEntry appGetGName
+```
+
+A hit on `Names` with a neighbouring `.cpp` path is the same signature that worked for
+`GObjObjects`; the tool's `__FILE__`-neighbour confirmation applies unchanged.
+
+## ⭐⭐ 2. The stronger route, and it needs no guess about the name at all
+
+This one is derived entirely from our own §9c, and it is the better idea because **it does not depend
+on knowing what the symbol is called.**
+
+§9c records, almost in passing:
+
+> "The **7th occurrence is a decorated MSVC symbol** at `0x021C09BC`
+> (`?GObjObjects@UObject@@0V?$TArray@PAVUObject@@VFDefaultAllocator@@@@A`), **not yet chased**."
+
+That single line is worth more than it was given credit for. **This binary retains decorated MSVC
+symbol names for private static members** — and decoration is *structural*, so it can be searched by
+shape:
+
+| fragment | what it matches |
+| --- | --- |
+| `@@0V?$TArray@` | **every private static `TArray` member in the binary** |
+| `?$TArrayNoInit@` | every `TArrayNoInit` — UE3's name table is one |
+| `FNameEntry` | the element type of the name table, wherever it is mentioned |
+| `@FName@@` | every member of class `FName` |
+
+Decoding the recorded symbol confirms the shape: `?GObjObjects@UObject@@` is `UObject::GObjObjects`,
+the `0` marks a **private static member**, and `V?$TArray@PAVUObject@@VFDefaultAllocator@@@@` is
+`TArray<UObject*, FDefaultAllocator>`.
+
+**So a scan for `@@0V?$TArray@` enumerates every private static `TArray` in the executable — a small,
+bounded set that the name table is almost certainly a member of, whatever it is called.** You would
+then read the decoded type of each hit and pick the one whose element type is a name entry. That
+turns "find a global whose name we are guessing at" into "read a short list and recognise one".
+
+**None of these tokens has ever been scanned for.** A grep of the dossier and the tool for
+`FNameEntry`, `TArrayNoInit`, `mangled` and `decorated` returns **only** the two existing mentions of
+the word "decorated"/"undecorated" `[verified-numerically 2026-09-07]` — and that grep was capable of
+positives, since it found those two. The scan table covers `GObjObjects`, `GObjAvailable`,
+`ProcessEvent`, `CheatManager`, `ConsoleCommand`, `GNames`, `AddCheats`, `ToggleDebugCamera` and
+`AllowCheats`, and nothing structural.
+
+## 3. The same route is the cheapest lead on `ProcessEvent`'s vtable slot
+
+The row's other half is the `ProcessEvent` vtable index. The scan already shows **`ProcessEvent`: 1
+ASCII, 2 UTF-16** — and the one ASCII hit is unexplained. Given §9c's finding, a decorated symbol is a
+strong candidate for what that ASCII occurrence is.
+
+A decorated symbol for a virtual member function encodes its **class and full signature**, so if
+`?ProcessEvent@UObject@@` is present it gives an exact address for the function, from which the
+vtable index is a matter of finding that address inside `UObject`'s vtable — rather than a byte
+signature that has to be built by hand. **Worth chasing before building any pattern**, which is
+§9c's own consequence 3: *"before hand-building a byte signature for anything in this binary, grep
+the strings for the symbol name first."*
+
+## Why this was not obvious, and what it costs to be wrong
+
+The 2026-09-07 execution did exactly what the 2026-09-05 topic asked and got a clean negative. The
+negative is real *for the token it tested*. What makes it worth revisiting is that **a null result on
+one identifier is not a null result on the object** — and this binary has already proved unusually
+generous with debug residue (`DO_CHECK` left on, `__FILE__` paths intact, decorated symbols present),
+so "there is nothing to find" is a weaker prior here than it would be in a stripped build.
+
+If both routes above come back empty too, that is a **much stronger** negative than the current one,
+and it would justify moving to the runtime route: with `GObjObjects` already known, take object 0,
+read its `FName` index, and locate the table by finding the pointer array whose element at that index
+resolves to the expected string. That is a live read rather than a static scan, so it belongs behind
+the pause-menu blocker — which is why it is named here but not recommended first.
+
+## The concrete next steps
+
+Both are static, need no launch, and use the tool that already exists:
+
+1. `python find_uobject_globals.py Enslaved.exe Names FName FNameEntry NameEntry appGetGName`
+   — tests the wrong-token hypothesis directly.
+2. `python find_uobject_globals.py Enslaved.exe "@@0V?$TArray@" "?$TArrayNoInit@" "@FName@@"`
+   — enumerates the static `TArray`s structurally, independent of naming. ⚠️ These are substrings of
+   decorated symbols rather than identifiers, so check the tool treats the argument as a literal
+   substring and not as a whole-token match.
+3. Chase the single ASCII `ProcessEvent` occurrence and see whether it is a decorated symbol.
+
+## Sources
+
+Entirely our own record; no public source was needed for this and none is claimed.
+
+- `enslaved-vr/engine-research/ENGINE-DOSSIER.md` §9c — the assertion method, the located addresses,
+  the encoding table, and the **decorated MSVC symbol at `0x021C09BC`, recorded as "not yet chased"**.
+- `enslaved-vr/dev-archive/tools/find_uobject_globals.py` — its usage line is what makes both
+  proposals one-command jobs.
+- `claude-memory/status/enslaved-vr.md`, OPEN block 2026-09-07 — the row this answers.
+- `enslaved-vr/external-research/topics/2026-09-05-…-gobjobjects-is-an-assertion-string.md` — this
+  lane's own prior topic, whose step 3 is now `[disproved]`.
