@@ -532,6 +532,133 @@ px should be read as "much larger than the `+2.01` frame median", not as a calib
 the ortho fix working, not a defect. **Check what is behind a probe region before believing it**; this
 is the second time that rule has paid on this project.
 
+## 9c. ⭐ `DO_CHECK` IS ON IN THIS RETAIL BUILD — assertion strings are a navigational resource for the WHOLE binary
+
+*Folded from `engine-research/inbox/2026-09-05-gr-gobjobjects-is-an-assertion-string-and-do-check-is-on.md`
+(`/gr`), then executed live on 2026-09-07. That drop also **supersedes** the 2026-09-04
+external-research claim that the UE3 SDK generators "ship patterns" — they ship a `FindPattern`
+harness with every pattern set to the literal string `"null"`; the pattern is per-game and is the
+thing you have to find `[verified-live 2026-09-05, n=1 API read]`.*
+
+UE3's assertion macro stringifies the asserted expression:
+
+```
+#define check(expr) { if(!(expr)) appFailAssert( #expr, __FILE__, __LINE__ ); ... }
+```
+
+`GObjObjects` is **never a string literal in UE3 source**, so seven copies of it in `Enslaved.exe`
+means `DO_CHECK` was left enabled in a shipping build. Three consequences, all of which make hunting
+this binary cheaper:
+
+1. **`appFailAssert` is called from inside the function that tests the global**, so the global sits
+   in the preceding instructions as a **direct memory operand** — the address itself, not a hint.
+2. **`__FILE__` is pushed in the same call**, giving a free confirmation beside every hit and telling
+   you which assertion you are standing in.
+3. **Before hand-building a byte signature for anything in this binary, grep the strings for the
+   symbol name first.**
+
+### ✅ Executed 2026-09-07 — the addresses `[inferred-static 2026-09-07]`
+
+```
+UObject::GObjObjects    .Data = 0x0242B984  .ArrayNum = 0x0242B988  .ArrayMax = 0x0242B98C
+UObject::GObjAvailable  .Data = 0x0242B990  .ArrayNum = 0x0242B994  .ArrayMax = 0x0242B998
+appFailAssert                 = 0x0058E580
+ImageBase 0x00400000   .text 0x00401000   .data 0x02312000
+```
+
+Cross-checked by three different assertion expressions in three different functions —
+`cmp dword ptr [0x242B988],0` is `GObjObjects.Num()==0`; `mov eax,[0x242B984]` +
+`cmp dword ptr [eax+edi*4],0` is `GObjObjects(InIndex)==NULL`; and `IsValidIndex` uses `[0x242B988]`
+as its bound. **Fourth, independent corroboration:** `GObjAvailable` lands exactly 12 bytes
+(`sizeof(TArray)` on 32-bit) after `GObjObjects`, as consecutive statics, and both show `ArrayNum` at
+`Data+4`.
+
+`__FILE__` beside the `Array.h` assertion gives the studio's build path —
+`e:\projects\congo\enslavedmaster\masterarchives\unrealengine3\development\src\core\inc\Array.h`.
+The 7th occurrence is a decorated MSVC symbol at `0x021C09BC`
+(`?GObjObjects@UObject@@0V?$TArray@PAVUObject@@VFDefaultAllocator@@@@A`), not yet chased.
+
+### ⚠️ Encoding: this binary needs BOTH scans
+
+`TCHAR` is `wchar_t`, so engine *names* are UTF-16 while assertion strings are narrow ASCII
+`[measured 2026-09-07]`:
+
+| symbol | ASCII | UTF-16 |
+| --- | --- | --- |
+| `GObjObjects` | 7 | 0 |
+| `GObjAvailable` | 4 | 0 |
+| `ProcessEvent` | 1 | 2 |
+| `CheatManager` | 0 | 3 |
+| `ConsoleCommand` | 0 | 4 |
+| `GNames` | **0** | **0** |
+| `AddCheats`, `ToggleDebugCamera`, `AllowCheats` | 0 | 0 |
+
+**`GNames` has no string at all** — the assertion route does not reach it and it needs a different
+locator. The three script-side names are absent as predicted (compressed `.u` packages).
+Tool: `dev-archive/tools/find_uobject_globals.py`.
+
+## 9d. ⛔️ 2026-09-07: THE PAUSE MENU COULD NOT BE OPENED, AND `[Engine.PlayerInput]` IS GAMEPAD-ONLY
+
+**Operationally the most important thing to know before the next launch.** Full detail:
+`modding-notes/2026-09-07-gobjobjects-is-located-and-the-pause-menu-is-unreachable.md`.
+
+Keyboard **movement** works (`W`/`S` walk Monkey, confirmed by eye). Nothing else does:
+`Escape` (twice, two hold lengths, two locations), `F4`→`DoPause`, `F1`/`F2`/`F3`, the shipped
+`F8`→`stat fps` and `F12`→`FreezeRendering` — all inert. A **virtual X360 pad enumerated** (the game
+raised a "Controller Connected" toast) but **`START` did not pause and `thumbLX=29490` did not move
+Monkey** — the exact value that verified the pad on the home PC on 2026-09-03d
+`[verified-live 2026-09-07, n=1 session]`.
+
+⇒ no pause menu ⇒ no checkpoint restart, no options screen, no route to the main menu ⇒ **the reset
+row (§9a) cannot be exercised on the dev PC as things stand**, and the session had to close through
+`WM_CLOSE` rather than the profile's graceful menu route.
+
+### ⭐ Why this reframes the exec question rather than answering it
+
+Dumping every `Bindings=` line in `[Engine.PlayerInput]`: it holds the action **aliases** and the
+**`XboxTypeS_*` gamepad bindings**, and **not one keyboard key** `[measured 2026-09-07]`. `DoPause`
+is reachable from exactly one entry, `XboxTypeS_Start`. Yet `W` walks Monkey — so keyboard movement
+does not come from this ini at all.
+
+**"The exec command did not fire" and "a keyboard binding added to a gamepad-only section is inert"
+are indistinguishable observations.** That is a cheaper explanation than "exec dispatch is stripped",
+so the exec question remains `[hypothesis]`; 2026-09-07 did not lift the 2026-09-04 downgrade.
+Relatedly, **`Escape` is bound only in `[NTGameFramework.NTCam_DebugInput]`** (line 171,
+`CloseEditorViewport | DoPause`) — the class 2026-09-04 proved is dead — so if Escape ever paused
+this game, it did so through native handling, not through config.
+**`[MonkeyGame.MKInput]` does not exist in this build's shipped ini**; it was created to test the
+community report and nothing in it fired.
+
+### ⚠️ Two untested suspects, and one of them is the build the reset row depends on
+
+The profile records `gameplay -> main_menu` via `Escape` as `verified-live 2026-09-03` **on this same
+dev PC**. Something changed since:
+
+1. the 2026-09-07 ini edit (**reverted**; stock restored, the test copy kept beside it), or
+2. **the 2026-09-04 self-healing proxy, which had never been run before 2026-09-07** (`d3d9.dll`
+   dated Sep 4 13:55; that session was `/pd`, no launch). It hooks `BeginStateBlock` /
+   `EndStateBlock` — which earlier builds did not — and re-patches five vtable slots every `Present`.
+
+If (2) is the cause, that build cannot be trusted to answer §9a until it is fixed, and the reading
+table written against its output is void. Two relaunches settle it; the decision tree is in the
+modding note.
+
+### ❌ There is no menu-free way to force a Reset `[disproved 2026-09-07]`
+
+`ALT+ENTER` (the game *did* revert its window style; the proxy restyled it back at `present#8700`)
+and external `SetWindowPos` resizes to 1024x576 / 1600x900 both produced **zero** `[reset]` lines.
+The backbuffer stays 1920x1080 and D3D stretches it into the window, so resizing never invalidates
+the device. A Reset here genuinely requires the in-game resolution change or a checkpoint restart —
+both behind the pause menu.
+
+### ⚠️ Turn wiggle OFF before judging anything by image comparison
+
+With `Mode=0` alternate frames are different eyes and differ by **~27.5 mean luma**, which swamps
+every other signal and is stable enough to look like one. On 2026-09-07 a
+`27.58 / 0.00 / 27.58 / 0.00` series was briefly read as a pause; it was Monkey standing still (a
+static scene renders exactly two images, so same-eye pairs are byte-identical). **Set `Mode=1` or
+`Mode=2` in `d3d9_proxy.ini` for any run that judges by image comparison**, and look at the frame.
+
 ## 10. Dead ends
 
 - **The barrel/fisheye warp with heavy vignetting on loading and transition screens is THE GAME'S

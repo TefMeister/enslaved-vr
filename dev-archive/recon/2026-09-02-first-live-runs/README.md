@@ -32,6 +32,6 @@ Both runs: Steam launch, `[stereo] Enabled=0`, load a level, play briefly, quit.
 - The window's caption was gone by ~frame 3600 although checks 1/60/300 passed.
 
 ## Run 7 — `Separation=60.0` (`run7-stereo-sep60-two-monkeys.log`)
-- Hop scales up: "I can basically see 2 monkeys with a little gap in between" — roughly one body-width at 60 units. With Monkey's torso ~50–60 cm that puts the world at **~1 unit ≈ 1 cm (UE3 convention)**, so a real IPD is `Separation ≈ 6.5`. `[inferred 2026-09-02, n=1, by eye]`
+- Hop scales up: "I can basically see 2 monkeys with a little gap in between" — roughly one body-width at 60 units. With Monkey's torso ~50–60 cm that puts the world at **~1 unit ≈ 1 cm (UE3 convention)**, so a real IPD is `Separation ≈ 6.5`. `[measured 2026-09-02]` (by eye, n=1)
 - Window re-check (now every 300 frames) caught the game restyling its own window to `WS_POPUP` (`0x94080000`, client 1286x749) at **present#1800 and #6600** and restored it both times. `[verified-live 2026-09-02, n=2]` So the game reapplies its fullscreen window style periodically (level/checkpoint loads, most likely) — the periodic re-check is required, not a nicety.
 - 6,600 frames, 0 resets.

@@ -30,3 +30,5 @@
 # the-evil-within-vr. Negate the rule for recon/ so evidence cannot be lost that way.
 !dev-archive/recon/**/*.log
 !recon/**/*.log
+dev-archive/tools/__pycache__/
+*.pyc
