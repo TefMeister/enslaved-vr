@@ -532,11 +532,56 @@ px should be read as "much larger than the `+2.01` frame median", not as a calib
 the ortho fix working, not a defect. **Check what is behind a probe region before believing it**; this
 is the second time that rule has paid on this project.
 
+## 9d. ⭐⭐ `GNames` IS LOCATED: `0x0242B954`, BY CODE PATTERN, FOUR WAYS (2026-09-08, `/pd`, no launch)
+
+Write-up: `modding-notes/2026-09-08-gnames-located-by-code-pattern.md`. Tool:
+`dev-archive/tools/find_gnames.py`. Evidence: `dev-archive/recon/2026-09-08-gnames-located/`.
+
+> **`GNames.Data = 0x0242B954`, `.ArrayNum = 0x0242B958`, `.ArrayMax = 0x0242B95C`**
+> `[inferred-static 2026-09-08]`
+
+Four independent signals, none of which is "it has the right name":
+
+1. **The published UT3 signature matches exactly**, from **four** call sites (`0x00594368`,
+   `0x006777FE`, `0x00677A24`, `0x00679D0E`), **all resolving to the same address**:
+   `8B 0D ?? ?? ?? ?? 83 3C 81 00 74` - the identical pattern used for UT3, APB: Reloaded,
+   Tribes: Ascend and Hawken in `polivilas/UnrealEngineSDKGenerator` `[reported 2026-09-07]`.
+2. **The adjacency prediction lands on the nose.** `/gr` gave two published pairs where `GNames` sits
+   BELOW `GObjects` by under `0x50` (Borderlands 1 `0x30`, Rocket League `0x48`). Ours is
+   `0x0242B984 - 0x0242B954` = **exactly `0x30`**.
+3. **It is in `.data`**, the only writable section - as a mutable global must be.
+4. **The usage gradient matches a `TArray`, and was not predicted** - it fell out of the scan:
+   `Data` 26 load sites, `ArrayNum` 12, `ArrayMax` 1. Exactly the descending frequency a
+   `{Data, ArrayNum, ArrayMax}` triple produces. A coincidental address has no reason to show it.
+
+**Why the name search could never have worked, and it is not an anomaly:** no public UE3 locator
+searches for a `GNames` string or symbol - all six working ones, six games, two codebases, scan for
+that code shape. `GNames` is the SDK community's name for the global, not necessarily the engine's.
+So the 2026-09-07 "no string in either encoding" wall was a METHOD problem, not a missing thing.
+
+⚠️ **NOT confirmed, and confirmation is runtime-only.** The validator - read `Data[0]`, follow it,
+read `+0x10`, require `"None"` - cannot run statically, because `FNameEntry` objects are
+**heap-allocated at startup** from the compiled-in `REGISTER_NAME` table and are not in the exe on
+disk. Four agreeing signals make a strong candidate, not a verified one. Strongest runner-up:
+`0x0242B950` (34 load sites).
+
+**`ProcessEvent`: its vtable index is NOT stable** (APB 60, Rocket League 67) and no public table
+exists. `unrealsdk` avoids the index entirely - scan `ProcessEvent`'s **prologue** and detour it.
+That is the recommended route for the other half of route (B). `[reported 2026-09-07]`
+
+⚠️ **Helix Mod's 3D Vision fix for Enslaved is itself a `d3d9.dll` wrapper** in `Binaries\Win32\`
+`[reported 2026-09-07]`. Independent evidence that `d3d9` proxying is the right seam here - **and it
+occupies the exact slot our proxy uses, so the two cannot both be installed.**
+
 ## 9c. ⭐ `DO_CHECK` IS ON IN THIS RETAIL BUILD — assertion strings are a navigational resource for the WHOLE binary
 
 *Folded from `engine-research/inbox/2026-09-05-gr-gobjobjects-is-an-assertion-string-and-do-check-is-on.md`
 (`/gr`), then executed live on 2026-09-07. That drop also **supersedes** the 2026-09-04
-external-research claim that the UE3 SDK generators "ship patterns" — they ship a `FindPattern`
+⚠️ **NARROWED 2026-09-08:** this was written of the generator family and is true only of
+`UE3SDKGenerator` and `CodeRed`. **`polivilas/UnrealEngineSDKGenerator` ships real, filled-in
+signatures for six games** - and its UT3 signature is what located `GNames` (§9d). Original
+wording follows, scoped to those two repos:
+external-research claim that those two UE3 SDK generators "ship patterns" - they ship a `FindPattern`
 harness with every pattern set to the literal string `"null"`; the pattern is per-game and is the
 thing you have to find `[verified-live 2026-09-05, n=1 API read]`.*
 
