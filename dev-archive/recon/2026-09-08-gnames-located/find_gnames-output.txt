@@ -1,0 +1,68 @@
+Enslaved.exe
+  image base 0x00400000, 5 sections
+    .text    VA 0x00401000..0x01A725D1  X-
+    .rdata   VA 0x01A73000..0x023112E0  --
+    .data    VA 0x02312000..0x024A6618  -W
+    .rsrc    VA 0x024A7000..0x024AE6F8  --
+    .reloc   VA 0x024AF000..0x027450A6  --
+
+EXACT published signature (8B 0D imm32 83 3C 81 00 74): 4 hit(s)
+   at 0x00594368 -> &GNames = 0x0242B954  (.data)
+   at 0x006777FE -> &GNames = 0x0242B954  (.data)
+   at 0x00677A24 -> &GNames = 0x0242B954  (.data)
+   at 0x00679D0E -> &GNames = 0x0242B954  (.data)
+
+WIDENED invariant (absolute load + scale-4 indexed read), 1362 distinct target(s).
+Ranked by the published adjacency: GNames sits BELOW GObjects, under 0x50 away (n=2).
+
+  target          delta  sites  note
+  0x0242B978      -12      1  .data  <-- ADJACENT to GObjObjects
+  0x0242B970      -20      3  .data  <-- ADJACENT to GObjObjects
+  0x0242B96C      -24      3  .data  <-- ADJACENT to GObjObjects
+  0x0242B95C      -40      1  .data  <-- ADJACENT to GObjObjects
+  0x0242B958      -44     12  .data  <-- ADJACENT to GObjObjects
+  0x0242B954      -48     26  .data  <-- ADJACENT to GObjObjects
+  0x0242B950      -52     34  .data  <-- ADJACENT to GObjObjects
+  0x0242B940      -68      1  .data  <-- ADJACENT to GObjObjects
+  0x0242B934      -80      3  .data  <-- ADJACENT to GObjObjects
+  0x0242B8E0     -164      1  .data  <-- ADJACENT to GObjObjects
+  0x0242B984       +0   1011  .data  <-- ADJACENT to GObjObjects
+  0x0242B988       +4    109  .data  <-- ADJACENT to GObjObjects
+  0x0242B99C      +24     11  .data  <-- ADJACENT to GObjObjects
+  0x0242B9A0      +28      2  .data  <-- ADJACENT to GObjObjects
+  0x0242B9B4      +48      1  .data  <-- ADJACENT to GObjObjects
+  0x0242B9C0      +60      3  .data  <-- ADJACENT to GObjObjects
+  0x0242BC14     +656      1  .data  <-- ADJACENT to GObjObjects
+  0x0242BC2C     +680      2  .data  <-- ADJACENT to GObjObjects
+  0x0242BC30     +684      4  .data  <-- ADJACENT to GObjObjects
+  0x0242BC34     +688      3  .data  <-- ADJACENT to GObjObjects
+  0x0242BC38     +692      1  .data  <-- ADJACENT to GObjObjects
+  0x0242BC3C     +696      3  .data  <-- ADJACENT to GObjObjects
+  0x0242BC40     +700      7  .data  <-- ADJACENT to GObjObjects
+  0x0242BC44     +704      2  .data  <-- ADJACENT to GObjObjects
+  0x0242BC48     +708      1  .data  <-- ADJACENT to GObjObjects
+  0x0242BC50     +716      1  .data  <-- ADJACENT to GObjObjects
+  0x0242BC54     +720      1  .data  <-- ADJACENT to GObjObjects
+  0x0242BC58     +724      2  .data  <-- ADJACENT to GObjObjects
+  0x0242BC5C     +728      6  .data  <-- ADJACENT to GObjObjects
+  0x0242BC60     +732      1  .data  <-- ADJACENT to GObjObjects
+  0x0242BC64     +736      3  .data  <-- ADJACENT to GObjObjects
+  0x0242BC98     +788      2  .data  <-- ADJACENT to GObjObjects
+  0x0242BC9C     +792      2  .data  <-- ADJACENT to GObjObjects
+  0x0242BCA4     +800      1  .data  <-- ADJACENT to GObjObjects
+  0x0242BCA8     +804      6  .data  <-- ADJACENT to GObjObjects
+  0x0242BCAC     +808      2  .data  <-- ADJACENT to GObjObjects
+  0x0242BCB0     +812      1  .data  <-- ADJACENT to GObjObjects
+  0x0242BCE8     +868      1  .data  <-- ADJACENT to GObjObjects
+  ... 1324 more, all outside the +-0x400 window
+
+Traceback (most recent call last):
+  File "D:\claude video game stuff\github-backups-pd\enslaved-vr\dev-archive\tools\find_gnames.py", line 236, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "D:\claude video game stuff\github-backups-pd\enslaved-vr\dev-archive\tools\find_gnames.py", line 228, in main
+    print("\u26a0\ufe0f THIS CANNOT CONFIRM ANY OF THEM. The validator is runtime-only: read")
+  File "C:\Users\Tefa\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
