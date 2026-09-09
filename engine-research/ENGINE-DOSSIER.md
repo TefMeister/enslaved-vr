@@ -505,6 +505,30 @@ summary line also prints `slot94=ours|NOT OURS`, which is the direct check.)*
 - **Not run.** Whether state blocks are the rewriter here, and whether a re-armed slot yields a
   *working* stereo, are the next launch's questions — one launch, one checkpoint restart.
 
+### ⭐⭐ 2026-09-09: RESOLVED LIVE — the re-arm works, and it is NOT a state block
+
+First live run of the 2026-09-04 self-healing build. **Two Resets** (stepping the resolution in
+DISPLAY OPTIONS and back), both reading identically `[verified-live 2026-09-09, n=2 resets]`:
+
+- `[reset] returned hr=0x00000000 … slot94=NOT ours slot17=ours slot16=ours (before any re-arm)` —
+  the Reset rewrites **exactly one slot**, the state-setting method. Slots 16 and 17 in the same
+  table are untouched, confirming the 2026-09-04 exclusion of "UE3 re-created the device".
+- `[rearm] … had REVERTED to the runtime's original … 0 frames after the last Reset … -> re-patched`
+  — the heal fires in the same frame the Reset returns.
+- Every summary afterwards: `offset 2760 … re-arms 1, slot94=ours`. **The stereo survives a Reset.**
+  The 9a headline above is fixed as of this build.
+- **`state blocks 0` for the entire session, either side of both Resets.** No `BeginStateBlock` /
+  `EndStateBlock` pair was ever recorded, so **the recorded-state-block explanation is not what
+  happens in this game** `[verified-live 2026-09-09, n=2 resets]`. It remains a real mechanism in
+  general (DxWnd, the D3D8 newsgroup) — it is simply not the one here. The revert is at `Reset`.
+
+**⚠️ A checkpoint restart did NOT reset the device on the dev PC** `[verified-live 2026-09-09, n=1]`
+— a full `RESTART FROM LAST CHECKPOINT` produced **zero** `[reset]` lines with `offset` healthy
+either side. 2026-09-03d recorded a checkpoint restart as one of its two resets, on the **home PC**
+(3440x1440 desktop, stored resolution ignored). The 9a claim is therefore narrowed: **a resolution
+change resets the device; a checkpoint restart does so on the home PC and did not on the dev PC.**
+Which of machine, resolution or forced-window mode decides it is not established.
+
 ### The game ignores its own saved resolution at startup `[verified-live 2026-09-03, n=2 launches]`
 
 `MonkeyEngine.ini` holds `ResX=1280 ResY=720`; `CreateDevice` asks for **3440x1440** (the desktop
@@ -643,6 +667,28 @@ locator. The three script-side names are absent as predicted (compressed `.u` pa
 Tool: `dev-archive/tools/find_uobject_globals.py`.
 
 ## 9d. ⛔️ 2026-09-07: THE PAUSE MENU COULD NOT BE OPENED, AND `[Engine.PlayerInput]` IS GAMEPAD-ONLY
+
+> **✅ SOLVED 2026-09-09 — the cause was OUR ini edit, specifically the invented section.**
+> A three-launch A/B on the dev PC: the reverted ini pauses on the first Escape; the 2026-09-07 test
+> ini restored verbatim reproduces the failure exactly (Escape and F-keys inert, `W` still walks);
+> the same ini **minus the `[MonkeyGame.MKInput]` section** pauses again on the first press
+> `[verified-live 2026-09-09, n=1 A/B pair]`.
+>
+> **Rule: never create a config section this build does not ship.** Adding `Bindings=` lines to a
+> section that already exists is harmless — run 3 carried two and behaved normally. Inventing a
+> section name silently disables Escape and the F-keys while leaving character movement alive, with
+> no error anywhere, and it reads exactly like "this game ignores the keyboard".
+>
+> **The 2026-09-04 self-healing proxy is exonerated** — it was installed and running in all three
+> launches, including both that worked. The concurrent-`/lm` focus-contention hypothesis is no longer
+> needed to explain this failure; it stays a real hazard in general `[hypothesis]`.
+>
+> **Still true, and now with a control:** `F4 -> DoPause` and `F2 -> Pause`, both live in
+> `[Engine.PlayerInput]` in run 3, **fired nothing** while Escape worked in the same session
+> `[verified-live 2026-09-09, n=1]`. Bindings added to that section are inert in this build, so the
+> exec question still has no valid control. Notes:
+> `modding-notes/2026-09-09-the-pause-blocker-was-an-invented-ini-section-and-the-reset-rearm-works.md`
+
 
 **Operationally the most important thing to know before the next launch.** Full detail:
 `modding-notes/2026-09-07-gobjobjects-is-located-and-the-pause-menu-is-unreachable.md`.

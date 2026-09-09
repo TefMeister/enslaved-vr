@@ -1,0 +1,4671 @@
+=== Enslaved d3d9 logging proxy ===
+PID=2192  frameInterval=120  dumpRegister=-1  maxLogFrames=0
+[init] real d3d9 resolved at 716E0000
+[Direct3DCreate9] SDKVersion=32 -> 1219A738
+[hook] IDirect3D9::CreateDevice patched (orig=6FFE4DD0)
+[Direct3DCreate9] SDKVersion=32 -> 124F7270
+[CreateDevice] adapter=0 devtype=1 behavior=0x00000142
+   BackBuffer 1920x1080 fmt=21 count=1 windowed=0 swap=1
+   MultiSample=0 hDeviceWindow=00200908 RefreshHz=0 PresentInterval=0x1
+[window] createdevice: forcing windowed; window client 1280x720, backbuffer stays 1920x1080 (game asked windowed=0 hz=0)
+[window] createdevice: restyled (was style=0x94080000 client 1920x1080) -> 1280x720 client at 317,165
+[hook] device vtable 29466D1C patched: Present=717C6120 Reset=717C6500 SetVSConstF=71747420 BeginStateBlock=7181C6A0 EndStateBlock=7181CB30; self-heal Rearm=1
+[window] present#1: window already ok (1280x720 client, style=0x14CA0000)
+[liveness] frame 14 had ZERO SetVSConstF calls (previous frame: 2); last Reset at frame -1; slot94=ours
+[window] present#60: window already ok (1280x720 client, style=0x14CA0000)
+[frame 120] VS-const uploads (startReg x vec4count : calls):
+   c0   x128 : 1   
+   c128 x128 : 1   
+[stereo] on=1 mode=0 sep=6.500 | offset 0, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 0 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[liveness] frame 229 had ZERO SetVSConstF calls (previous frame: 2); last Reset at frame -1; slot94=ours
+[liveness] frame 231 had ZERO SetVSConstF calls (previous frame: 2); last Reset at frame -1; slot94=ours
+[frame 240] VS-const uploads (startReg x vec4count : calls):
+[stereo] on=1 mode=0 sep=6.500 | offset 0, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 0 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[window] present#300: window already ok (1280x720 client, style=0x14CA0000)
+[frame 360] VS-const uploads (startReg x vec4count : calls):
+[stereo] on=1 mode=0 sep=6.500 | offset 0, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 0 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 480] VS-const uploads (startReg x vec4count : calls):
+[stereo] on=1 mode=0 sep=6.500 | offset 0, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 0 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 600] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 207 
+   c10  x4  : 31    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 21  
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 31 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 859, ortho-skipped 19 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 171 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 720] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.0352 -549.7646 -11228.9531    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 4133, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 960 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 840] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 189 
+   c10  x4  : 19    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 19 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 4114, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 960 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 960] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.0942 -549.8823 -11228.9824    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 4133, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 960 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 1080] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 189 
+   c10  x4  : 19    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 19 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 4152, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 960 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 1200] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 47  
+   c4   x1  : 45  
+   c5   x1  : 45  
+   c6   x4  : 189 
+   c10  x4  : 19    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 19 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 4114, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 960 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 1320] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 116 
+   c10  x4  : 18    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 9   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 8   
+   c21  x1  : 8   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 18 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-444.1819 -550.0576 -11229.0264    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 4114, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 960 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 1440] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 146 
+   c10  x4  : 27    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 9   
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 27 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [-312.3665 -607.4072 -11224.9707    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 4283, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1053 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 1560] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 164 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 327.9263 -873.0923 -11214.5195    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5251, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 1680] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 21  
+   c4   x1  : 19  
+   c5   x1  : 19  
+   c6   x4  : 113 
+   c10  x4  : 19    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 17  
+   c14  x3  : 2   
+   c17  x1  : 1   
+   c18  x1  : 1   
+   c19  x1  : 1   
+   c20  x1  : 1   
+   c21  x1  : 1   
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 19 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.3115 -868.8071 -11205.0762    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 3934, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1160 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 1800] VS-const uploads (startReg x vec4count : calls):
+   c6   x4  : 1   
+[stereo] on=1 mode=0 sep=6.500 | offset 1300, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 65 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[liveness] frame 1916 had ZERO SetVSConstF calls (previous frame: 25329); last Reset at frame -1; slot94=ours
+[frame 1920] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 23  
+   c4   x1  : 21  
+   c5   x1  : 21  
+   c6   x4  : 1044
+   c9   x1  : 1   
+   c10  x4  : 696 
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 680 
+   c14  x3  : 290 
+   c15  x1  : 59  
+   c16  x1  : 64  
+   c17  x1  : 57  
+   c18  x1  : 53  
+   c19  x1  : 102 
+   c20  x1  : 28  
+   c21  x1  : 2   
+   c23  x1  : 2   
+   c24  x1  : 2   
+   c25  x1  : 2   
+   c26  x1  : 2   
+   c27  x1  : 2   
+   c28  x1  : 2   
+   c231 x4  : 81  
+   c235 x3  : 81  
+   c236 x1  : 21  
+   c238 x1  : 46  
+   c239 x1  : 60  
+   c240 x1  : 28  
+   c241 x1  : 13  
+   c242 x1  : 14  
+   c243 x1  : 2   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+[stereo] on=1 mode=0 sep=6.500 | offset 102, ortho-skipped 39 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 102 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 2040] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 23  
+   c4   x1  : 21  
+   c5   x1  : 21  
+   c6   x4  : 1072
+   c9   x1  : 1   
+   c10  x4  : 724 
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 708 
+   c14  x3  : 290 
+   c15  x1  : 59  
+   c16  x1  : 64  
+   c17  x1  : 57  
+   c18  x1  : 53  
+   c19  x1  : 102 
+   c20  x1  : 28  
+   c21  x1  : 2   
+   c23  x1  : 2   
+   c24  x1  : 2   
+   c25  x1  : 2   
+   c26  x1  : 2   
+   c27  x1  : 2   
+   c28  x1  : 2   
+   c231 x4  : 81  
+   c235 x3  : 81  
+   c236 x1  : 21  
+   c238 x1  : 46  
+   c239 x1  : 60  
+   c240 x1  : 28  
+   c241 x1  : 13  
+   c242 x1  : 14  
+   c243 x1  : 2   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+[stereo] on=1 mode=0 sep=6.500 | offset 2440, ortho-skipped 302 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 762 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[window] present#2100: restyled (was style=0x94080000 client 1286x749) -> 1280x720 client at 317,165
+[frame 2160] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 23  
+   c4   x1  : 21  
+   c5   x1  : 21  
+   c6   x4  : 1074
+   c9   x1  : 1   
+   c10  x4  : 726 
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 710 
+   c14  x3  : 290 
+   c15  x1  : 59  
+   c16  x1  : 64  
+   c17  x1  : 57  
+   c18  x1  : 53  
+   c19  x1  : 102 
+   c20  x1  : 28  
+   c21  x1  : 2   
+   c23  x1  : 2   
+   c24  x1  : 2   
+   c25  x1  : 2   
+   c26  x1  : 2   
+   c27  x1  : 2   
+   c28  x1  : 2   
+   c231 x4  : 81  
+   c235 x3  : 81  
+   c236 x1  : 21  
+   c238 x1  : 46  
+   c239 x1  : 60  
+   c240 x1  : 28  
+   c241 x1  : 13  
+   c242 x1  : 14  
+   c243 x1  : 2   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+[stereo] on=1 mode=0 sep=6.500 | offset 2400, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 600 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 2280] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 20  
+   c4   x1  : 18  
+   c5   x1  : 18  
+   c6   x4  : 240 
+   c9   x1  : 1   
+   c10  x3  : 174 
+   c11  x1  : 1   
+   c13  x1  : 162 
+   c14  x1  : 81  
+   c15  x1  : 5   
+   c16  x1  : 6   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 7   
+   c21  x1  : 2   
+   c23  x1  : 1   
+   c24  x1  : 1   
+   c25  x1  : 1   
+   c26  x1  : 1   
+   c27  x1  : 1   
+   c28  x1  : 1   
+[stereo] on=1 mode=0 sep=6.500 | offset 2187, ortho-skipped 130 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 931 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 2400] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 20  
+   c4   x1  : 18  
+   c5   x1  : 18  
+   c6   x4  : 241 
+   c9   x1  : 1   
+   c10  x3  : 176 
+   c11  x1  : 1   
+   c13  x1  : 164 
+   c14  x1  : 82  
+   c15  x1  : 5   
+   c16  x1  : 6   
+   c17  x1  : 8   
+   c18  x1  : 8   
+   c19  x1  : 8   
+   c20  x1  : 7   
+   c21  x1  : 2   
+   c23  x1  : 1   
+   c24  x1  : 1   
+   c25  x1  : 1   
+   c26  x1  : 1   
+   c27  x1  : 1   
+   c28  x1  : 1   
+[stereo] on=1 mode=0 sep=6.500 | offset 2160, ortho-skipped 120 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 960 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 2520] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 24  
+   c4   x1  : 22  
+   c5   x1  : 22  
+   c6   x4  : 2847
+   c9   x1  : 1   
+   c10  x4  : 2116
+   c11  x1  : 1   
+   c13  x1  : 2063
+   c14  x3  : 698 
+   c15  x1  : 92  
+   c16  x1  : 98  
+   c17  x1  : 94  
+   c18  x1  : 92  
+   c19  x1  : 146 
+   c20  x1  : 42  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 36  
+   c235 x3  : 36  
+   c236 x1  : 8   
+   c238 x1  : 20  
+   c239 x1  : 28  
+   c240 x1  : 15  
+   c241 x1  : 8   
+   c242 x1  : 8   
+[stereo] on=1 mode=0 sep=6.500 | offset 2313, ortho-skipped 171 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3077 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 2640] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 24  
+   c4   x1  : 22  
+   c5   x1  : 22  
+   c6   x4  : 2878
+   c9   x1  : 1   
+   c10  x4  : 2137
+   c11  x1  : 1   
+   c13  x1  : 2085
+   c14  x3  : 704 
+   c15  x1  : 92  
+   c16  x1  : 97  
+   c17  x1  : 93  
+   c18  x1  : 91  
+   c19  x1  : 145 
+   c20  x1  : 42  
+   c21  x1  : 2   
+   c23  x1  : 6   
+   c24  x1  : 6   
+   c25  x1  : 6   
+   c26  x1  : 6   
+   c27  x1  : 6   
+   c28  x1  : 6   
+   c231 x4  : 36  
+   c235 x3  : 36  
+   c236 x1  : 8   
+   c238 x1  : 20  
+   c239 x1  : 28  
+   c240 x1  : 15  
+   c241 x1  : 8   
+   c242 x1  : 8   
+[stereo] on=1 mode=0 sep=6.500 | offset 2520, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 5726 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 2760] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 21  
+   c4   x1  : 19  
+   c5   x1  : 19  
+   c6   x4  : 823 
+   c9   x1  : 1   
+   c10  x4  : 572 
+   c11  x1  : 1   
+   c13  x1  : 560 
+   c14  x3  : 220 
+   c15  x1  : 13  
+   c16  x1  : 18  
+   c17  x1  : 19  
+   c18  x1  : 19  
+   c19  x1  : 25  
+   c20  x1  : 7   
+   c21  x1  : 1   
+   c23  x1  : 6   
+   c24  x1  : 6   
+   c25  x1  : 6   
+   c26  x1  : 6   
+   c27  x1  : 6   
+   c28  x1  : 6   
+   c231 x4  : 2     <== SHARED matrix (view-projection candidate)
+   c235 x4  : 2     <== SHARED matrix (view-projection candidate)
+   c239 x1  : 2   
+   c240 x1  : 2   
+   c241 x1  : 2   
+   c242 x1  : 2   
+   [SHARED] c231 4x4 (same across all 2 draws):
+     [  -0.7730   -0.6344    0.0000    0.0000]
+     [   0.0000   -0.0000   -1.0000    0.0000]
+     [   0.6344   -0.7730    0.0000    0.0000]
+     [1735.9023 1074.1172 4360.2393    1.0000]
+   [SHARED] c235 4x4 (same across all 2 draws):
+     [   0.0009    0.0001    0.0002    0.0000]
+     [   0.0000   -0.0012    0.0001    0.0000]
+     [   0.0004   -0.0003   -0.0003    0.0000]
+     [  -3.3217    2.1894    1.6318    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 2184, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1243 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 2880] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1166
+   c9   x1  : 1   
+   c10  x4  : 691 
+   c11  x1  : 1   
+   c13  x1  : 654 
+   c14  x3  : 263 
+   c15  x1  : 45  
+   c16  x1  : 51  
+   c17  x1  : 42  
+   c18  x1  : 37  
+   c19  x1  : 41  
+   c20  x1  : 16  
+   c21  x1  : 1   
+   c23  x1  : 4   
+   c24  x1  : 4   
+   c25  x1  : 4   
+   c26  x1  : 4   
+   c27  x1  : 4   
+   c28  x1  : 4   
+   c231 x4  : 147 
+   c235 x3  : 147 
+   c236 x1  : 26  
+   c238 x1  : 90  
+   c239 x1  : 121 
+   c240 x1  : 59  
+   c241 x1  : 29  
+   c242 x1  : 31  
+   c243 x1  : 3   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+[stereo] on=1 mode=0 sep=6.500 | offset 2474, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2259 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 3000] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1155
+   c9   x1  : 1   
+   c10  x4  : 683 
+   c11  x1  : 1   
+   c13  x1  : 643 
+   c14  x3  : 252 
+   c15  x1  : 39  
+   c16  x1  : 48  
+   c17  x1  : 39  
+   c18  x1  : 34  
+   c19  x1  : 38  
+   c20  x1  : 13  
+   c21  x1  : 1   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 147 
+   c235 x3  : 147 
+   c236 x1  : 26  
+   c238 x1  : 90  
+   c239 x1  : 121 
+   c240 x1  : 59  
+   c241 x1  : 29  
+   c242 x1  : 31  
+   c243 x1  : 3   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 4341 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 3120] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 23  
+   c4   x1  : 21  
+   c5   x1  : 21  
+   c6   x4  : 1321
+   c9   x1  : 1   
+   c10  x3  : 848 
+   c11  x1  : 8   
+   c12  x1  : 3   
+   c13  x1  : 831 
+   c14  x1  : 352 
+   c15  x1  : 88  
+   c16  x1  : 96  
+   c17  x1  : 81  
+   c18  x1  : 75  
+   c19  x1  : 118 
+   c20  x1  : 38  
+   c23  x1  : 2   
+   c24  x1  : 2   
+   c25  x1  : 2   
+   c26  x1  : 2   
+   c27  x1  : 2   
+   c28  x1  : 2   
+   c231 x4  : 146 
+   c235 x3  : 146 
+   c236 x1  : 25  
+   c238 x1  : 90  
+   c239 x1  : 121 
+   c240 x1  : 57  
+   c241 x1  : 27  
+   c242 x1  : 31  
+   c243 x1  : 5   
+   c244 x1  : 4   
+   c245 x1  : 4   
+   c246 x1  : 4   
+   c247 x1  : 4   
+   c248 x1  : 4   
+[stereo] on=1 mode=0 sep=6.500 | offset 2552, ortho-skipped 130 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1140 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 3240] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 25  
+   c4   x1  : 23  
+   c5   x1  : 23  
+   c6   x4  : 560 
+   c9   x1  : 1   
+   c10  x3  : 278 
+   c11  x1  : 1   
+   c13  x1  : 271 
+   c14  x1  : 121 
+   c15  x1  : 16  
+   c16  x1  : 17  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 21  
+   c20  x1  : 8   
+   c23  x1  : 1   
+   c24  x1  : 1   
+   c25  x1  : 1   
+   c26  x1  : 1   
+   c27  x1  : 1   
+   c28  x1  : 1   
+   c231 x4  : 142 
+   c235 x3  : 142 
+   c236 x1  : 40  
+   c238 x1  : 74  
+   c239 x1  : 102 
+   c240 x1  : 49  
+   c241 x1  : 24  
+   c242 x1  : 28  
+   c243 x1  : 5   
+   c244 x1  : 4   
+   c245 x1  : 4   
+   c246 x1  : 4   
+   c247 x1  : 4   
+   c248 x1  : 4   
+[stereo] on=1 mode=0 sep=6.500 | offset 2622, ortho-skipped 120 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 641 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 3360] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 22  
+   c4   x1  : 20  
+   c5   x1  : 20  
+   c6   x4  : 344 
+   c9   x1  : 1   
+   c10  x3  : 186 
+   c11  x1  : 1   
+   c13  x1  : 181 
+   c14  x1  : 83  
+   c15  x1  : 14  
+   c16  x1  : 15  
+   c17  x1  : 15  
+   c18  x1  : 15  
+   c19  x1  : 19  
+   c20  x1  : 7   
+   c23  x1  : 1   
+   c24  x1  : 1   
+   c25  x1  : 1   
+   c26  x1  : 1   
+   c27  x1  : 1   
+   c28  x1  : 1   
+   c231 x4  : 63  
+   c235 x3  : 63  
+   c236 x1  : 16  
+   c238 x1  : 33  
+   c239 x1  : 47  
+   c240 x1  : 24  
+   c241 x1  : 13  
+   c242 x1  : 14  
+   c243 x1  : 2   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+[stereo] on=1 mode=0 sep=6.500 | offset 2687, ortho-skipped 206 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 782 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 3480] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 21  
+   c4   x1  : 19  
+   c5   x1  : 19  
+   c6   x4  : 1034
+   c9   x1  : 1   
+   c10  x4  : 739 
+   c11  x1  : 3   
+   c12  x1  : 2   
+   c13  x1  : 727 
+   c14  x3  : 282 
+   c15  x1  : 34  
+   c16  x1  : 36  
+   c17  x1  : 36  
+   c18  x1  : 34  
+   c19  x1  : 56  
+   c20  x1  : 16  
+   c21  x1  : 3   
+   c23  x1  : 3   
+   c24  x1  : 3   
+   c25  x1  : 3   
+   c26  x1  : 3   
+   c27  x1  : 3   
+   c28  x1  : 3   
+   c231 x4  : 4     <== SHARED matrix (view-projection candidate)
+   c235 x3  : 4   
+   c236 x1  : 1   
+   c238 x1  : 3   
+   c239 x1  : 3   
+   c240 x1  : 1   
+   [SHARED] c231 4x4 (same across all 4 draws):
+     [   0.0061    1.7981    0.0028    0.0000]
+     [   0.0937    0.0024   -1.7956    0.0000]
+     [  -1.7956    0.0062   -0.0937    0.0000]
+     [-339.0742 -5879.5625 -213.0704    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 2283, ortho-skipped 203 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 579 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 3600] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 25  
+   c4   x1  : 23  
+   c5   x1  : 23  
+   c6   x4  : 531 
+   c9   x1  : 1   
+   c10  x4  : 328 
+   c11  x1  : 1   
+   c13  x1  : 275 
+   c14  x3  : 121 
+   c15  x1  : 10  
+   c16  x1  : 12  
+   c17  x1  : 15  
+   c18  x1  : 15  
+   c19  x1  : 17  
+   c20  x1  : 9   
+   c21  x1  : 3   
+   c23  x1  : 3   
+   c24  x1  : 3   
+   c25  x1  : 3   
+   c26  x1  : 3   
+   c27  x1  : 3   
+   c28  x1  : 3   
+   c231 x4  : 20  
+   c235 x3  : 20  
+   c236 x1  : 6   
+   c238 x1  : 10  
+   c239 x1  : 14  
+   c240 x1  : 8   
+   c241 x1  : 4   
+   c242 x1  : 4   
+[stereo] on=1 mode=0 sep=6.500 | offset 2431, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3491 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 3720] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 23  
+   c4   x1  : 21  
+   c5   x1  : 21  
+   c6   x4  : 296 
+   c9   x1  : 1   
+   c10  x3  : 133 
+   c11  x1  : 2   
+   c12  x1  : 1   
+   c13  x1  : 125 
+   c14  x1  : 60  
+   c15  x1  : 12  
+   c16  x1  : 13  
+   c17  x1  : 12  
+   c18  x1  : 11  
+   c19  x1  : 17  
+   c20  x1  : 5   
+   c23  x1  : 1   
+   c24  x1  : 1   
+   c25  x1  : 1   
+   c26  x1  : 1   
+   c27  x1  : 1   
+   c28  x1  : 1   
+   c231 x4  : 95  
+   c235 x3  : 95  
+   c236 x1  : 26  
+   c238 x1  : 44  
+   c239 x1  : 69  
+   c240 x1  : 39  
+   c241 x1  : 24  
+   c242 x1  : 25  
+   c243 x1  : 2   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+[stereo] on=1 mode=0 sep=6.500 | offset 2593, ortho-skipped 187 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3429 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 3840] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 26  
+   c4   x1  : 24  
+   c5   x1  : 24  
+   c6   x4  : 392 
+   c9   x1  : 1   
+   c10  x3  : 209 
+   c11  x1  : 3   
+   c12  x1  : 1   
+   c13  x1  : 185 
+   c14  x1  : 78  
+   c15  x1  : 14  
+   c16  x1  : 18  
+   c17  x1  : 15  
+   c18  x1  : 14  
+   c19  x1  : 14  
+   c20  x1  : 6   
+   c23  x1  : 2   
+   c24  x1  : 2   
+   c25  x1  : 2   
+   c26  x1  : 2   
+   c27  x1  : 2   
+   c28  x1  : 2   
+   c231 x4  : 80  
+   c235 x3  : 80  
+   c236 x1  : 18  
+   c238 x1  : 36  
+   c239 x1  : 62  
+   c240 x1  : 37  
+   c241 x1  : 25  
+   c242 x1  : 26  
+   c243 x1  : 2   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+[stereo] on=1 mode=0 sep=6.500 | offset 2700, ortho-skipped 178 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1248 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 3960] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 531 
+   c9   x1  : 1   
+   c10  x3  : 241 
+   c11  x1  : 4   
+   c12  x1  : 2   
+   c13  x1  : 226 
+   c14  x1  : 91  
+   c15  x1  : 18  
+   c16  x1  : 22  
+   c17  x1  : 18  
+   c18  x1  : 16  
+   c19  x1  : 18  
+   c20  x1  : 7   
+   c23  x1  : 2   
+   c24  x1  : 2   
+   c25  x1  : 2   
+   c26  x1  : 2   
+   c27  x1  : 2   
+   c28  x1  : 2   
+   c231 x4  : 165 
+   c235 x3  : 165 
+   c236 x1  : 48  
+   c238 x1  : 90  
+   c239 x1  : 117 
+   c240 x1  : 55  
+   c241 x1  : 25  
+   c242 x1  : 27  
+   c243 x1  : 3   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+[stereo] on=1 mode=0 sep=6.500 | offset 2817, ortho-skipped 186 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 866 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 4080] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 29  
+   c4   x1  : 27  
+   c5   x1  : 27  
+   c6   x4  : 596 
+   c9   x1  : 1   
+   c10  x4  : 309 
+   c11  x1  : 1   
+   c13  x1  : 296 
+   c14  x3  : 136 
+   c15  x1  : 31  
+   c16  x1  : 32  
+   c17  x1  : 32  
+   c18  x1  : 32  
+   c19  x1  : 39  
+   c20  x1  : 17  
+   c21  x1  : 1   
+   c23  x1  : 2   
+   c24  x1  : 2   
+   c25  x1  : 2   
+   c26  x1  : 2   
+   c27  x1  : 2   
+   c28  x1  : 2   
+   c231 x4  : 131 
+   c235 x3  : 131 
+   c236 x1  : 36  
+   c238 x1  : 68  
+   c239 x1  : 95  
+   c240 x1  : 48  
+   c241 x1  : 25  
+   c242 x1  : 27  
+   c243 x1  : 3   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+[stereo] on=1 mode=0 sep=6.500 | offset 3123, ortho-skipped 198 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1149 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 4200] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 525 
+   c9   x1  : 1   
+   c10  x3  : 229 
+   c11  x1  : 4   
+   c12  x1  : 2   
+   c13  x1  : 216 
+   c14  x1  : 96  
+   c15  x1  : 18  
+   c16  x1  : 21  
+   c17  x1  : 17  
+   c18  x1  : 15  
+   c19  x1  : 15  
+   c20  x1  : 7   
+   c23  x1  : 1   
+   c24  x1  : 1   
+   c25  x1  : 1   
+   c26  x1  : 1   
+   c27  x1  : 1   
+   c28  x1  : 1   
+   c231 x4  : 165 
+   c235 x3  : 165 
+   c236 x1  : 48  
+   c238 x1  : 90  
+   c239 x1  : 117 
+   c240 x1  : 55  
+   c241 x1  : 25  
+   c242 x1  : 27  
+   c243 x1  : 3   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+[stereo] on=1 mode=0 sep=6.500 | offset 3124, ortho-skipped 191 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1038 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 4320] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 537 
+   c9   x1  : 1   
+   c10  x3  : 240 
+   c11  x1  : 3   
+   c12  x1  : 1   
+   c13  x1  : 228 
+   c14  x1  : 98  
+   c15  x1  : 16  
+   c16  x1  : 19  
+   c17  x1  : 16  
+   c18  x1  : 15  
+   c19  x1  : 15  
+   c20  x1  : 7   
+   c23  x1  : 1   
+   c24  x1  : 1   
+   c25  x1  : 1   
+   c26  x1  : 1   
+   c27  x1  : 1   
+   c28  x1  : 1   
+   c231 x4  : 161 
+   c235 x3  : 161 
+   c236 x1  : 48  
+   c238 x1  : 86  
+   c239 x1  : 113 
+   c240 x1  : 54  
+   c241 x1  : 25  
+   c242 x1  : 27  
+   c243 x1  : 3   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+[stereo] on=1 mode=0 sep=6.500 | offset 3127, ortho-skipped 202 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1006 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 4440] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 398 
+   c9   x1  : 1   
+   c10  x3  : 150 
+   c11  x1  : 2   
+   c12  x1  : 1   
+   c13  x1  : 133 
+   c14  x3  : 62  
+   c15  x1  : 12  
+   c16  x1  : 18  
+   c17  x1  : 18  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 6   
+   c21  x1  : 1   
+   c23  x1  : 6   
+   c24  x1  : 6   
+   c25  x1  : 6   
+   c26  x1  : 6   
+   c27  x1  : 6   
+   c28  x1  : 6   
+   c231 x4  : 161 
+   c235 x3  : 161 
+   c236 x1  : 48  
+   c238 x1  : 86  
+   c239 x1  : 113 
+   c240 x1  : 54  
+   c241 x1  : 25  
+   c242 x1  : 27  
+   c243 x1  : 3   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+[stereo] on=1 mode=0 sep=6.500 | offset 3125, ortho-skipped 120 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 947 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 4560] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 400 
+   c9   x1  : 1   
+   c10  x3  : 152 
+   c11  x1  : 2   
+   c12  x1  : 1   
+   c13  x1  : 135 
+   c14  x3  : 63  
+   c15  x1  : 12  
+   c16  x1  : 18  
+   c17  x1  : 18  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 6   
+   c21  x1  : 1   
+   c23  x1  : 6   
+   c24  x1  : 6   
+   c25  x1  : 6   
+   c26  x1  : 6   
+   c27  x1  : 6   
+   c28  x1  : 6   
+   c231 x4  : 161 
+   c235 x3  : 161 
+   c236 x1  : 48  
+   c238 x1  : 86  
+   c239 x1  : 113 
+   c240 x1  : 54  
+   c241 x1  : 25  
+   c242 x1  : 27  
+   c243 x1  : 3   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+[stereo] on=1 mode=0 sep=6.500 | offset 3120, ortho-skipped 120 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1523 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 4680] VS-const uploads (startReg x vec4count : calls):
+   c0   x1  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 516 
+   c9   x1  : 1   
+   c10  x3  : 224 
+   c11  x1  : 3   
+   c12  x1  : 1   
+   c13  x1  : 212 
+   c14  x1  : 88  
+   c15  x1  : 14  
+   c16  x1  : 17  
+   c17  x1  : 14  
+   c18  x1  : 13  
+   c19  x1  : 13  
+   c20  x1  : 6   
+   c23  x1  : 1   
+   c24  x1  : 1   
+   c25  x1  : 1   
+   c26  x1  : 1   
+   c27  x1  : 1   
+   c28  x1  : 1   
+   c231 x4  : 161 
+   c235 x3  : 161 
+   c236 x1  : 48  
+   c238 x1  : 86  
+   c239 x1  : 113 
+   c240 x1  : 54  
+   c241 x1  : 25  
+   c242 x1  : 27  
+   c243 x1  : 3   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+[stereo] on=1 mode=0 sep=6.500 | offset 3124, ortho-skipped 120 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1078 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 4800] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 30  
+   c4   x1  : 28  
+   c5   x1  : 28  
+   c6   x4  : 637 
+   c9   x1  : 1   
+   c10  x4  : 330 
+   c11  x1  : 5   
+   c12  x1  : 2   
+   c13  x1  : 309 
+   c14  x3  : 133 
+   c15  x1  : 34  
+   c16  x1  : 42  
+   c17  x1  : 36  
+   c18  x1  : 34  
+   c19  x1  : 47  
+   c20  x1  : 16  
+   c21  x1  : 1   
+   c23  x1  : 6   
+   c24  x1  : 6   
+   c25  x1  : 6   
+   c26  x1  : 6   
+   c27  x1  : 6   
+   c28  x1  : 6   
+   c231 x4  : 162 
+   c235 x3  : 162 
+   c236 x1  : 46  
+   c238 x1  : 87  
+   c239 x1  : 116 
+   c240 x1  : 56  
+   c241 x1  : 27  
+   c242 x1  : 29  
+   c243 x1  : 3   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+[stereo] on=1 mode=0 sep=6.500 | offset 3129, ortho-skipped 154 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1450 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 4920] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 30  
+   c4   x1  : 28  
+   c5   x1  : 28  
+   c6   x4  : 681 
+   c9   x1  : 1   
+   c10  x4  : 361 
+   c11  x1  : 4   
+   c12  x1  : 2   
+   c13  x1  : 341 
+   c14  x3  : 149 
+   c15  x1  : 34  
+   c16  x1  : 40  
+   c17  x1  : 36  
+   c18  x1  : 34  
+   c19  x1  : 51  
+   c20  x1  : 16  
+   c21  x1  : 1   
+   c23  x1  : 6   
+   c24  x1  : 6   
+   c25  x1  : 6   
+   c26  x1  : 6   
+   c27  x1  : 6   
+   c28  x1  : 6   
+   c231 x4  : 162 
+   c235 x3  : 162 
+   c236 x1  : 46  
+   c238 x1  : 87  
+   c239 x1  : 116 
+   c240 x1  : 56  
+   c241 x1  : 27  
+   c242 x1  : 29  
+   c243 x1  : 3   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+[stereo] on=1 mode=0 sep=6.500 | offset 3240, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1645 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 5040] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 733 
+   c9   x1  : 1   
+   c10  x4  : 452 
+   c11  x1  : 2   
+   c12  x1  : 1   
+   c13  x1  : 434 
+   c14  x3  : 171 
+   c15  x1  : 42  
+   c16  x1  : 47  
+   c17  x1  : 46  
+   c18  x1  : 45  
+   c19  x1  : 70  
+   c20  x1  : 20  
+   c21  x1  : 1   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 91  
+   c235 x3  : 91  
+   c236 x1  : 20  
+   c238 x1  : 39  
+   c239 x1  : 71  
+   c240 x1  : 44  
+   c241 x1  : 31  
+   c242 x1  : 32  
+   c243 x1  : 2   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+[stereo] on=1 mode=0 sep=6.500 | offset 2893, ortho-skipped 160 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1057 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 5160] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 846 
+   c9   x1  : 1   
+   c10  x4  : 544 
+   c11  x1  : 2   
+   c12  x1  : 1   
+   c13  x1  : 531 
+   c14  x3  : 199 
+   c15  x1  : 45  
+   c16  x1  : 45  
+   c17  x1  : 44  
+   c18  x1  : 43  
+   c19  x1  : 69  
+   c20  x1  : 21  
+   c21  x1  : 1   
+   c23  x1  : 2   
+   c24  x1  : 2   
+   c25  x1  : 2   
+   c26  x1  : 2   
+   c27  x1  : 2   
+   c28  x1  : 2   
+   c231 x4  : 76  
+   c235 x3  : 76  
+   c236 x1  : 14  
+   c238 x1  : 30  
+   c239 x1  : 62  
+   c240 x1  : 41  
+   c241 x1  : 31  
+   c242 x1  : 32  
+   c243 x1  : 2   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+[stereo] on=1 mode=0 sep=6.500 | offset 3000, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1362 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 5280] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 28  
+   c4   x1  : 26  
+   c5   x1  : 26  
+   c6   x4  : 966 
+   c9   x1  : 1   
+   c10  x4  : 625 
+   c11  x1  : 2   
+   c12  x1  : 1   
+   c13  x1  : 610 
+   c14  x3  : 224 
+   c15  x1  : 43  
+   c16  x1  : 44  
+   c17  x1  : 44  
+   c18  x1  : 43  
+   c19  x1  : 69  
+   c20  x1  : 21  
+   c21  x1  : 2   
+   c23  x1  : 3   
+   c24  x1  : 3   
+   c25  x1  : 3   
+   c26  x1  : 3   
+   c27  x1  : 3   
+   c28  x1  : 3   
+   c231 x4  : 71  
+   c235 x3  : 71  
+   c236 x1  : 12  
+   c238 x1  : 27  
+   c239 x1  : 59  
+   c240 x1  : 40  
+   c241 x1  : 31  
+   c242 x1  : 32  
+   c243 x1  : 2   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+[stereo] on=1 mode=0 sep=6.500 | offset 3000, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1087 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 5400] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 39  
+   c4   x1  : 37  
+   c5   x1  : 37  
+   c6   x4  : 1643
+   c9   x1  : 1   
+   c10  x4  : 1102
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1062
+   c14  x3  : 427 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 105 
+   c18  x1  : 101 
+   c19  x1  : 165 
+   c20  x1  : 55  
+   c21  x1  : 14  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2930, ortho-skipped 1014 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2505 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 5520] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 40  
+   c4   x1  : 38  
+   c5   x1  : 38  
+   c6   x4  : 1643
+   c9   x1  : 1   
+   c10  x4  : 1103
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1062
+   c14  x3  : 428 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 106 
+   c18  x1  : 102 
+   c19  x1  : 166 
+   c20  x1  : 56  
+   c21  x1  : 15  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1649 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3535 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 5640] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1641
+   c9   x1  : 1   
+   c10  x4  : 1101
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1062
+   c14  x3  : 425 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1483 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3367 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 5760] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1645
+   c9   x1  : 1   
+   c10  x4  : 1101
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1062
+   c14  x3  : 425 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1518 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3399 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 5880] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1664
+   c9   x1  : 1   
+   c10  x4  : 1115
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1076
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1520 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3410 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 6000] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1660
+   c9   x1  : 1   
+   c10  x4  : 1115
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1076
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1530 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3414 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 6120] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 1661
+   c9   x1  : 1   
+   c10  x4  : 1116
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1076
+   c14  x3  : 433 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 105 
+   c18  x1  : 101 
+   c19  x1  : 165 
+   c20  x1  : 54  
+   c21  x1  : 13  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1509 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3394 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 6240] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1675
+   c9   x1  : 1   
+   c10  x4  : 1105
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1076
+   c14  x3  : 422 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 94  
+   c18  x1  : 90  
+   c19  x1  : 154 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2160 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 6360] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1706
+   c9   x1  : 1   
+   c10  x4  : 1127
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 94  
+   c18  x1  : 90  
+   c19  x1  : 154 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2160 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 6480] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1706
+   c9   x1  : 1   
+   c10  x4  : 1127
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 94  
+   c18  x1  : 90  
+   c19  x1  : 154 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2160 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 6600] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1706
+   c9   x1  : 1   
+   c10  x4  : 1127
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 94  
+   c18  x1  : 90  
+   c19  x1  : 154 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2160 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 6720] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1706
+   c9   x1  : 1   
+   c10  x4  : 1127
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 94  
+   c18  x1  : 90  
+   c19  x1  : 154 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2160 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 6840] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1706
+   c9   x1  : 1   
+   c10  x4  : 1127
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 94  
+   c18  x1  : 90  
+   c19  x1  : 154 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2160 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 6960] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1706
+   c9   x1  : 1   
+   c10  x4  : 1127
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 94  
+   c18  x1  : 90  
+   c19  x1  : 154 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2160 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 7080] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1706
+   c9   x1  : 1   
+   c10  x4  : 1127
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 94  
+   c18  x1  : 90  
+   c19  x1  : 154 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2160 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 7200] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1706
+   c9   x1  : 1   
+   c10  x4  : 1127
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 94  
+   c18  x1  : 90  
+   c19  x1  : 154 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2160 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 7320] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1706
+   c9   x1  : 1   
+   c10  x4  : 1127
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 94  
+   c18  x1  : 90  
+   c19  x1  : 154 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2160 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 7440] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1706
+   c9   x1  : 1   
+   c10  x4  : 1127
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 94  
+   c18  x1  : 90  
+   c19  x1  : 154 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2160 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 7560] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1690
+   c9   x1  : 1   
+   c10  x4  : 1136
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 103 
+   c18  x1  : 99  
+   c19  x1  : 163 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1062 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2962 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 7680] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1690
+   c9   x1  : 1   
+   c10  x4  : 1136
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 103 
+   c18  x1  : 99  
+   c19  x1  : 163 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1507 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3391 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 7800] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1694
+   c9   x1  : 1   
+   c10  x4  : 1136
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 103 
+   c18  x1  : 99  
+   c19  x1  : 163 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1504 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3392 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 7920] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 40  
+   c4   x1  : 38  
+   c5   x1  : 38  
+   c6   x4  : 1697
+   c9   x1  : 1   
+   c10  x4  : 1139
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 445 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 106 
+   c18  x1  : 102 
+   c19  x1  : 166 
+   c20  x1  : 56  
+   c21  x1  : 15  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1484 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3368 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 8040] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1690
+   c9   x1  : 1   
+   c10  x4  : 1136
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 103 
+   c18  x1  : 99  
+   c19  x1  : 163 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1464 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3345 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 8160] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1694
+   c9   x1  : 1   
+   c10  x4  : 1136
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 103 
+   c18  x1  : 99  
+   c19  x1  : 163 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1535 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3423 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 8280] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1694
+   c9   x1  : 1   
+   c10  x4  : 1136
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 103 
+   c18  x1  : 99  
+   c19  x1  : 163 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1507 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3392 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 8400] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1694
+   c9   x1  : 1   
+   c10  x4  : 1136
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 103 
+   c18  x1  : 99  
+   c19  x1  : 163 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1500 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3382 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 8520] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 1691
+   c9   x1  : 1   
+   c10  x4  : 1137
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 443 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 54  
+   c21  x1  : 13  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1489 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3371 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 8640] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 1695
+   c9   x1  : 1   
+   c10  x4  : 1137
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 443 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 54  
+   c21  x1  : 13  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1526 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3477 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 8760] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 1691
+   c9   x1  : 1   
+   c10  x4  : 1137
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 443 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 54  
+   c21  x1  : 13  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1523 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3409 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 8880] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1694
+   c9   x1  : 1   
+   c10  x4  : 1136
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 103 
+   c18  x1  : 99  
+   c19  x1  : 163 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1499 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3381 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 9000] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 39  
+   c4   x1  : 37  
+   c5   x1  : 37  
+   c6   x4  : 1697
+   c9   x1  : 1   
+   c10  x4  : 1139
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 444 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 106 
+   c18  x1  : 102 
+   c19  x1  : 166 
+   c20  x1  : 55  
+   c21  x1  : 14  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1489 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3378 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 9120] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1695
+   c9   x1  : 1   
+   c10  x4  : 1137
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1504 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3390 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 9240] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1695
+   c9   x1  : 1   
+   c10  x4  : 1137
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1529 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3414 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 9360] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 1696
+   c9   x1  : 1   
+   c10  x4  : 1138
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 443 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 105 
+   c18  x1  : 101 
+   c19  x1  : 165 
+   c20  x1  : 54  
+   c21  x1  : 13  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1520 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3405 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 9480] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 1696
+   c9   x1  : 1   
+   c10  x4  : 1138
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 443 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 105 
+   c18  x1  : 101 
+   c19  x1  : 165 
+   c20  x1  : 54  
+   c21  x1  : 13  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1471 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3358 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 9600] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 1696
+   c9   x1  : 1   
+   c10  x4  : 1138
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 443 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 105 
+   c18  x1  : 101 
+   c19  x1  : 165 
+   c20  x1  : 54  
+   c21  x1  : 13  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1513 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3399 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 9720] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1695
+   c9   x1  : 1   
+   c10  x4  : 1137
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1493 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3377 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 9840] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 1696
+   c9   x1  : 1   
+   c10  x4  : 1138
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 443 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 105 
+   c18  x1  : 101 
+   c19  x1  : 165 
+   c20  x1  : 54  
+   c21  x1  : 13  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1495 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3380 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 9960] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1693
+   c9   x1  : 1   
+   c10  x4  : 1135
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1096
+   c14  x3  : 441 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1518 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3474 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 10080] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 1692
+   c9   x1  : 1   
+   c10  x4  : 1138
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 443 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 105 
+   c18  x1  : 101 
+   c19  x1  : 165 
+   c20  x1  : 54  
+   c21  x1  : 13  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1506 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3392 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 10200] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 1696
+   c9   x1  : 1   
+   c10  x4  : 1138
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 443 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 105 
+   c18  x1  : 101 
+   c19  x1  : 165 
+   c20  x1  : 54  
+   c21  x1  : 13  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1502 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3387 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 10320] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1695
+   c9   x1  : 1   
+   c10  x4  : 1137
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1534 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3422 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 10440] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 38  
+   c4   x1  : 36  
+   c5   x1  : 36  
+   c6   x4  : 1695
+   c9   x1  : 1   
+   c10  x4  : 1137
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1097
+   c14  x3  : 443 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 105 
+   c18  x1  : 101 
+   c19  x1  : 165 
+   c20  x1  : 54  
+   c21  x1  : 13  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 110 
+   c235 x4  : 110 
+   c236 x1  : 24  
+   c238 x1  : 52  
+   c239 x3  : 86  
+   c240 x1  : 48  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1527 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3404 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 10560] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 39  
+   c4   x1  : 37  
+   c5   x1  : 37  
+   c6   x4  : 1693
+   c9   x1  : 1   
+   c10  x4  : 1139
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 444 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 106 
+   c18  x1  : 102 
+   c19  x1  : 166 
+   c20  x1  : 55  
+   c21  x1  : 14  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1495 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3380 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 10680] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1691
+   c9   x1  : 1   
+   c10  x4  : 1137
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1477 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3358 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 10800] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 1691
+   c9   x1  : 1   
+   c10  x4  : 1137
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 442 
+   c15  x1  : 92  
+   c16  x1  : 101 
+   c17  x1  : 104 
+   c18  x1  : 100 
+   c19  x1  : 164 
+   c20  x1  : 53  
+   c21  x1  : 12  
+   c23  x1  : 8   
+   c24  x1  : 8   
+   c25  x1  : 8   
+   c26  x1  : 8   
+   c27  x1  : 8   
+   c28  x1  : 8   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 1509 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 3397 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 10920] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1705
+   c9   x1  : 1   
+   c10  x4  : 1126
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 93  
+   c18  x1  : 89  
+   c19  x1  : 153 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 909 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2705 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 11040] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1705
+   c9   x1  : 1   
+   c10  x4  : 1126
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 93  
+   c18  x1  : 89  
+   c19  x1  : 153 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 11160] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1705
+   c9   x1  : 1   
+   c10  x4  : 1126
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 93  
+   c18  x1  : 89  
+   c19  x1  : 153 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 11280] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1705
+   c9   x1  : 1   
+   c10  x4  : 1126
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 93  
+   c18  x1  : 89  
+   c19  x1  : 153 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 11400] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1705
+   c9   x1  : 1   
+   c10  x4  : 1126
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 93  
+   c18  x1  : 89  
+   c19  x1  : 153 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 11520] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1705
+   c9   x1  : 1   
+   c10  x4  : 1126
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 93  
+   c18  x1  : 89  
+   c19  x1  : 153 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 11640] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1705
+   c9   x1  : 1   
+   c10  x4  : 1126
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 93  
+   c18  x1  : 89  
+   c19  x1  : 153 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 11760] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1705
+   c9   x1  : 1   
+   c10  x4  : 1126
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 93  
+   c18  x1  : 89  
+   c19  x1  : 153 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 11880] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1705
+   c9   x1  : 1   
+   c10  x4  : 1126
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 93  
+   c18  x1  : 89  
+   c19  x1  : 153 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 12000] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1705
+   c9   x1  : 1   
+   c10  x4  : 1126
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 93  
+   c18  x1  : 89  
+   c19  x1  : 153 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 12120] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1705
+   c9   x1  : 1   
+   c10  x4  : 1126
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 93  
+   c18  x1  : 89  
+   c19  x1  : 153 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 12240] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1691
+   c9   x1  : 1   
+   c10  x4  : 1126
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 93  
+   c18  x1  : 89  
+   c19  x1  : 153 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 12360] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 27  
+   c4   x1  : 25  
+   c5   x1  : 25  
+   c6   x4  : 1681
+   c9   x1  : 1   
+   c10  x4  : 1126
+   c11  x1  : 7   
+   c12  x1  : 2   
+   c13  x1  : 1098
+   c14  x3  : 432 
+   c15  x1  : 92  
+   c16  x1  : 100 
+   c17  x1  : 93  
+   c18  x1  : 89  
+   c19  x1  : 153 
+   c20  x1  : 43  
+   c21  x1  : 2   
+   c23  x1  : 7   
+   c24  x1  : 7   
+   c25  x1  : 7   
+   c26  x1  : 7   
+   c27  x1  : 7   
+   c28  x1  : 7   
+   c231 x4  : 106 
+   c235 x4  : 106 
+   c236 x1  : 23  
+   c238 x1  : 49  
+   c239 x3  : 83  
+   c240 x1  : 47  
+   c241 x1  : 31  
+   c242 x1  : 34  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+[stereo] on=1 mode=0 sep=6.500 | offset 2880, ortho-skipped 240 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[liveness] frame 12450 had ZERO SetVSConstF calls (previous frame: 768); last Reset at frame -1; slot94=ours
+[frame 12480] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 54  
+   c4   x1  : 54  
+   c5   x1  : 54  
+   c6   x4  : 264 
+   c10  x4  : 42    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 12  
+   c13  x1  : 13  
+   c14  x3  : 17  
+   c17  x1  : 16  
+   c18  x1  : 16  
+   c19  x1  : 16  
+   c20  x1  : 16  
+   c21  x1  : 16  
+   c231 x4  : 154 
+   c235 x3  : 154 
+   c236 x1  : 28  
+   c238 x1  : 80  
+   c239 x1  : 126 
+   c240 x1  : 77  
+   c241 x1  : 43  
+   c242 x1  : 46  
+   c243 x1  : 4   
+   c244 x1  : 3   
+   c245 x1  : 3   
+   c246 x1  : 3   
+   c247 x1  : 3   
+   c248 x1  : 3   
+   [SHARED] c10 4x4 (same across all 42 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 2891, ortho-skipped 148 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 1538 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[window] present#12600: restyled (was style=0x94080000 client 1286x749) -> 1280x720 client at 317,165
+[frame 12600] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 164 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.7041 -872.9204 -11214.5928    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5192, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2038 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 12720] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 56  
+   c4   x1  : 54  
+   c5   x1  : 54  
+   c6   x4  : 237 
+   c10  x4  : 40    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 40 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5232, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 12840] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 164 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 327.3069 -883.7632 -11208.7881    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5175, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 12960] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 164 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.1155 -866.6968 -11212.9902    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5194, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 13080] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 56  
+   c4   x1  : 54  
+   c5   x1  : 54  
+   c6   x4  : 237 
+   c10  x4  : 40    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 40 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5232, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 13200] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 56  
+   c4   x1  : 54  
+   c5   x1  : 54  
+   c6   x4  : 237 
+   c10  x4  : 40    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 40 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5175, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 13320] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 164 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 327.4270 -871.5435 -11211.4414    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5194, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 13440] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 164 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.4082 -865.5425 -11198.2539    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5213, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 13560] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 164 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 329.2471 -890.5400 -11194.1221    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5175, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 13680] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 164 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.1360 -885.1113 -11204.9424    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5194, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 13800] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 56  
+   c4   x1  : 54  
+   c5   x1  : 54  
+   c6   x4  : 237 
+   c10  x4  : 40    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 40 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5232, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 13920] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 164 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.4607 -869.8071 -11192.5449    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5175, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 14040] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 56  
+   c4   x1  : 54  
+   c5   x1  : 54  
+   c6   x4  : 237 
+   c10  x4  : 40    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 40 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5194, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 14160] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 165 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.2793 -872.7090 -11214.4668    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5194, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 14280] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 165 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.9348 -872.7808 -11190.7842    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5251, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 14400] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 56  
+   c4   x1  : 54  
+   c5   x1  : 54  
+   c6   x4  : 238 
+   c10  x4  : 40    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 13  
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 124 
+   c235 x3  : 124 
+   c236 x1  : 18  
+   c238 x1  : 64  
+   c239 x1  : 106 
+   c240 x1  : 84  
+   c241 x1  : 40  
+   c242 x1  : 42  
+   c243 x1  : 2   
+   c244 x1  : 2   
+   c245 x1  : 2   
+   c246 x1  : 2   
+   c247 x1  : 2   
+   c248 x1  : 2   
+   [SHARED] c10 4x4 (same across all 40 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5213, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 14520] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 165 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 327.8394 -867.9771 -11210.0908    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5194, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 14640] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 165 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.8030 -868.4521 -11209.2979    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5232, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 14760] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 165 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 329.8887 -888.6934 -11189.5146    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5175, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 14880] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 165 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 327.9578 -882.1006 -11206.0801    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5175, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 15000] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 165 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 328.6860 -870.9673 -11210.5879    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5213, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 15120] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 165 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 330.0713 -891.9722 -11188.0430    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5194, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
+[frame 15240] VS-const uploads (startReg x vec4count : calls):
+   c0   x4  : 37  
+   c4   x1  : 35  
+   c5   x1  : 35  
+   c6   x4  : 165 
+   c10  x4  : 39    <== SHARED matrix (view-projection candidate)
+   c11  x1  : 7   
+   c13  x1  : 21  
+   c14  x3  : 18  
+   c17  x1  : 17  
+   c18  x1  : 17  
+   c19  x1  : 17  
+   c20  x1  : 17  
+   c21  x1  : 17  
+   c231 x4  : 62    <== SHARED matrix (view-projection candidate)
+   c235 x3  : 62  
+   c236 x1  : 9   
+   c238 x1  : 32  
+   c239 x1  : 53  
+   c240 x1  : 42  
+   c241 x1  : 20  
+   c242 x1  : 21  
+   c243 x1  : 1   
+   c244 x1  : 1   
+   c245 x1  : 1   
+   c246 x1  : 1   
+   c247 x1  : 1   
+   c248 x1  : 1   
+   [SHARED] c10 4x4 (same across all 39 draws):
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+     [   0.0000    0.0000    0.0000    1.0000]
+   [SHARED] c231 4x4 (same across all 62 draws):
+     [   7.3513  -74.6389    0.0000    0.0000]
+     [   0.0000    0.0000  -75.0000    0.0000]
+     [  74.6389    7.3513    0.0000    0.0000]
+     [ 327.4985 -884.0762 -11207.9004    1.0000]
+[stereo] on=1 mode=0 sep=6.500 | offset 5194, ortho-skipped 0 (UI/HUD), rejected: c0-zero-row0 0 (global params, expected), c0-other 0 (should be 0), c3/c10-no-match 2040 (per-object, expected) (since last summary) | re-arms 0, state blocks 0, slot94=ours
