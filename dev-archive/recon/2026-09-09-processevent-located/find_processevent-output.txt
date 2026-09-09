@@ -1,0 +1,50 @@
+Enslaved.exe
+  image base 0x00400000   ASLR(DYNAMIC_BASE) OFF
+  -> the exe is not relocated at load, so every VA below is also its RUNTIME address.
+
+appFailAssert(0x0058E580) call sites: 56142
+  of which in UnCorSc.cpp: 7
+
+Functions in UnCorSc.cpp that carry an assertion:
+  function     ret       vtables  assertions
+  0x00565790  ret 4     0        477: DefaultObject
+  0x00573190  ret 8     0        566: DefaultObject!=NULL
+  0x00576610  ret 8     0        1100: SearchProp != NULL
+  0x0056F520  ret 8     0        5319: DefaultObject
+  0x0057A550  ret 4     0        5745: InSoftMemoryLimit; 5836: EndIndex!=INDEX_NONE
+  0x00580990  ret 0xc   1835     6470: !HasAnyFlags(RF_Unreachable)
+
+=== ProcessEvent candidate: 0x00580990 ===
+  in 1835 vtable slots (next best in this file: 0)
+  bounds 0x00580990..0x00580EFB  (1387 bytes), returns `ret 0xc`
+  assertions: 6470: !HasAnyFlags(RF_Unreachable)
+  prologue bytes: 55 8b ec 6a ff 68 d0 ca 91 01 64 a1 00 00 00 00 50 83 ec 54 a1 00 ba 34
+
+     0x00580990  push   ebp
+     0x00580991  mov    ebp, esp
+     0x00580993  push   -1
+     0x00580995  push   0x191cad0
+     0x0058099A  mov    eax, dword ptr fs:[0]
+     0x005809A0  push   eax
+     0x005809A1  sub    esp, 0x54
+     0x005809A4  mov    eax, dword ptr [0x234ba00]
+     0x005809A9  xor    eax, ebp
+     0x005809AB  mov    dword ptr [ebp - 0x10], eax
+     0x005809AE  push   ebx
+     0x005809AF  push   esi
+
+  Why this is ProcessEvent and not a neighbour in the same file:
+   1. it is the only VIRTUAL function among UnCorSc.cpp's assertion-bearing
+      functions - every other one appears in 0 vtable slots;
+   2. `ret 0xc` is thiscall plus three stack arguments, which is
+      ProcessEvent(UFunction* Function, void* Parms, void* Result);
+   3. it guards on !HasAnyFlags(RF_Unreachable), ProcessEvent's own
+      entry check on `this`.
+
+  [inferred-static] - nothing here was run. The live confirmation is
+     to detour it and check the UFunction* argument names a script
+     function through GNames.
+
+--prologue: the published unrealsdk shape (two `push imm32`) matches 1 site(s) in 23 MB of code.
+  The candidate above is NOT among them: this build emits ONE push imm32 (_except_handler3),
+  and `sub esp,0x54` rather than the reported 0x50. The invariant holds; the byte pattern does not.

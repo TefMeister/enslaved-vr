@@ -592,10 +592,77 @@ disk. Four agreeing signals make a strong candidate, not a verified one. Stronge
 **`ProcessEvent`: its vtable index is NOT stable** (APB 60, Rocket League 67) and no public table
 exists. `unrealsdk` avoids the index entirely - scan `ProcessEvent`'s **prologue** and detour it.
 That is the recommended route for the other half of route (B). `[reported 2026-09-07]`
+**→ Executed 2026-09-09, but NOT by the prologue: see §9e. The published prologue BYTES do not fit
+this build; the address came from the assertion strings instead.**
 
 ⚠️ **Helix Mod's 3D Vision fix for Enslaved is itself a `d3d9.dll` wrapper** in `Binaries\Win32\`
 `[reported 2026-09-07]`. Independent evidence that `d3d9` proxying is the right seam here - **and it
 occupies the exact slot our proxy uses, so the two cannot both be installed.**
+
+## 9e. ⭐⭐ `ProcessEvent` IS LOCATED: `0x00580990` (2026-09-09, `/pd`, no launch)
+
+`UObject::ProcessEvent = 0x00580990` `[inferred-static 2026-09-09]`, bounds
+`0x00580990..0x00580EFB` (1387 bytes), `ret 0Ch`. Tool:
+`dev-archive/tools/find_processevent.py`. Evidence:
+`dev-archive/recon/2026-09-09-processevent-located/`.
+
+Four converging signals, none of them a name match:
+
+1. it lives in **`UnCorSc.cpp`**, UE3 Core's script VM, via the §9c assertion-string route;
+2. it asserts **`!HasAnyFlags(RF_Unreachable)` at `UnCorSc.cpp:6470`** — `ProcessEvent`'s own entry
+   check on `this`. The pushed line number decodes as `0x1946` = 6470, which is what proves the
+   argument decode rather than assuming it;
+3. it is the **only VIRTUAL function** among that file's seven assertion-bearing functions —
+   **1835 `.rdata` vtable slots** against **0** for every other one. There is no second candidate;
+4. **`ret 0Ch`** = thiscall + three stack args = `ProcessEvent(UFunction*, void* Parms, void* Result)`.
+
+⚠️ **NOT confirmed; confirmation is runtime-only.** The live check is to detour it and see whether
+the first argument resolves through `GNames` to a script function name.
+
+⚠️ **The vtable INDEX is UNRESOLVED and no number should be quoted.** A reading of 64 was produced
+and **withdrawn the same session** `[disproved 2026-09-09]`: it came from treating runs of code
+pointers in `.rdata` as vtables, but adjacent vtables here abut with no separator, so runs merge and
+every index derived that way is an artefact. This costs nothing — the index is not the route (§9d
+above, and `unrealsdk`'s detour needs only the address).
+
+### ⚠️ The published prologue signature DOES NOT FIT this build `[verified-numerically 2026-09-09]`
+
+Reported shape (`unrealsdk`, via `/gr` 2026-09-07b): `push ebp / mov ebp,esp / push -1 /
+push <scopetable> / push <handler> / mov eax,fs:[0] / push eax / sub esp,0x50 / ...`
+
+Actual `ProcessEvent` here: `55 8b ec 6a ff 68 d0 ca 91 01 64 a1 00 00 00 00 50 83 ec 54 ...` —
+`push ebp / mov ebp,esp / push -1 / push 0x191cad0 / mov eax,fs:[0] / push eax / sub esp,0x54`.
+
+| reported | actual | why |
+| --- | --- | --- |
+| **two** `push imm32` | **one** | this build uses the older `_except_handler3` frame; the handler comes from the scope table, not a second push |
+| `sub esp,0x50` | `sub esp,0x54` | a different local-frame size |
+
+**A scanner built from those literal bytes matches exactly ONE function in 23 MB of code, and it is
+not `ProcessEvent`** — reproduce with `find_processevent.py --prologue`. **The invariant (an SEH +
+/GS frame) holds; the byte pattern does not transfer.** Recorded because the `[PD]` row said "scan
+the prologue", and taken literally that returns nothing and looks like the function is absent.
+
+### ⭐ ASLR is OFF — the static addresses ARE the runtime addresses
+
+`Enslaved.exe` has `DYNAMIC_BASE` clear and image base `0x00400000`
+`[measured 2026-09-09]`, so no runtime scanning or rebasing is needed for any address in §9d/§9e.
+The proxy probe still checks `GetModuleHandle(NULL)` and refuses to read if the base differs.
+
+### The UObject probe (built 2026-09-09, deployed, NEVER RUN)
+
+`staging/enslaved-vr/proxy-d3d9/` — `[uobject] Probe=1` in `d3d9_proxy.ini`. Read-only: it never
+calls `ProcessEvent`, never writes engine memory, and guards every read with `VirtualQuery`.
+Validates the `GObjObjects` shape, requires element 0's vtable to be in-module, validates `GNames`
+via entry 0 == `"None"` (which also tests `FNameEntry +0x10`), **calibrates `UObject::Name` instead
+of assuming it**, and reports the live `PlayerController`.
+`[compile-verified 2026-09-09]`, `-Wall -Wextra` clean, 9/9 exports.
+
+⚠️ **A self-test against synthetic memory caught a real bug before any launch**
+`[verified-numerically 2026-09-09, n=8 checks]`. **FName index 0 is the legal name `"None"`, so an
+all-zero field resolves for 100% of objects** and calibration picked the first zero-filled offset.
+Fixed by scoring only non-zero indices and requiring ≥4 distinct names. Generalisable: *any
+FName-index heuristic that counts successful lookups must exclude index 0.*
 
 ## 9c. ⭐ `DO_CHECK` IS ON IN THIS RETAIL BUILD — assertion strings are a navigational resource for the WHOLE binary
 
