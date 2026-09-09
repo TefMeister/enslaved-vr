@@ -8,7 +8,7 @@ and from a self-test that runs against synthetic memory.
 | --- | --- |
 | `find_processevent-output.txt` | full output of `dev-archive/tools/find_processevent.py --prologue`, the run that located `UObject::ProcessEvent` |
 | `selftest-output.txt` | the 8 checks of the UObject probe self-test, all passing |
-| `selftest-probe.log` | the probe's own log from the last self-test attempt, i.e. what its output looks like |
+| `selftest-probe-check8.log` | the probe's own log from **check 8 only** — the pass where `GNames` is deliberately pointed at the wrong address. Kept because it shows the log format *and* the intended failure mode: the object array validates, and the name lookup then declines rather than inventing an offset. ⚠️ It is **not** a sample of a successful run. The `PROBE DONE in 0 ms` line reflects a 512-object synthetic array, not the real one. |
 
 ## The finding in one line
 
