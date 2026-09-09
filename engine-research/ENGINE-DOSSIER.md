@@ -546,7 +546,20 @@ shifts every tile equally.
 | shadows at matched depth | track the depth gradient | `[measured 2026-09-03]` |
 | wet floor + caustics (Ch2) | clean, no un-offset region | `[measured 2026-09-03, n=4 eye-pairs]` |
 | **reflective water, glancing angle (Ch4 pool)** | **clean — largest parallax in frame** | `[measured 2026-09-03, n=16 eye-pairs, 1 scene]` |
-| **decals** | **NOT TESTED** | — |
+| **decals** | **NOT TESTED, and possibly NOT PRESENT** — see below | `[reported 2026-09-09]` |
+
+⚠️ **The decal row may have no subject.** It sat open for days as "name a place with a decal
+and this is one launch". Asked directly on 2026-09-09, the person who has actually played the
+game answered that they do not think it has any: *"no bullet holes are left in walls and there
+is no blood after getting hit"* `[reported 2026-09-09]`. That is a real answer to the question
+the row was asking, and it is why the row is now parked at `[VR]` rather than waiting on a
+person.
+
+**But it is not a measurement.** "I did not notice any" is weaker than "there are none", and
+nobody has looked at the shipped material or shader set for a decal path. Two ways to settle it
+without a person, whenever it matters: grep the cooked packages for decal material names, or
+check whether the shader cache carries a decal pass at all. Until then the honest state is
+**unknown, and low priority** — if a VR run ever shows a surface behaving oddly, come back.
 
 ⚠️ **The magnitude on the water is softer than the verdict.** The blocks standing in that pool are a
 strongly repetitive ridged pattern and phase correlation can lock onto the wrong period; `+18`/`+19`
