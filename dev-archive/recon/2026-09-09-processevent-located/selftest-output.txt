@@ -1,0 +1,11 @@
+UObject probe self-test (shipped code, synthetic world)
+  [PASS] 1. a well-formed GObjObjects is accepted
+  [PASS] 5. GNames entry 0 reads "None" via FNameEntry +0x10
+  [PASS] 6. calibration recovers the true Name offset (+0x2C)
+  [PASS] 7. the PlayerController is found and named
+  [PASS] 2. Num > Max is rejected
+  [PASS] 3. Num == 0 is rejected
+  [PASS] 4. an out-of-module vtable on element 0 is rejected
+  [PASS] 8. a wrong GNames address produces no false Name offset
+
+ALL CHECKS PASSED (0 failures)
