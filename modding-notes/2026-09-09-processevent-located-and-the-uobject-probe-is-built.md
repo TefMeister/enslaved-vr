@@ -143,9 +143,23 @@ integer is a valid FName index, so a counter field can still score well, and tha
 is a judgement for whoever reads the log. **8/8 checks now pass**
 `[verified-numerically 2026-09-09, n=8 checks]`.
 
+### ⚠️ A second defect found in self-review: the probe would have looked like a hang
+
+The probe runs inside `Present`, and every read went through its own
+`VirtualQuery`. Walking a 100k-entry object array is then a few hundred thousand
+syscalls **in one frame** — a multi-second freeze that a player would read as a
+crash, not a diagnostic.
+
+Fixed three ways: a one-region cache in `MemReadable` (reset at the start of every
+pass, so nothing freed between passes is trusted), the full-array
+`PlayerController` scan bounded at 200,000 objects, and the elapsed time printed
+on the `PROBE DONE` line so a slow pass is visible rather than mysterious. The
+self-test still passes 8/8 — checks 4 and 8 matter most here, because a cache that
+over-approved would have stopped the probe rejecting bad addresses.
+
 ### Deployed
 
-`Binaries\Win32\d3d9.dll` is now the new build (86,528 B, md5 `a9d6a63c…`) and has
+`Binaries\Win32\d3d9.dll` is now the new build (88,064 B, md5 `ee1c12d3…`) and has
 been re-stamped with `deployed.sh record`. The previous DLL and ini are backed up
 beside it as `*.bak-2026-09-09`.
 

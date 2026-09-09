@@ -1,4 +1,4 @@
 [uobject] frame 1, attempt 0: ProcessEvent prologue at 0x00580990 MATCHES the file - same build, so the addresses are trustworthy
-[uobject] shape OK: GObjObjects.Data=0x00732808 Num=512 Max=1024; of the first 512 entries 482 are live objects with in-module vtables, 30 NULL holes, 0 unreadable or foreign.
-[uobject] GNames.Data=0x00722800 Num=10, but entry 0 yields no printable name at +0x10.
-[uobject] PROBE DONE. Nothing was written, and ProcessEvent was not called.
+[uobject] shape OK: GObjObjects.Data=0x01251E98 Num=512 Max=1024; of the first 512 entries 482 are live objects with in-module vtables, 30 NULL holes, 0 unreadable or foreign.
+[uobject] GNames.Data=0x01241E90 Num=10, but entry 0 yields no printable name at +0x10.
+[uobject] PROBE DONE in 0 ms. Nothing was written, and ProcessEvent was not called.
