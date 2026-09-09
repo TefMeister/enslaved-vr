@@ -145,10 +145,16 @@ is a judgement for whoever reads the log. **8/8 checks now pass**
 
 ### Deployed
 
-`Binaries\Win32\d3d9.dll` is now the new build (86,528 B, md5 `a9d6a63c…`),
-byte-identical to the committed staging copy, and re-stamped with
-`deployed.sh record`. The previous DLL and ini are backed up beside it as
-`*.bak-2026-09-09`.
+`Binaries\Win32\d3d9.dll` is now the new build (86,528 B, md5 `a9d6a63c…`) and has
+been re-stamped with `deployed.sh record`. The previous DLL and ini are backed up
+beside it as `*.bak-2026-09-09`.
+
+⚠️ **Wording correction, applying to the 2026-09-08 note as well as this one:**
+`d3d9.dll` is **gitignored in `staging`** (`proxy-d3d9/.gitignore` line 3), so
+there is no "committed staging copy" to be byte-identical to. What is committed is
+the **source**; the DLL is reproducible from it with `build.ps1`. The deployed
+file matches the one built in the staging working tree this session, and that is
+all a hash comparison against staging can ever mean here.
 
 ⚠️ **The installed `d3d9_proxy.ini` was NOT overwritten** — it had been tuned by
 the live session (`Enabled=1`, `Mode=1`, `Separation=6.5`) and differs from the
