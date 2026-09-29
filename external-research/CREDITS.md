@@ -90,3 +90,6 @@ please tell us: **open a GitHub issue on this repo**. We'll act on that
 request promptly — no argument, no delay — and we'll find another way to get
 the job done that doesn't rely on your material. This is your work; we're
 just grateful to have learned from it.
+
+| DxWnd forum (SourceForge), Enslaved windowing threads | DxWnd community, user "gho" | https://sourceforge.net/p/dxwnd/discussion/general/thread/ebb1ab40/ |
+| Steam Community discussions, app 245280 (windowed mode threads) | Steam users | https://steamcommunity.com/app/245280/discussions/ |
