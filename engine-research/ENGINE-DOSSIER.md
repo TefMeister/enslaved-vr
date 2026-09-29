@@ -614,6 +614,9 @@ occupies the exact slot our proxy uses, so the two cannot both be installed.**
 
 ## 9e. ⭐⭐ `ProcessEvent` IS LOCATED: `0x00580990` (2026-09-09, `/pd`, no launch)
 
+**⭐ 2026-09-29 LIVE: all three globals confirmed** (probe during Tefa's play): ProcessEvent prologue matches, GObjObjects shape OK (124,758 objects), GNames[0] = "None", UObject::Name at +0x28 `[verified-live 2026-09-29, n=1]`. The PlayerController hits were class/function objects, not the live instance. **And the pool answer:** 4,455 of 4,500 creations into gameplay are D3DPOOL_MANAGED `[verified-live 2026-09-29, n=1]`, so D3D9Ex is a project; prefer `-d3d10` for VR output. Note `modding-notes/2026-09-29-menus-uobject-live-and-managed-pools.md`.
+
+
 `UObject::ProcessEvent = 0x00580990` `[inferred-static 2026-09-09]`, bounds
 `0x00580990..0x00580EFB` (1387 bytes), `ret 0Ch`. Tool:
 `dev-archive/tools/find_processevent.py`. Evidence:
