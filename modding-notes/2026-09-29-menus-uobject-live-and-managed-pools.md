@@ -25,3 +25,19 @@ buffers, 412 index buffers); only 43 DEFAULT `[verified-live 2026-09-29, n=1]`. 
 device would mean moving all of that to DEFAULT and restoring it on device loss. The board's fallback, the public
 `-d3d10` launch option, becomes the better road to a shared texture for VR output. Evidence:
 `dev-archive/recon/2026-09-29-pools/`. The counter stays in the build, off.
+
+## Later: the DirectX 10 mode runs (Tefa chose this road)
+
+Tefa decided VR output goes through the game's DirectX 10 mode (reworking the MANAGED memory "will cause ALL sorts
+of issues", and side-by-side is not an option). The quick check:
+
+- **Started directly** (`Enslaved.exe -d3d10 ...`): it crashed at start (`unreal-v6165-2026.09.29-17.00.54.dmp` in
+  `Documents/My Games/UnrealEngine3/MonkeyGame/Logs`), and a second copy came up full screen. Start it through Steam.
+- **Through Steam** (`steam://run/245280//-d3d10/`): it runs, loads `d3d10.dll`, `d3d10core.dll`, `dxgi.dll` and
+  `d3dx10_41.dll`, and closes cleanly on WM_CLOSE `[verified-live 2026-09-29, n=2]`. Our `d3d9.dll` still loads but is
+  not the renderer.
+- **It will not window itself:** `-windowed ResX=1280 ResY=720` was ignored, and `Fullscreen=False` / `ResX=1280`
+  written into `Documents/My Games/UnrealEngine3/MonkeyGame/Config/MonkeyEngine.ini` was rewritten back to
+  `Fullscreen=True` / 1920×1080 at start-up (the file came back byte-identical to its backup) `[verified-live
+  2026-09-29, n=1]`. In D3D9 mode our proxy forces the window; in D3D10 mode a proxy of ours will have to do the same
+  (DXGI swap-chain override), so the window is part of the D3D10 re-plan, and until then a D3D10 run is full screen.
