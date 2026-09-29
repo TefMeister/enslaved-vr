@@ -833,6 +833,23 @@ every other signal and is stable enough to look like one. On 2026-09-07 a
 static scene renders exactly two images, so same-eye pairs are byte-identical). **Set `Mode=1` or
 `Mode=2` in `d3d9_proxy.ini` for any run that judges by image comparison**, and look at the frame.
 
+## 9g. Folded from the inbox, 2026-09-29 (three drops from 2026-09-09, drained late)
+
+- **Read the game's control-layout ini for SHIPPED action bindings; do not write new ones.** Alice (UE3) turned out
+  to ship a working first-person camera on `T` in `AliceControlLayout.ini`, a second input ini its sessions had
+  never opened `[verified-live 2026-09-09, n=1, alice-madness-returns-vr]`. The same day's correction (which wins):
+  **rows ADDED to that file do nothing**, even a known-working command moved to a new key `[verified-live 2026-09-09,
+  alice-madness-returns-vr]`. So for Enslaved the check is worth ten minutes as a READ: look for a second
+  `Monkey*Layout*.ini` / control-layout file and list what is already bound (camera modes, debug toggles). This
+  project's own "keybinding exec is dead" result (control profile, 2026-09-03) stands for anything we would add.
+- **Match the game window by process, not only by title.** A title is user data: any browser tab or chat window can
+  contain the game's name. `doom-2016-vr/dev-archive/tools/doomdrive.py` narrows by title and verifies with
+  `GetWindowThreadProcessId` → `OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION)` → `QueryFullProcessImageNameW`, and
+  refuses loudly on a mismatch `[inferred-static 2026-09-09]`. Our old `enslaved_harness.py` is superseded by the
+  Menu-o-matiC routes (2026-09-29), which pick the LARGEST window with a matching title (Enslaved opens a 160×28
+  start-up window with the same title first); a process check is still the stronger guard and is a candidate
+  improvement for the tool.
+
 ## 10. Dead ends
 
 - **The barrel/fisheye warp with heavy vignetting on loading and transition screens is THE GAME'S
