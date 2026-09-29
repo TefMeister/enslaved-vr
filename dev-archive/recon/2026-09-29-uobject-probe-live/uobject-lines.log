@@ -1,0 +1,33 @@
+[uobject] frame 300, attempt 1: ProcessEvent prologue at 0x00580990 MATCHES the file - same build, so the addresses are trustworthy
+[uobject] shape OK: GObjObjects.Data=0x41ED0000 Num=124758 Max=170439; of the first 4000 entries 4000 are live objects with in-module vtables, 0 NULL holes, 0 unreadable or foreign.
+[uobject] GNames.Data=0x2A880000 Num=60162; entry 0 reads "None" - "None", as UE3 requires: GNames CONFIRMED and the FNameEntry name offset 0x10 is right
+[uobject] UObject::Name is at +0x28 (a non-zero name resolved for 300 of 300 sampled objects, 32 distinct names).
+[uobject]   [    0] 0x0BAF6580  TextBuffer
+[uobject]   [    1] 0x0BAFB600  Object
+[uobject]   [    2] 0x0BAF63C0  System
+[uobject]   [    3] 0x0BAF6200  Subsystem
+[uobject]   [    4] 0x0BAF6040  PackageMap
+[uobject]   [    5] 0x0BAF5E80  ObjectSerializer
+[uobject]   [    6] 0x0BAF5CC0  ObjectRedirector
+[uobject]   [    7] 0x0BAF5B00  MetaData
+[uobject]   [    8] 0x0BAF5940  LinkerSave
+[uobject]   [    9] 0x0BAF55C0  Linker
+[uobject]   [   10] 0x0BAF5780  LinkerLoad
+[uobject]   [   11] 0x0BAF5400  Interface
+[uobject]   [   12] 0x0BAF5240  ScriptStruct
+[uobject]   [   13] 0x0BAFB280  Struct
+[uobject]   [   14] 0x0BAFB0C0  Field
+[uobject]   [   15] 0x0BAF5080  Function
+[uobject]   [   16] 0x0BAF4EC0  StructProperty
+[uobject]   [   17] 0x0BAF3800  Property
+[uobject]   [   18] 0x0BAF4D00  StrProperty
+[uobject]   [   19] 0x0BAF6740  ComponentProperty
+[uobject] PLAYERCONTROLLER [204] 0x132B0380  PlayerController
+[uobject] PLAYERCONTROLLER [1297] 0x176147C0  GamePlayerController
+[uobject] PLAYERCONTROLLER [2082] 0x17D1DAC0  NTPlayerController
+[uobject] PLAYERCONTROLLER [4316] 0x1F779840  LocalPlayerControllers
+[uobject] PLAYERCONTROLLER [4319] 0x1F779780  GetALocalPlayerController
+[uobject] PLAYERCONTROLLER [6233] 0x1F769000  IsLocalPlayerController
+[uobject] PLAYERCONTROLLER [8034] 0x1F902DC0  IsLocalPlayerController
+[uobject] PLAYERCONTROLLER [8691] 0x1F939FC0  GetPlayerControllerFromNetId
+[uobject] PROBE DONE in 141 ms. Nothing was written, and ProcessEvent was not called.

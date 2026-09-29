@@ -1,0 +1,7 @@
+[pools] running count after 4500 creations (DEFAULT / MANAGED / SYSTEMMEM / SCRATCH):
+[pools]   texture        40 /   2481 /      2 /      0
+[pools]   volume          0 /      0 /      0 /      0
+[pools]   cube            0 /     12 /      0 /      0
+[pools]   vertexbuf       3 /   1550 /      0 /      0
+[pools]   indexbuf        0 /    412 /      0 /      0
+[pools]   MANAGED total 4455 -> D3D9Ex needs these moved to DEFAULT (a project)
