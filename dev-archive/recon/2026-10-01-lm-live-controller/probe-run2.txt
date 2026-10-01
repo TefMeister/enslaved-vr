@@ -1,0 +1,46 @@
+[uobject] frame 300, attempt 1: ProcessEvent prologue at 0x00580990 MATCHES the file - same build, so the addresses are trustworthy
+[uobject] shape OK: GObjObjects.Data=0x40190000 Num=124758 Max=170439; of the first 4000 entries 4000 are live objects with in-module vtables, 0 NULL holes, 0 unreadable or foreign.
+[uobject] GNames.Data=0x2A810000 Num=60162; entry 0 reads "None" - "None", as UE3 requires: GNames CONFIRMED and the FNameEntry name offset 0x10 is right
+[uobject] UObject::Name is at +0x28 (a non-zero name resolved for 300 of 300 sampled objects, 32 distinct names).
+[uobject]   [    0] 0x0B996580  TextBuffer
+[uobject]   [    1] 0x0B99B600  Object
+[uobject]   [    2] 0x0B9963C0  System
+[uobject]   [    3] 0x0B996200  Subsystem
+[uobject]   [    4] 0x0B996040  PackageMap
+[uobject]   [    5] 0x0B995E80  ObjectSerializer
+[uobject]   [    6] 0x0B995CC0  ObjectRedirector
+[uobject]   [    7] 0x0B995B00  MetaData
+[uobject]   [    8] 0x0B995940  LinkerSave
+[uobject]   [    9] 0x0B9955C0  Linker
+[uobject]   [   10] 0x0B995780  LinkerLoad
+[uobject]   [   11] 0x0B995400  Interface
+[uobject]   [   12] 0x0B995240  ScriptStruct
+[uobject]   [   13] 0x0B99B280  Struct
+[uobject]   [   14] 0x0B99B0C0  Field
+[uobject]   [   15] 0x0B995080  Function
+[uobject]   [   16] 0x0B994EC0  StructProperty
+[uobject]   [   17] 0x0B993800  Property
+[uobject]   [   18] 0x0B994D00  StrProperty
+[uobject]   [   19] 0x0B996740  ComponentProperty
+[uobject] PLAYERCONTROLLER [204] 0x0F9C0380  PlayerController
+[uobject] PLAYERCONTROLLER [1297] 0x124347C0  GamePlayerController
+[uobject] PLAYERCONTROLLER [2082] 0x124FDAC0  NTPlayerController
+[uobject] PLAYERCONTROLLER [4316] 0x2ADA9840  LocalPlayerControllers
+[uobject] PLAYERCONTROLLER [4319] 0x2ADA9780  GetALocalPlayerController
+[uobject] PLAYERCONTROLLER [6233] 0x2ADF9000  IsLocalPlayerController
+[uobject] PLAYERCONTROLLER [8034] 0x2AE02DC0  IsLocalPlayerController
+[uobject] PLAYERCONTROLLER [8691] 0x28E19FC0  GetPlayerControllerFromNetId
+[uobject] UObject::Class is at +0x30 ("Class" at 0x0B99B7C0 is its own class).
+[uobject] PlayerController CLASS 0x0F9C0380  PlayerController
+[uobject] PlayerController CLASS 0x124347C0  GamePlayerController
+[uobject] PlayerController CLASS 0x124FDAC0  NTPlayerController
+[uobject] PlayerController CLASS 0x1E443480  MKPlayerController
+[uobject] PlayerController CLASS 0x1EB6EFC0  MKPlayerController_Monkey
+[uobject] PlayerController CLASS 0x1F07C5C0  MKPlayerController_Pigsy
+[uobject] PlayerController CLASS 0x1F070A80  MKPlayerController_Berserker
+[uobject] PlayerController CLASS 0x1F0708C0  MKPlayerController_CDog
+[uobject] PlayerController CLASS 0x1F27E1C0  MKPlayerController_Rhino
+[uobject] PlayerController CLASS 0x1F27E000  MKPlayerController_Scout
+[uobject] PlayerController CLASS 0x1F27DE40  MKPlayerController_Trip
+[uobject] LIVE PLAYERCONTROLLER [124522] 0x3EAA5A00  MKPlayerController_Monkey  (class 0x1EB6EFC0)
+[uobject] PROBE DONE in 1062 ms. Nothing was written, and ProcessEvent was not called.

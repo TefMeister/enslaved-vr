@@ -616,6 +616,8 @@ occupies the exact slot our proxy uses, so the two cannot both be installed.**
 
 **⭐ 2026-09-29 LIVE: all three globals confirmed** (probe during Tefa's play): ProcessEvent prologue matches, GObjObjects shape OK (124,758 objects), GNames[0] = "None", UObject::Name at +0x28 `[verified-live 2026-09-29, n=1]`. The PlayerController hits were class/function objects, not the live instance. **And the pool answer:** 4,455 of 4,500 creations into gameplay are D3DPOOL_MANAGED `[verified-live 2026-09-29, n=1]`, so D3D9Ex is a project; prefer `-d3d10` for VR output. Note `modding-notes/2026-09-29-menus-uobject-live-and-managed-pools.md`.
 
+**⭐ 2026-10-01 LIVE: the live player controller is found by its class pointer.** `UObject::Class` is at **+0x30** (the "Class" object is its own class) `[verified-live 2026-10-01, n=3 launches]`. Eleven PlayerController classes exist, one per playable character (`MKPlayerController_Monkey`, `_Pigsy`, `_Trip`, `_Berserker`, `_CDog`, `_Rhino`, `_Scout`, plus the engine's). In gameplay as Monkey there is exactly one instance: `MKPlayerController_Monkey` `[verified-live 2026-10-01, n=1 in gameplay]`. Pitfalls met: each class's template object `Default__<Class>` carries the class too (now skipped), and the probe must wait for gameplay (frame 300 is still the menus; gameplay starts past frame ~3,800 on the dev PC; `FirstFrame=4500`). Whether the menu has its own Monkey controller is not separated `[hypothesis]`. Note `modding-notes/2026-10-01-lm-the-live-player-controller-is-found.md`.
+
 
 `UObject::ProcessEvent = 0x00580990` `[inferred-static 2026-09-09]`, bounds
 `0x00580990..0x00580EFB` (1387 bytes), `ret 0Ch`. Tool:
