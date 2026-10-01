@@ -618,6 +618,84 @@ occupies the exact slot our proxy uses, so the two cannot both be installed.**
 
 **⭐ 2026-10-01 LIVE: the live player controller is found by its class pointer.** `UObject::Class` is at **+0x30** (the "Class" object is its own class) `[verified-live 2026-10-01, n=3 launches]`. Eleven PlayerController classes exist, one per playable character (`MKPlayerController_Monkey`, `_Pigsy`, `_Trip`, `_Berserker`, `_CDog`, `_Rhino`, `_Scout`, plus the engine's). In gameplay as Monkey there is exactly one instance: `MKPlayerController_Monkey` `[verified-live 2026-10-01, n=1 in gameplay]`. Pitfalls met: each class's template object `Default__<Class>` carries the class too (now skipped), and the probe must wait for gameplay (frame 300 is still the menus; gameplay starts past frame ~3,800 on the dev PC; `FirstFrame=4500`). Whether the menu has its own Monkey controller is not separated `[hypothesis]`. Note `modding-notes/2026-10-01-lm-the-live-player-controller-is-found.md`.
 
+**⭐⭐ 2026-10-01 LIVE: THE CAMERA IS READ.** `PlayerController+0x3D4` → Camera; its `CameraCache.POV` at **+0x364** (Location, then Rotation at +0x370 as UE3 ints 65536 = 360°, FOV +0x37C) follows the mouse: three 300-count mouse steps turned yaw 6.5 → 68.3 → 132.8 → −162.8°, the position circling the player; mouse down/up tilted pitch −9.3 → −32.5 → +18.6° with the camera rising as it looks down; FOV 65 `[verified-live 2026-10-01, n=1]`. Enslaved's own camera (`Camera+0x594` → +0x68/+0x74/+0x58) reads the same values. The controller's OWN Location/Rotation (+0x50/+0x5C) stayed fixed throughout, so they are not the view. Logger: `[camera] Log=1` (needs `Probe=1`), `camera_log.inc.h`. Evidence `dev-archive/recon/2026-10-01-lm-live-controller/camera-log-mouse-turns.txt`.
+
+#### Folded: the `/lm` reader's controller/camera offsets (2026-10-01, static)
+
+**Static only. The game was not launched, attached to or touched.** Folds into ENGINE-DOSSIER §9e
+(the UObject probe) as the "next step: read the camera" table.
+
+##### How the offsets were found
+
+UE3 does not store `UProperty::Offset` in packages; the engine computes it at load (`UStruct::Link`).
+New tool `staging/enslaved-vr/reader-tools/ue3_props.py` decompresses the cooked script packages
+(`CookedPC/*.u`: version 673, licensee 2, **LZO** chunks; pure-Python LZO1X inside), reads names,
+imports, exports and each `UProperty`, and re-runs the link (bools packed into DWORD bitfields).
+Two quirks of this build: `UField` serializes **SuperField then Next** (older UE3 order), and a
+`UClass` export carries no tagged-property list.
+
+Two independent checks:
+
+1. **Live anchor:** it computes `UObject::Name = +0x28` (matches the 2026-09-29 live measurement)
+   and `UObject::Class = +0x30`, sizeof(UObject) 0x38. (`--selftest`)
+2. **Every native class's `sizeof` in the exe** (`check_native_sizes.py`): each native class is
+   registered through the UClass static constructor `0x0055EF00` with `push sizeof(...)` beside
+   `push TEXT("AClass")+1`. Exact match for **Object 0x38, Actor 0x234, Controller 0x3D0,
+   PlayerController 0x61C, Camera 0x540, Pawn 0x49C, NTPlayerController 0x74C, NTPawn 0xB58,
+   MKPawn 0xCD4, GamePlayerController 0x62C**. Across the exe, ~1,565 of ~1,733 compared classes
+   match; the misses are classes with 16-byte-aligned members (Matrix/Plane, which the tool does
+   not model yet) or C++-only members (SoundCue, AnimNode, UILabel...). None is on the camera chain.
+3. **Native code reads them:** at `0x0162AEA1` (MonkeyGame native code) `mov eax,[eax+0x3D4]`
+   (PlayerCamera) feeds `eventGetCameraViewPoint` (`0x0161F2D0`, uses the FName stored at
+   `0x02439ED0`), and the result is subtracted from `[edi+0x50/0x54/0x58]` (an Actor's Location).
+
+##### The offsets
+
+| Field | Offset | Tag |
+| --- | --- | --- |
+| `UObject::Class` | +0x30 | [inferred-static 2026-10-01] (live probe should confirm) |
+| `Actor::Location` (FVector, 3 floats) | +0x50 | [inferred-static 2026-10-01] size match + native read at 0x0162AEF7 |
+| `Actor::Rotation` (FRotator, 3 ints Pitch/Yaw/Roll, 65536 = 360°) | +0x5C | [inferred-static 2026-10-01] size match |
+| `Actor::Velocity` | +0x138 | [inferred-static 2026-10-01] |
+| `Controller::Pawn` | +0x238 | [inferred-static 2026-10-01] size match (Controller 0x3D0) |
+| Control rotation = the controller's own `Actor::Rotation` | PC+0x5C | [inferred-static 2026-10-01] |
+| `PlayerController::PlayerCamera` | +0x3D4 | [inferred-static 2026-10-01] size match + native read at 0x0162AEA1 |
+| `PlayerController::ViewTarget` / `DefaultFOV` | +0x3FC / +0x410 | [inferred-static 2026-10-01] |
+| `Camera::CameraCache` (TCameraCache: TimeStamp, POV) | +0x360 | [inferred-static 2026-10-01] size match (Camera 0x540) |
+| `CameraCache.POV.Location` | Camera+0x364 | [inferred-static 2026-10-01] |
+| `CameraCache.POV.Rotation` | Camera+0x370 | [inferred-static 2026-10-01] |
+| `CameraCache.POV.FOV` | Camera+0x37C | [inferred-static 2026-10-01] |
+| `Camera::ViewTarget.POV` (Location/Rotation/FOV) | Camera+0x388 / +0x394 / +0x3A0 | [inferred-static 2026-10-01] |
+| `Camera::PCOwner` / `DefaultFOV` | +0x234 / +0x240 | [inferred-static 2026-10-01] |
+
+##### Enslaved's own camera
+
+The live `PlayerCamera` should be an **`MKCam_CameraController`** (size 0x6D4), chain
+`Camera > NTCam_CameraControllerNative > NTCam_CameraController > NTCam_CameraController_ThirdPerson
+> MKCam_CameraController`, so every `Camera` offset above still applies `[inferred-static 2026-10-01]`.
+Its own fields (no native sizeof to check against, so these are one step weaker,
+`[inferred-static 2026-10-01]`, script layout only):
+
+- `m_camManager` +0x544, `m_Pawn` +0x548, `m_ntPlayerController` +0x550
+- **`m_currentCamera` +0x594** (an `NTCamera` component), `m_aimCam` +0x674, **`m_chaseCam` +0x67C**
+  (`NTCam_Chase`, the class `DefaultChaseCamera.ini` configures), `m_handholdCam` +0x6AC, `m_beastCam` +0x6B0
+- `NTCamera` component: `m_FOV` +0x58, `m_camController` +0x60, **`m_Location` +0x68,
+  `m_rotation` +0x74**, `m_POI` +0x80
+- `NTCam_CameraManager`: `m_highestPriorityCamera` +0x50, `m_mainCamera` +0x58
+
+`[hypothesis]` that `CameraCache.POV` holds the final view each frame: stock UE3 fills it in
+`ACamera::UpdateCamera`, but the NT camera stack may compute its view elsewhere. If the cache
+looks stale or frozen live, read `PlayerCamera+0x594 → +0x68/+0x74/+0x58` instead, and compare the two.
+
+##### Reproduce
+
+```
+python reader-tools/ue3_props.py <CookedPC> Actor PlayerController Camera MKCam_CameraController
+python reader-tools/ue3_props.py <CookedPC> --struct TCameraCache TPOV
+python reader-tools/ue3_props.py <CookedPC> --selftest
+python reader-tools/check_native_sizes.py <Enslaved.exe> <CookedPC> Actor Controller PlayerController Camera
+```
+
 
 `UObject::ProcessEvent = 0x00580990` `[inferred-static 2026-09-09]`, bounds
 `0x00580990..0x00580EFB` (1387 bytes), `ret 0Ch`. Tool:

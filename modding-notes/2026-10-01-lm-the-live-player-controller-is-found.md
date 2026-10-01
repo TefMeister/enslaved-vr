@@ -19,8 +19,12 @@ real controller object among ~125,000 objects, by its CLASS rather than its name
 4. **Run 3 (`FirstFrame=4500`, in gameplay as Monkey, picture saved):** exactly one instance,
    `MKPlayerController_Monkey`, index 130,695.
 
-So the route to the camera is open: controller → its camera → the view. The reader is working out the field offsets
-for that next step from the game's files.
+## Then the camera itself `[verified-live 2026-10-01, n=1]`
+
+The reader worked out the field offsets from the game's own script files (and predicted the +0x30 above before the
+probe measured it). A small read-only logger (`[camera] Log=1`) printed them every 60 frames while Claude turned the
+mouse: the camera's turn followed each step (6.5 → 68.3 → 132.8 → −162.8°), its tilt followed up/down, and its
+position circled the player. **We can now read the game's camera live** — the input a head-tracked view needs.
 
 ## Also done
 
