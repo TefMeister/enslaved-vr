@@ -930,6 +930,23 @@ static scene renders exactly two images, so same-eye pairs are byte-identical). 
   start-up window with the same title first); a process check is still the stronger guard and is a candidate
   improvement for the tool.
 
+## 9h. ⭐⭐ The view is decided in ONE loop per tick; hook right after it (2026-10-04, `/pd`, no launch)
+
+- **Camera loop** `0x008BEF70..0x008BEFE6` in the world tick: for each controller (`NextController`
+  +0x244) with a `PlayerCamera` (+0x3D4), `eventUpdateCamera(DeltaTime)` (FName global `0x0243AC10`)
+  `[inferred-static 2026-10-04]`. Stock UE3's "update cameras last".
+- **`Camera.UpdateCamera`, `FillCameraCache` and `GetCameraViewPoint` are SCRIPT here**, not native;
+  no NT/MK camera class overrides them (they override `UpdateViewTarget`). So `CameraCache.POV` is
+  written inside that loop and only copied out when drawing `[inferred-static 2026-10-04]`.
+- **Hook spot `0x008BEFE8`** (`83 3D B8 88 3B 02 00`, `cmp dword ptr [0x023B88B8],0`), first
+  instruction after the loop; a write there changes the view, a write from `Present` is too late
+  `[inferred-static 2026-10-04]`.
+- **ProcessEvent = vtable slot 64 (`+0x100`)** by a new route: 845 of 850 `FindFunctionChecked`
+  (`0x005B3850`) call sites are followed by a `+0x100` vtable call (the `eventXxx()` thunk shape)
+  `[inferred-static 2026-10-04, n=845]`. The 2026-09-09 withdrawal stands for its method, not this one.
+- Built: `[headyaw]` numpad yaw test (`headyaw.inc.h`), installed off `[compile-verified 2026-10-04]`.
+  Note `modding-notes/2026-10-04-pd-the-camera-is-decided-in-one-loop-and-the-yaw-test-is-built.md`.
+
 ## 10. Dead ends
 
 - **The barrel/fisheye warp with heavy vignetting on loading and transition screens is THE GAME'S
