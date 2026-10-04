@@ -93,3 +93,4 @@ just grateful to have learned from it.
 
 | DxWnd forum (SourceForge), Enslaved windowing threads | DxWnd community, user "gho" | https://sourceforge.net/p/dxwnd/discussion/general/thread/ebb1ab40/ |
 | Steam Community discussions, app 245280 (windowed mode threads) | Steam users | https://steamcommunity.com/app/245280/discussions/ |
+| BL1GOTYVR, `docs/HOOK_RESEARCH.md` (camera and stereo-boundary notes) | Mastersellz | https://github.com/Mastersellz/BL1GOTYVR |
