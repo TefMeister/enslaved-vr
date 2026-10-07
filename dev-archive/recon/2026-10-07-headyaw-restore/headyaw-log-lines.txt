@@ -1,0 +1,756 @@
+[headyaw] installed at 0x008BEFE8 -> trampoline 04840000. Numpad 6/4 = +/-15 deg, 5 = zero.
+[headyaw] restore installed at 0x008BDE30 (UWorld::Tick entry) -> trampoline 04880000.
+[headyaw] frame 60 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 120 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 180 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 240 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 300 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 360 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 420 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 480 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 540 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 600 offset 0.0 deg | hook ran 28, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 29, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 660 offset 0.0 deg | hook ran 89, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 89, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 720 offset 0.0 deg | hook ran 149, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 149, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 780 offset 0.0 deg | hook ran 209, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 209, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 840 offset 0.0 deg | hook ran 269, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 269, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 900 offset 0.0 deg | hook ran 300, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 300, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 960 offset 0.0 deg | hook ran 424, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 425, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1020 offset 0.0 deg | hook ran 543, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 544, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1080 offset 0.0 deg | hook ran 638, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 638, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1140 offset 0.0 deg | hook ran 698, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 698, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1200 offset 0.0 deg | hook ran 758, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 758, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1260 offset 0.0 deg | hook ran 818, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 818, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1320 offset 0.0 deg | hook ran 878, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 878, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1380 offset 0.0 deg | hook ran 938, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 938, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1440 offset 0.0 deg | hook ran 998, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 998, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1500 offset 0.0 deg | hook ran 1058, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1058, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1560 offset 0.0 deg | hook ran 1118, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1118, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1620 offset 0.0 deg | hook ran 1178, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1178, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1680 offset 0.0 deg | hook ran 1238, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1238, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1740 offset 0.0 deg | hook ran 1298, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1298, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1800 offset 0.0 deg | hook ran 1358, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1358, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1860 offset 0.0 deg | hook ran 1418, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1418, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1920 offset 0.0 deg | hook ran 1478, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1478, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1980 offset 0.0 deg | hook ran 1538, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1538, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2040 offset 0.0 deg | hook ran 1598, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1598, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2100 offset 0.0 deg | hook ran 1658, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1658, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2160 offset 0.0 deg | hook ran 1718, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1718, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2220 offset 0.0 deg | hook ran 1778, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1778, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2280 offset 0.0 deg | hook ran 1838, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1838, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2340 offset 0.0 deg | hook ran 1898, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1898, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2400 offset 0.0 deg | hook ran 1958, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 1958, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2460 offset 0.0 deg | hook ran 2018, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2018, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2520 offset 0.0 deg | hook ran 2078, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2078, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2580 offset 0.0 deg | hook ran 2138, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2138, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2640 offset 0.0 deg | hook ran 2198, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2198, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2700 offset 0.0 deg | hook ran 2258, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2258, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2760 offset 0.0 deg | hook ran 2318, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2318, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2820 offset 0.0 deg | hook ran 2378, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2378, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2880 offset 0.0 deg | hook ran 2438, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2438, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2940 offset 0.0 deg | hook ran 2498, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2498, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3000 offset 0.0 deg | hook ran 2558, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2558, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3060 offset 0.0 deg | hook ran 2618, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2618, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3120 offset 0.0 deg | hook ran 2678, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2678, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3180 offset 0.0 deg | hook ran 2738, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2738, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3240 offset 0.0 deg | hook ran 2798, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2798, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3300 offset 0.0 deg | hook ran 2858, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2858, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3360 offset 0.0 deg | hook ran 2918, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2918, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3420 offset 0.0 deg | hook ran 2978, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 2978, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3480 offset 0.0 deg | hook ran 3038, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3038, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3540 offset 0.0 deg | hook ran 3098, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3098, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3600 offset 0.0 deg | hook ran 3158, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3158, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3660 offset 0.0 deg | hook ran 3218, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3218, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3720 offset 0.0 deg | hook ran 3278, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3278, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3780 offset 0.0 deg | hook ran 3338, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3338, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3840 offset 0.0 deg | hook ran 3398, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3398, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3900 offset 0.0 deg | hook ran 3458, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3458, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3960 offset 0.0 deg | hook ran 3518, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3518, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4020 offset 0.0 deg | hook ran 3578, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3578, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4080 offset 0.0 deg | hook ran 3638, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3638, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4140 offset 0.0 deg | hook ran 3698, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3698, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4200 offset 0.0 deg | hook ran 3758, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3758, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4260 offset 0.0 deg | hook ran 3818, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3818, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4320 offset 0.0 deg | hook ran 3878, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3878, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4380 offset 0.0 deg | hook ran 3938, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3938, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4440 offset 0.0 deg | hook ran 3998, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 3998, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4500 offset 0.0 deg | hook ran 4058, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] restore: tick-start ran 4058, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4560 offset 0.0 deg | hook ran 4117, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4118, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4620 offset 0.0 deg | hook ran 4177, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4177, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4680 offset 0.0 deg | hook ran 4238, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4238, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4740 offset 0.0 deg | hook ran 4298, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4298, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4800 offset 0.0 deg | hook ran 4358, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4358, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4860 offset 0.0 deg | hook ran 4418, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4418, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4920 offset 0.0 deg | hook ran 4478, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4478, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4980 offset 0.0 deg | hook ran 4538, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4538, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5040 offset 0.0 deg | hook ran 4598, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4598, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5100 offset 0.0 deg | hook ran 4658, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4658, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5160 offset 0.0 deg | hook ran 4718, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4718, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5220 offset 0.0 deg | hook ran 4778, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4778, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5280 offset 0.0 deg | hook ran 4838, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4838, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5340 offset 0.0 deg | hook ran 4898, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4898, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5400 offset 0.0 deg | hook ran 4958, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 4958, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5460 offset 0.0 deg | hook ran 5018, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5018, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5520 offset 0.0 deg | hook ran 5078, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5078, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5580 offset 0.0 deg | hook ran 5138, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5138, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5640 offset 0.0 deg | hook ran 5198, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5198, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5700 offset 0.0 deg | hook ran 5258, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5258, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5760 offset 0.0 deg | hook ran 5318, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5318, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5820 offset 0.0 deg | hook ran 5378, wrote 0 | game yaw 8.2 -> after ours 8.2 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5378, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5880 offset 0.0 deg | hook ran 5438, wrote 0 | game yaw 66.5 -> after ours 66.5 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5438, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5940 offset 0.0 deg | hook ran 5498, wrote 0 | game yaw 65.6 -> after ours 65.6 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5498, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5995 KEY offset 0.0 deg | hook ran 5553, wrote 0 | game yaw 83.3 -> after ours 83.3 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5553, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6000 offset 0.0 deg | hook ran 5558, wrote 0 | game yaw 83.3 -> after ours 83.3 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5558, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6060 offset 0.0 deg | hook ran 5618, wrote 0 | game yaw 83.3 -> after ours 83.3 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5618, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6120 offset 0.0 deg | hook ran 5678, wrote 0 | game yaw 83.3 -> after ours 83.3 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5678, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6180 offset 0.0 deg | hook ran 5738, wrote 0 | game yaw 83.3 -> after ours 83.3 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5738, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6192 KEY offset 15.0 deg | hook ran 5750, wrote 0 | game yaw 83.3 -> after ours 83.3 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 5750, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6237 KEY offset 30.0 deg | hook ran 5795, wrote 45 | game yaw 83.3 -> after ours 98.3 (diff 15.0) | ok
+[headyaw] restore: tick-start ran 5795, restored 44, skipped 0 (cache no longer ours)
+[headyaw] frame 6240 offset 30.0 deg | hook ran 5798, wrote 48 | game yaw 83.3 -> after ours 113.3 (diff 30.0) | ok
+[headyaw] restore: tick-start ran 5798, restored 47, skipped 0 (cache no longer ours)
+[headyaw] frame 6283 KEY offset 45.0 deg | hook ran 5841, wrote 91 | game yaw 83.3 -> after ours 113.3 (diff 30.0) | ok
+[headyaw] restore: tick-start ran 5841, restored 90, skipped 0 (cache no longer ours)
+[headyaw] frame 6300 offset 45.0 deg | hook ran 5858, wrote 108 | game yaw 83.3 -> after ours 128.3 (diff 45.0) | ok
+[headyaw] restore: tick-start ran 5858, restored 107, skipped 0 (cache no longer ours)
+[headyaw] frame 6360 offset 45.0 deg | hook ran 5918, wrote 168 | game yaw 83.3 -> after ours 128.3 (diff 45.0) | ok
+[headyaw] restore: tick-start ran 5918, restored 167, skipped 0 (cache no longer ours)
+[headyaw] frame 6420 offset 45.0 deg | hook ran 5978, wrote 228 | game yaw 83.3 -> after ours 128.3 (diff 45.0) | ok
+[headyaw] restore: tick-start ran 5978, restored 227, skipped 0 (cache no longer ours)
+[headyaw] frame 6480 offset 45.0 deg | hook ran 6038, wrote 288 | game yaw 82.7 -> after ours 127.7 (diff 45.0) | ok
+[headyaw] restore: tick-start ran 6038, restored 287, skipped 0 (cache no longer ours)
+[headyaw] frame 6540 offset 45.0 deg | hook ran 6097, wrote 347 | game yaw 84.1 -> after ours 129.1 (diff 45.0) | ok
+[headyaw] restore: tick-start ran 6098, restored 347, skipped 0 (cache no longer ours)
+[headyaw] frame 6600 offset 45.0 deg | hook ran 6157, wrote 407 | game yaw 104.6 -> after ours 149.6 (diff 45.0) | ok
+[headyaw] restore: tick-start ran 6158, restored 407, skipped 0 (cache no longer ours)
+[headyaw] frame 6660 offset 45.0 deg | hook ran 6218, wrote 468 | game yaw 104.6 -> after ours 149.6 (diff 45.0) | ok
+[headyaw] restore: tick-start ran 6218, restored 467, skipped 0 (cache no longer ours)
+[headyaw] frame 6720 offset 45.0 deg | hook ran 6278, wrote 528 | game yaw 100.8 -> after ours 145.8 (diff 45.0) | ok
+[headyaw] restore: tick-start ran 6278, restored 527, skipped 0 (cache no longer ours)
+[headyaw] frame 6732 KEY offset 0.0 deg | hook ran 6290, wrote 540 | game yaw 100.8 -> after ours 145.8 (diff 45.0) | ok
+[headyaw] restore: tick-start ran 6290, restored 539, skipped 0 (cache no longer ours)
+[headyaw] frame 6780 offset 0.0 deg | hook ran 6338, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 6338, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 6840 offset 0.0 deg | hook ran 6398, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 6398, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 6900 offset 0.0 deg | hook ran 6458, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 6458, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 6960 offset 0.0 deg | hook ran 6518, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 6518, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7020 offset 0.0 deg | hook ran 6578, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 6578, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7080 offset 0.0 deg | hook ran 6638, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 6638, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7140 offset 0.0 deg | hook ran 6698, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 6698, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7200 offset 0.0 deg | hook ran 6758, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 6758, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7260 offset 0.0 deg | hook ran 6818, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 6818, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7320 offset 0.0 deg | hook ran 6878, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 6878, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7380 offset 0.0 deg | hook ran 6938, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 6938, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7440 offset 0.0 deg | hook ran 6998, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 6998, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7500 offset 0.0 deg | hook ran 7058, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7058, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7560 offset 0.0 deg | hook ran 7118, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7118, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7620 offset 0.0 deg | hook ran 7178, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7178, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7680 offset 0.0 deg | hook ran 7238, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7238, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7740 offset 0.0 deg | hook ran 7298, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7298, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7800 offset 0.0 deg | hook ran 7358, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7358, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7860 offset 0.0 deg | hook ran 7418, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7418, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7920 offset 0.0 deg | hook ran 7478, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7478, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 7980 offset 0.0 deg | hook ran 7538, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7538, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8040 offset 0.0 deg | hook ran 7598, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7598, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8100 offset 0.0 deg | hook ran 7658, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7658, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8160 offset 0.0 deg | hook ran 7718, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7718, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8220 offset 0.0 deg | hook ran 7778, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7778, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8280 offset 0.0 deg | hook ran 7838, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7838, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8340 offset 0.0 deg | hook ran 7898, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7898, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8400 offset 0.0 deg | hook ran 7958, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 7958, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8460 offset 0.0 deg | hook ran 8018, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8018, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8520 offset 0.0 deg | hook ran 8078, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8078, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8580 offset 0.0 deg | hook ran 8138, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8138, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8640 offset 0.0 deg | hook ran 8198, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8198, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8700 offset 0.0 deg | hook ran 8258, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8258, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8760 offset 0.0 deg | hook ran 8318, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8318, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8820 offset 0.0 deg | hook ran 8378, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8378, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8880 offset 0.0 deg | hook ran 8438, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8438, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 8940 offset 0.0 deg | hook ran 8498, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8498, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9000 offset 0.0 deg | hook ran 8558, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8558, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9060 offset 0.0 deg | hook ran 8618, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8618, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9120 offset 0.0 deg | hook ran 8678, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8678, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9180 offset 0.0 deg | hook ran 8738, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8738, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9240 offset 0.0 deg | hook ran 8798, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8798, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9300 offset 0.0 deg | hook ran 8858, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8858, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9360 offset 0.0 deg | hook ran 8918, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8918, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9420 offset 0.0 deg | hook ran 8978, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 8978, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9480 offset 0.0 deg | hook ran 9038, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9038, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9540 offset 0.0 deg | hook ran 9098, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9098, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9600 offset 0.0 deg | hook ran 9158, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9158, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9660 offset 0.0 deg | hook ran 9218, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9218, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9720 offset 0.0 deg | hook ran 9278, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9278, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9780 offset 0.0 deg | hook ran 9338, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9338, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9840 offset 0.0 deg | hook ran 9398, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9398, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9900 offset 0.0 deg | hook ran 9458, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9458, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 9960 offset 0.0 deg | hook ran 9518, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9518, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10020 offset 0.0 deg | hook ran 9578, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9578, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10080 offset 0.0 deg | hook ran 9638, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9638, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10140 offset 0.0 deg | hook ran 9698, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9698, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10200 offset 0.0 deg | hook ran 9758, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9758, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10260 offset 0.0 deg | hook ran 9818, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9818, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10320 offset 0.0 deg | hook ran 9878, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9878, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10380 offset 0.0 deg | hook ran 9938, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9938, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10440 offset 0.0 deg | hook ran 9998, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 9998, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10500 offset 0.0 deg | hook ran 10058, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10058, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10560 offset 0.0 deg | hook ran 10118, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10118, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10620 offset 0.0 deg | hook ran 10178, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10178, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10680 offset 0.0 deg | hook ran 10238, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10238, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10740 offset 0.0 deg | hook ran 10298, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10298, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10800 offset 0.0 deg | hook ran 10358, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10358, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10860 offset 0.0 deg | hook ran 10418, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10418, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10920 offset 0.0 deg | hook ran 10478, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10478, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 10980 offset 0.0 deg | hook ran 10538, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10538, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11040 offset 0.0 deg | hook ran 10598, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10598, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11100 offset 0.0 deg | hook ran 10658, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10658, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11160 offset 0.0 deg | hook ran 10718, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10718, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11220 offset 0.0 deg | hook ran 10778, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10778, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11280 offset 0.0 deg | hook ran 10838, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10838, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11340 offset 0.0 deg | hook ran 10898, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10898, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11400 offset 0.0 deg | hook ran 10958, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 10958, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11460 offset 0.0 deg | hook ran 11018, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11018, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11520 offset 0.0 deg | hook ran 11078, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11078, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11580 offset 0.0 deg | hook ran 11138, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11138, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11640 offset 0.0 deg | hook ran 11198, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11198, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11700 offset 0.0 deg | hook ran 11258, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11258, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11760 offset 0.0 deg | hook ran 11318, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11318, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11820 offset 0.0 deg | hook ran 11378, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11378, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11880 offset 0.0 deg | hook ran 11438, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11438, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 11940 offset 0.0 deg | hook ran 11498, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11498, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12000 offset 0.0 deg | hook ran 11558, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11558, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12060 offset 0.0 deg | hook ran 11618, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11618, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12120 offset 0.0 deg | hook ran 11678, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11678, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12180 offset 0.0 deg | hook ran 11738, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11738, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12240 offset 0.0 deg | hook ran 11798, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11798, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12300 offset 0.0 deg | hook ran 11858, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11858, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12360 offset 0.0 deg | hook ran 11918, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11918, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12420 offset 0.0 deg | hook ran 11978, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 11978, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12480 offset 0.0 deg | hook ran 12038, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12038, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12540 offset 0.0 deg | hook ran 12098, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12098, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12600 offset 0.0 deg | hook ran 12158, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12158, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12660 offset 0.0 deg | hook ran 12218, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12218, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12720 offset 0.0 deg | hook ran 12278, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12278, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12780 offset 0.0 deg | hook ran 12338, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12338, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12840 offset 0.0 deg | hook ran 12398, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12398, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12900 offset 0.0 deg | hook ran 12458, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12458, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 12960 offset 0.0 deg | hook ran 12518, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12518, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13020 offset 0.0 deg | hook ran 12578, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12578, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13080 offset 0.0 deg | hook ran 12638, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12638, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13140 offset 0.0 deg | hook ran 12698, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12698, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13200 offset 0.0 deg | hook ran 12758, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12758, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13260 offset 0.0 deg | hook ran 12818, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12818, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13320 offset 0.0 deg | hook ran 12878, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12878, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13380 offset 0.0 deg | hook ran 12938, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12938, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13440 offset 0.0 deg | hook ran 12998, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 12998, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13500 offset 0.0 deg | hook ran 13058, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13058, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13560 offset 0.0 deg | hook ran 13118, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13118, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13620 offset 0.0 deg | hook ran 13178, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13178, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13680 offset 0.0 deg | hook ran 13238, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13238, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13740 offset 0.0 deg | hook ran 13298, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13298, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13800 offset 0.0 deg | hook ran 13358, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13358, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13860 offset 0.0 deg | hook ran 13418, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13418, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13920 offset 0.0 deg | hook ran 13478, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13478, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 13980 offset 0.0 deg | hook ran 13538, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13538, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14040 offset 0.0 deg | hook ran 13598, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13598, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14100 offset 0.0 deg | hook ran 13658, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13658, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14160 offset 0.0 deg | hook ran 13718, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13718, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14220 offset 0.0 deg | hook ran 13778, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13778, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14280 offset 0.0 deg | hook ran 13838, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13838, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14340 offset 0.0 deg | hook ran 13898, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13898, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14400 offset 0.0 deg | hook ran 13958, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 13958, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14460 offset 0.0 deg | hook ran 14018, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14018, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14520 offset 0.0 deg | hook ran 14078, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14078, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14580 offset 0.0 deg | hook ran 14138, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14138, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14640 offset 0.0 deg | hook ran 14198, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14198, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14700 offset 0.0 deg | hook ran 14258, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14258, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14760 offset 0.0 deg | hook ran 14318, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14318, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14820 offset 0.0 deg | hook ran 14378, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14378, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14880 offset 0.0 deg | hook ran 14438, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14438, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 14940 offset 0.0 deg | hook ran 14498, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14498, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15000 offset 0.0 deg | hook ran 14558, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14558, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15060 offset 0.0 deg | hook ran 14618, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14618, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15120 offset 0.0 deg | hook ran 14678, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14678, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15180 offset 0.0 deg | hook ran 14738, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14738, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15240 offset 0.0 deg | hook ran 14798, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14798, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15300 offset 0.0 deg | hook ran 14858, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14858, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15360 offset 0.0 deg | hook ran 14918, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14918, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15420 offset 0.0 deg | hook ran 14978, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 14978, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15480 offset 0.0 deg | hook ran 15038, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15038, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15540 offset 0.0 deg | hook ran 15098, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15098, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15600 offset 0.0 deg | hook ran 15158, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15158, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15660 offset 0.0 deg | hook ran 15218, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15218, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15720 offset 0.0 deg | hook ran 15278, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15278, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15780 offset 0.0 deg | hook ran 15338, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15338, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15840 offset 0.0 deg | hook ran 15398, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15398, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15900 offset 0.0 deg | hook ran 15458, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15458, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 15960 offset 0.0 deg | hook ran 15518, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15518, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16020 offset 0.0 deg | hook ran 15578, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15578, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16080 offset 0.0 deg | hook ran 15638, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15638, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16140 offset 0.0 deg | hook ran 15698, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15698, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16200 offset 0.0 deg | hook ran 15758, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15758, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16260 offset 0.0 deg | hook ran 15818, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15818, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16320 offset 0.0 deg | hook ran 15878, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15878, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16380 offset 0.0 deg | hook ran 15938, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15938, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16440 offset 0.0 deg | hook ran 15998, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 15998, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16500 offset 0.0 deg | hook ran 16058, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16058, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16560 offset 0.0 deg | hook ran 16118, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16118, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16620 offset 0.0 deg | hook ran 16178, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16178, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16680 offset 0.0 deg | hook ran 16238, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16238, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16740 offset 0.0 deg | hook ran 16298, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16298, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16800 offset 0.0 deg | hook ran 16358, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16358, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16860 offset 0.0 deg | hook ran 16418, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16418, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16920 offset 0.0 deg | hook ran 16478, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16478, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 16980 offset 0.0 deg | hook ran 16538, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16538, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17040 offset 0.0 deg | hook ran 16598, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16598, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17100 offset 0.0 deg | hook ran 16658, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16658, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17160 offset 0.0 deg | hook ran 16718, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16718, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17220 offset 0.0 deg | hook ran 16778, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16778, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17280 offset 0.0 deg | hook ran 16838, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16838, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17340 offset 0.0 deg | hook ran 16898, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16898, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17400 offset 0.0 deg | hook ran 16958, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 16958, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17460 offset 0.0 deg | hook ran 17018, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17018, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17520 offset 0.0 deg | hook ran 17078, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17078, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17580 offset 0.0 deg | hook ran 17138, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17138, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17640 offset 0.0 deg | hook ran 17198, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17198, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17700 offset 0.0 deg | hook ran 17258, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17258, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17760 offset 0.0 deg | hook ran 17318, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17318, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17820 offset 0.0 deg | hook ran 17378, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17378, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17880 offset 0.0 deg | hook ran 17438, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17438, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 17940 offset 0.0 deg | hook ran 17498, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17498, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18000 offset 0.0 deg | hook ran 17558, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17558, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18060 offset 0.0 deg | hook ran 17618, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17618, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18120 offset 0.0 deg | hook ran 17678, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17678, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18180 offset 0.0 deg | hook ran 17738, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17738, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18240 offset 0.0 deg | hook ran 17798, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17798, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18300 offset 0.0 deg | hook ran 17858, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17858, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18360 offset 0.0 deg | hook ran 17918, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17918, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18420 offset 0.0 deg | hook ran 17978, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 17978, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18480 offset 0.0 deg | hook ran 18038, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18038, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18540 offset 0.0 deg | hook ran 18098, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18098, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18600 offset 0.0 deg | hook ran 18158, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18158, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18660 offset 0.0 deg | hook ran 18218, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18218, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18720 offset 0.0 deg | hook ran 18278, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18278, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18780 offset 0.0 deg | hook ran 18338, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18338, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18840 offset 0.0 deg | hook ran 18398, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18398, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18900 offset 0.0 deg | hook ran 18458, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18458, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 18960 offset 0.0 deg | hook ran 18518, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18518, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19020 offset 0.0 deg | hook ran 18578, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18578, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19080 offset 0.0 deg | hook ran 18638, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18638, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19140 offset 0.0 deg | hook ran 18698, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18698, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19200 offset 0.0 deg | hook ran 18758, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18758, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19260 offset 0.0 deg | hook ran 18818, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18818, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19320 offset 0.0 deg | hook ran 18878, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18878, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19380 offset 0.0 deg | hook ran 18938, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18938, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19440 offset 0.0 deg | hook ran 18998, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 18998, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19500 offset 0.0 deg | hook ran 19058, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 19058, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19560 offset 0.0 deg | hook ran 19118, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 19118, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19620 offset 0.0 deg | hook ran 19178, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 19178, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19680 offset 0.0 deg | hook ran 19238, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 19238, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19740 offset 0.0 deg | hook ran 19298, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 19298, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19800 offset 0.0 deg | hook ran 19358, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 19358, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19860 offset 0.0 deg | hook ran 19418, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 19418, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19920 offset 0.0 deg | hook ran 19478, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 19478, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 19980 offset 0.0 deg | hook ran 19538, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 19538, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20040 offset 0.0 deg | hook ran 19598, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 19598, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20100 offset 0.0 deg | hook ran 19658, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 19658, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20160 offset 0.0 deg | hook ran 19718, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | ok
+[headyaw] restore: tick-start ran 19718, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20220 offset 0.0 deg | hook ran 19752, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 19752, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20280 offset 0.0 deg | hook ran 19812, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 19813, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20340 offset 0.0 deg | hook ran 19873, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 19873, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20400 offset 0.0 deg | hook ran 19933, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 19933, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20460 offset 0.0 deg | hook ran 19993, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 19993, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20520 offset 0.0 deg | hook ran 20053, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20053, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20580 offset 0.0 deg | hook ran 20112, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20113, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20640 offset 0.0 deg | hook ran 20172, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20173, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20700 offset 0.0 deg | hook ran 20232, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20233, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20760 offset 0.0 deg | hook ran 20292, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20293, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20820 offset 0.0 deg | hook ran 20353, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20353, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20880 offset 0.0 deg | hook ran 20413, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20413, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 20940 offset 0.0 deg | hook ran 20473, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20473, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21000 offset 0.0 deg | hook ran 20532, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20533, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21060 offset 0.0 deg | hook ran 20593, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20593, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21120 offset 0.0 deg | hook ran 20652, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20653, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21180 offset 0.0 deg | hook ran 20712, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20713, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21240 offset 0.0 deg | hook ran 20772, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20773, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21300 offset 0.0 deg | hook ran 20833, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20833, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21360 offset 0.0 deg | hook ran 20892, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20893, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21420 offset 0.0 deg | hook ran 20952, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 20953, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21480 offset 0.0 deg | hook ran 21012, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21013, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21540 offset 0.0 deg | hook ran 21072, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21073, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21600 offset 0.0 deg | hook ran 21132, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21132, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21660 offset 0.0 deg | hook ran 21193, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21193, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21720 offset 0.0 deg | hook ran 21253, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21253, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21780 offset 0.0 deg | hook ran 21312, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21313, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21840 offset 0.0 deg | hook ran 21373, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21373, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21900 offset 0.0 deg | hook ran 21433, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21433, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 21960 offset 0.0 deg | hook ran 21492, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21493, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 22020 offset 0.0 deg | hook ran 21553, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21553, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 22080 offset 0.0 deg | hook ran 21612, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21613, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 22140 offset 0.0 deg | hook ran 21672, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21673, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 22200 offset 0.0 deg | hook ran 21732, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21733, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 22260 offset 0.0 deg | hook ran 21793, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21793, restored 540, skipped 0 (cache no longer ours)
+[headyaw] frame 22320 offset 0.0 deg | hook ran 21853, wrote 540 | game yaw 100.8 -> after ours 100.8 (diff 0.0) | controller gone
+[headyaw] restore: tick-start ran 21853, restored 540, skipped 0 (cache no longer ours)

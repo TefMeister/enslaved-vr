@@ -970,7 +970,12 @@ static scene renders exactly two images, so same-eye pairs are byte-identical). 
   So as written, a head turn would steer Monkey. **Restore draft** `headyaw_restore.inc.h` (`[headyaw] Restore=0`,
   off): remembers the game's yaw and puts it back at the entry of `UWorld::Tick` `0x008BDE30`
   (`6A FF 68 36 9B 93 01`), after the draw and before the next `PlayerInput`, only if the cache still holds our
-  value; `Present` rejected because the render thread can lag a frame `[compile-verified 2026-10-07]`, not deployed.
+  value; `Present` rejected because the render thread can lag a frame `[compile-verified 2026-10-07]`.
+- **Restore LIVE** `[verified-live 2026-10-07, n=1]`: installed at `0x008BDE30`, restored on every tick our
+  hook wrote (540/540, 0 skipped), the drawn view still turned. The chase camera swings ~75° by itself in a
+  2 s walk with no offset, so earlier swings were not feedback. With +45° and restore, the game yaw held
+  steady while walking and the screen slid sideways — fits walking along the game's direction `[hypothesis, n=1]`
+  (turret fire, weak test). Note `modding-notes/2026-10-07-lm-the-restore-keeps-walking-the-games.md`.
 
 ## 10. Dead ends
 
