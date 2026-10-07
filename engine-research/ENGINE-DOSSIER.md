@@ -960,6 +960,17 @@ static scene renders exactly two images, so same-eye pairs are byte-identical). 
   45 every line — the offset rides on top of a moving camera without accumulating `[verified-live
   2026-10-07, n=1]`. **Whether walking follows the drawn view or the game's view is NOT settled** (the
   game's camera turns as Monkey walks, which masks it). Evidence `dev-archive/recon/2026-10-07-headyaw-turns-the-view/`.
+- **Who reads `CameraCache.POV` (the reader, 2026-10-07, from a new bytecode decoder
+  `staging/enslaved-vr/reader-tools/ue3_bytecode.py`, 19,067 of 19,177 functions decoded `[measured 2026-10-07]`):**
+  the camera does NOT build from last tick's cache (`NTCam_CameraController.UpdateViewTarget` reads its own
+  camera objects), which fits the live "no spin" `[inferred-static 2026-10-07]`; the native chase-camera
+  `Update` was not fully read. **Walking and aim DO read it:** `NTInput.PlayerInput` → `updateStickRelativeFrame`
+  → `PlayerCamera.GetCameraViewPoint` rotates the stick/WASD direction by the cached yaw, and
+  `Pawn.GetBaseAimRotation` / jump-handhold direction read it via `GetPlayerViewPoint` `[inferred-static 2026-10-07]`.
+  So as written, a head turn would steer Monkey. **Restore draft** `headyaw_restore.inc.h` (`[headyaw] Restore=0`,
+  off): remembers the game's yaw and puts it back at the entry of `UWorld::Tick` `0x008BDE30`
+  (`6A FF 68 36 9B 93 01`), after the draw and before the next `PlayerInput`, only if the cache still holds our
+  value; `Present` rejected because the render thread can lag a frame `[compile-verified 2026-10-07]`, not deployed.
 
 ## 10. Dead ends
 
