@@ -1,0 +1,315 @@
+[headyaw] installed at 0x008BEFE8 -> trampoline 04830000. Numpad 6/4 = +/-15 deg, 5 = zero.
+[headyaw] frame 60 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] frame 120 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] frame 180 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] frame 240 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] frame 300 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] frame 360 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] frame 420 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] frame 480 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] frame 540 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headyaw] frame 600 offset 0.0 deg | hook ran 26, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 660 offset 0.0 deg | hook ran 87, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 720 offset 0.0 deg | hook ran 146, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 780 offset 0.0 deg | hook ran 206, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 840 offset 0.0 deg | hook ran 267, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 900 offset 0.0 deg | hook ran 269, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 960 offset 0.0 deg | hook ran 361, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1020 offset 0.0 deg | hook ran 473, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1080 offset 0.0 deg | hook ran 568, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1140 offset 0.0 deg | hook ran 671, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1200 offset 0.0 deg | hook ran 731, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1260 offset 0.0 deg | hook ran 791, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1320 offset 0.0 deg | hook ran 851, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1380 offset 0.0 deg | hook ran 911, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1440 offset 0.0 deg | hook ran 971, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1500 offset 0.0 deg | hook ran 1031, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1560 offset 0.0 deg | hook ran 1091, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1620 offset 0.0 deg | hook ran 1151, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1680 offset 0.0 deg | hook ran 1211, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1740 offset 0.0 deg | hook ran 1271, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1800 offset 0.0 deg | hook ran 1331, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1860 offset 0.0 deg | hook ran 1391, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1920 offset 0.0 deg | hook ran 1451, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 1980 offset 0.0 deg | hook ran 1511, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2040 offset 0.0 deg | hook ran 1571, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2100 offset 0.0 deg | hook ran 1631, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2160 offset 0.0 deg | hook ran 1691, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2220 offset 0.0 deg | hook ran 1751, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2280 offset 0.0 deg | hook ran 1811, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2340 offset 0.0 deg | hook ran 1871, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2400 offset 0.0 deg | hook ran 1931, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2460 offset 0.0 deg | hook ran 1991, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2520 offset 0.0 deg | hook ran 2051, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2580 offset 0.0 deg | hook ran 2111, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2640 offset 0.0 deg | hook ran 2171, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2700 offset 0.0 deg | hook ran 2231, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2760 offset 0.0 deg | hook ran 2291, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2820 offset 0.0 deg | hook ran 2351, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2880 offset 0.0 deg | hook ran 2411, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 2940 offset 0.0 deg | hook ran 2471, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3000 offset 0.0 deg | hook ran 2531, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3060 offset 0.0 deg | hook ran 2591, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3120 offset 0.0 deg | hook ran 2651, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3180 offset 0.0 deg | hook ran 2711, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3240 offset 0.0 deg | hook ran 2771, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3300 offset 0.0 deg | hook ran 2831, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3360 offset 0.0 deg | hook ran 2891, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3420 offset 0.0 deg | hook ran 2951, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3480 offset 0.0 deg | hook ran 3011, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3540 offset 0.0 deg | hook ran 3071, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3600 offset 0.0 deg | hook ran 3131, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3660 offset 0.0 deg | hook ran 3191, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3720 offset 0.0 deg | hook ran 3251, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3780 offset 0.0 deg | hook ran 3311, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3840 offset 0.0 deg | hook ran 3371, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3900 offset 0.0 deg | hook ran 3431, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 3960 offset 0.0 deg | hook ran 3491, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 4020 offset 0.0 deg | hook ran 3551, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 4080 offset 0.0 deg | hook ran 3611, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 4140 offset 0.0 deg | hook ran 3671, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 4200 offset 0.0 deg | hook ran 3731, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 4260 offset 0.0 deg | hook ran 3791, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 4320 offset 0.0 deg | hook ran 3851, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 4380 offset 0.0 deg | hook ran 3911, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 4440 offset 0.0 deg | hook ran 3971, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[uobject] LIVE PLAYERCONTROLLER [130695] 0x3FD2E600  MKPlayerController_Monkey  (class 0x2A4CEFC0)
+[uobject] PROBE DONE in 1469 ms. Nothing was written, and ProcessEvent was not called.
+[headyaw] frame 4500 offset 0.0 deg | hook ran 4031, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headyaw] frame 4560 offset 0.0 deg | hook ran 4091, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 4620 offset 0.0 deg | hook ran 4151, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 4680 offset 0.0 deg | hook ran 4211, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 4740 offset 0.0 deg | hook ran 4271, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 4800 offset 0.0 deg | hook ran 4331, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 4860 offset 0.0 deg | hook ran 4391, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 4920 offset 0.0 deg | hook ran 4451, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 4980 offset 0.0 deg | hook ran 4511, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5040 offset 0.0 deg | hook ran 4571, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5100 offset 0.0 deg | hook ran 4631, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5160 offset 0.0 deg | hook ran 4691, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5220 offset 0.0 deg | hook ran 4751, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5280 offset 0.0 deg | hook ran 4811, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5340 offset 0.0 deg | hook ran 4871, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5400 offset 0.0 deg | hook ran 4931, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5460 offset 0.0 deg | hook ran 4991, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5520 offset 0.0 deg | hook ran 5051, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5580 offset 0.0 deg | hook ran 5111, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5640 offset 0.0 deg | hook ran 5171, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5700 offset 0.0 deg | hook ran 5231, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5760 offset 0.0 deg | hook ran 5291, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5820 offset 0.0 deg | hook ran 5351, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5880 offset 0.0 deg | hook ran 5411, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 5940 offset 0.0 deg | hook ran 5471, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6000 offset 0.0 deg | hook ran 5531, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6060 offset 0.0 deg | hook ran 5591, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6120 offset 0.0 deg | hook ran 5651, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6180 offset 0.0 deg | hook ran 5711, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6240 offset 0.0 deg | hook ran 5771, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6300 offset 0.0 deg | hook ran 5831, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6360 offset 0.0 deg | hook ran 5891, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6420 offset 0.0 deg | hook ran 5951, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6480 offset 0.0 deg | hook ran 6011, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6540 offset 0.0 deg | hook ran 6071, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6600 offset 0.0 deg | hook ran 6131, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6660 offset 0.0 deg | hook ran 6191, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6720 offset 0.0 deg | hook ran 6251, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6780 offset 0.0 deg | hook ran 6311, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6840 offset 0.0 deg | hook ran 6371, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6900 offset 0.0 deg | hook ran 6431, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 6960 offset 0.0 deg | hook ran 6491, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 7020 offset 0.0 deg | hook ran 6551, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 7080 offset 0.0 deg | hook ran 6611, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 7140 offset 0.0 deg | hook ran 6671, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 7200 offset 0.0 deg | hook ran 6731, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 7260 offset 0.0 deg | hook ran 6791, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 7320 offset 0.0 deg | hook ran 6851, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 7380 offset 0.0 deg | hook ran 6911, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 7440 offset 0.0 deg | hook ran 6971, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 7500 offset 0.0 deg | hook ran 7031, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 7560 offset 0.0 deg | hook ran 7091, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 7620 offset 0.0 deg | hook ran 7151, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 7645 KEY offset 15.0 deg | hook ran 7176, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 7680 offset 15.0 deg | hook ran 7211, wrote 35 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 7740 offset 15.0 deg | hook ran 7271, wrote 95 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 7800 offset 15.0 deg | hook ran 7331, wrote 155 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 7860 offset 15.0 deg | hook ran 7391, wrote 215 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 7920 offset 15.0 deg | hook ran 7451, wrote 275 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 7980 offset 15.0 deg | hook ran 7511, wrote 335 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 8040 offset 15.0 deg | hook ran 7571, wrote 395 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 8100 offset 15.0 deg | hook ran 7631, wrote 455 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 8160 offset 15.0 deg | hook ran 7691, wrote 515 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 8220 offset 15.0 deg | hook ran 7751, wrote 575 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 8280 offset 15.0 deg | hook ran 7810, wrote 634 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 8317 KEY offset 30.0 deg | hook ran 7848, wrote 672 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 8340 offset 30.0 deg | hook ran 7871, wrote 695 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headyaw] frame 8400 offset 30.0 deg | hook ran 7931, wrote 755 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headyaw] frame 8431 KEY offset 45.0 deg | hook ran 7962, wrote 786 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headyaw] frame 8460 offset 45.0 deg | hook ran 7991, wrote 815 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 8520 offset 45.0 deg | hook ran 8051, wrote 875 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 8580 offset 45.0 deg | hook ran 8111, wrote 935 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 8640 offset 45.0 deg | hook ran 8171, wrote 995 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 8700 offset 45.0 deg | hook ran 8231, wrote 1055 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 8760 offset 45.0 deg | hook ran 8291, wrote 1115 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 8820 offset 45.0 deg | hook ran 8351, wrote 1175 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 8880 offset 45.0 deg | hook ran 8411, wrote 1235 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 8940 offset 45.0 deg | hook ran 8471, wrote 1295 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 9000 offset 45.0 deg | hook ran 8531, wrote 1355 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 9060 offset 45.0 deg | hook ran 8591, wrote 1415 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 9120 offset 45.0 deg | hook ran 8651, wrote 1475 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 9171 KEY offset 0.0 deg | hook ran 8702, wrote 1526 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 9180 offset 0.0 deg | hook ran 8711, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 9240 offset 0.0 deg | hook ran 8771, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 9300 offset 0.0 deg | hook ran 8831, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 9360 offset 0.0 deg | hook ran 8891, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 9420 offset 0.0 deg | hook ran 8951, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 9480 offset 0.0 deg | hook ran 9011, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 9540 offset 0.0 deg | hook ran 9071, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 9600 offset 0.0 deg | hook ran 9131, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 9660 offset 0.0 deg | hook ran 9191, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 9720 offset 0.0 deg | hook ran 9251, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 9780 offset 0.0 deg | hook ran 9311, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 9840 offset 0.0 deg | hook ran 9371, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 9900 offset 0.0 deg | hook ran 9431, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 9960 offset 0.0 deg | hook ran 9491, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 10020 offset 0.0 deg | hook ran 9551, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 10080 offset 0.0 deg | hook ran 9611, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 10140 offset 0.0 deg | hook ran 9671, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 10200 offset 0.0 deg | hook ran 9731, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 10260 offset 0.0 deg | hook ran 9791, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 10320 offset 0.0 deg | hook ran 9851, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 10380 offset 0.0 deg | hook ran 9911, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 10440 offset 0.0 deg | hook ran 9971, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 10500 offset 0.0 deg | hook ran 10031, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 10556 KEY offset 15.0 deg | hook ran 10087, wrote 1526 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headyaw] frame 10560 offset 15.0 deg | hook ran 10091, wrote 1530 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 10601 KEY offset 30.0 deg | hook ran 10132, wrote 1571 | game yaw 6.5 -> after ours 21.5 (diff 15.0) | ok
+[headyaw] frame 10620 offset 30.0 deg | hook ran 10151, wrote 1590 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headyaw] frame 10646 KEY offset 45.0 deg | hook ran 10177, wrote 1616 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headyaw] frame 10680 offset 45.0 deg | hook ran 10211, wrote 1650 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 10740 offset 45.0 deg | hook ran 10271, wrote 1710 | game yaw 6.5 -> after ours 51.5 (diff 45.0) | ok
+[headyaw] frame 10800 offset 45.0 deg | hook ran 10330, wrote 1769 | game yaw 25.5 -> after ours 70.5 (diff 45.0) | ok
+[headyaw] frame 10860 offset 45.0 deg | hook ran 10391, wrote 1830 | game yaw 101.5 -> after ours 146.5 (diff 45.0) | ok
+[headyaw] frame 10920 offset 45.0 deg | hook ran 10451, wrote 1890 | game yaw 68.7 -> after ours 113.7 (diff 45.0) | ok
+[headyaw] frame 10953 KEY offset 0.0 deg | hook ran 10484, wrote 1923 | game yaw 39.0 -> after ours 84.0 (diff 45.0) | ok
+[headyaw] frame 10980 offset 0.0 deg | hook ran 10511, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11040 offset 0.0 deg | hook ran 10571, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11100 offset 0.0 deg | hook ran 10631, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11160 offset 0.0 deg | hook ran 10691, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11220 offset 0.0 deg | hook ran 10751, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11280 offset 0.0 deg | hook ran 10811, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11340 offset 0.0 deg | hook ran 10871, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11400 offset 0.0 deg | hook ran 10931, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11460 offset 0.0 deg | hook ran 10991, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11520 offset 0.0 deg | hook ran 11051, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11580 offset 0.0 deg | hook ran 11111, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11640 offset 0.0 deg | hook ran 11171, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11700 offset 0.0 deg | hook ran 11231, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11760 offset 0.0 deg | hook ran 11291, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11820 offset 0.0 deg | hook ran 11351, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11880 offset 0.0 deg | hook ran 11411, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 11940 offset 0.0 deg | hook ran 11471, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 12000 offset 0.0 deg | hook ran 11531, wrote 1923 | game yaw 23.6 -> after ours 23.6 (diff 0.0) | ok
+[headyaw] frame 12060 offset 0.0 deg | hook ran 11591, wrote 1923 | game yaw 98.4 -> after ours 98.4 (diff 0.0) | ok
+[headyaw] frame 12120 offset 0.0 deg | hook ran 11651, wrote 1923 | game yaw 104.3 -> after ours 104.3 (diff 0.0) | ok
+[headyaw] frame 12180 offset 0.0 deg | hook ran 11711, wrote 1923 | game yaw 78.6 -> after ours 78.6 (diff 0.0) | ok
+[headyaw] frame 12240 offset 0.0 deg | hook ran 11771, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 12300 offset 0.0 deg | hook ran 11831, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 12360 offset 0.0 deg | hook ran 11891, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 12420 offset 0.0 deg | hook ran 11951, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 12480 offset 0.0 deg | hook ran 12011, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 12540 offset 0.0 deg | hook ran 12071, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 12600 offset 0.0 deg | hook ran 12131, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 12660 offset 0.0 deg | hook ran 12191, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 12720 offset 0.0 deg | hook ran 12251, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 12780 offset 0.0 deg | hook ran 12311, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 12840 offset 0.0 deg | hook ran 12371, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 12900 offset 0.0 deg | hook ran 12431, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 12960 offset 0.0 deg | hook ran 12491, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 13020 offset 0.0 deg | hook ran 12551, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 13080 offset 0.0 deg | hook ran 12611, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 13140 offset 0.0 deg | hook ran 12671, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 13200 offset 0.0 deg | hook ran 12731, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 13260 offset 0.0 deg | hook ran 12791, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 13320 offset 0.0 deg | hook ran 12851, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 13380 offset 0.0 deg | hook ran 12911, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 13440 offset 0.0 deg | hook ran 12971, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 13500 offset 0.0 deg | hook ran 13030, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 13560 offset 0.0 deg | hook ran 13091, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 13620 offset 0.0 deg | hook ran 13140, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | ok
+[headyaw] frame 13680 offset 0.0 deg | hook ran 13185, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 13740 offset 0.0 deg | hook ran 13245, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 13800 offset 0.0 deg | hook ran 13305, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 13860 offset 0.0 deg | hook ran 13365, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 13920 offset 0.0 deg | hook ran 13425, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 13980 offset 0.0 deg | hook ran 13485, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14040 offset 0.0 deg | hook ran 13545, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14100 offset 0.0 deg | hook ran 13605, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14160 offset 0.0 deg | hook ran 13665, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14220 offset 0.0 deg | hook ran 13725, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14280 offset 0.0 deg | hook ran 13785, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14340 offset 0.0 deg | hook ran 13844, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14400 offset 0.0 deg | hook ran 13905, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14460 offset 0.0 deg | hook ran 13964, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14520 offset 0.0 deg | hook ran 14024, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14580 offset 0.0 deg | hook ran 14084, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14640 offset 0.0 deg | hook ran 14144, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14700 offset 0.0 deg | hook ran 14204, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14760 offset 0.0 deg | hook ran 14265, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14820 offset 0.0 deg | hook ran 14325, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14880 offset 0.0 deg | hook ran 14384, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 14940 offset 0.0 deg | hook ran 14444, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15000 offset 0.0 deg | hook ran 14505, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15060 offset 0.0 deg | hook ran 14565, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15120 offset 0.0 deg | hook ran 14624, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15180 offset 0.0 deg | hook ran 14684, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15240 offset 0.0 deg | hook ran 14744, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15300 offset 0.0 deg | hook ran 14804, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15360 offset 0.0 deg | hook ran 14865, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15420 offset 0.0 deg | hook ran 14924, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15480 offset 0.0 deg | hook ran 14985, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15540 offset 0.0 deg | hook ran 15045, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15600 offset 0.0 deg | hook ran 15104, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15660 offset 0.0 deg | hook ran 15165, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15720 offset 0.0 deg | hook ran 15225, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15780 offset 0.0 deg | hook ran 15285, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15840 offset 0.0 deg | hook ran 15344, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15900 offset 0.0 deg | hook ran 15405, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 15960 offset 0.0 deg | hook ran 15464, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16020 offset 0.0 deg | hook ran 15524, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16080 offset 0.0 deg | hook ran 15584, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16140 offset 0.0 deg | hook ran 15644, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16200 offset 0.0 deg | hook ran 15704, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16260 offset 0.0 deg | hook ran 15764, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16320 offset 0.0 deg | hook ran 15825, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16380 offset 0.0 deg | hook ran 15885, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16440 offset 0.0 deg | hook ran 15945, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16500 offset 0.0 deg | hook ran 16004, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16560 offset 0.0 deg | hook ran 16064, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16620 offset 0.0 deg | hook ran 16124, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16680 offset 0.0 deg | hook ran 16185, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16740 offset 0.0 deg | hook ran 16245, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16800 offset 0.0 deg | hook ran 16305, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16860 offset 0.0 deg | hook ran 16364, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16920 offset 0.0 deg | hook ran 16425, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 16980 offset 0.0 deg | hook ran 16485, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17040 offset 0.0 deg | hook ran 16544, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17100 offset 0.0 deg | hook ran 16604, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17160 offset 0.0 deg | hook ran 16665, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17220 offset 0.0 deg | hook ran 16725, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17280 offset 0.0 deg | hook ran 16785, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17340 offset 0.0 deg | hook ran 16844, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17400 offset 0.0 deg | hook ran 16905, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17460 offset 0.0 deg | hook ran 16965, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17520 offset 0.0 deg | hook ran 17024, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17580 offset 0.0 deg | hook ran 17084, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17640 offset 0.0 deg | hook ran 17145, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17700 offset 0.0 deg | hook ran 17205, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17760 offset 0.0 deg | hook ran 17264, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17820 offset 0.0 deg | hook ran 17324, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17880 offset 0.0 deg | hook ran 17385, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 17940 offset 0.0 deg | hook ran 17444, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 18000 offset 0.0 deg | hook ran 17505, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 18060 offset 0.0 deg | hook ran 17565, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 18120 offset 0.0 deg | hook ran 17624, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 18180 offset 0.0 deg | hook ran 17684, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
+[headyaw] frame 18240 offset 0.0 deg | hook ran 17745, wrote 1923 | game yaw 81.3 -> after ours 81.3 (diff 0.0) | controller gone
