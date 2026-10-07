@@ -946,6 +946,20 @@ static scene renders exactly two images, so same-eye pairs are byte-identical). 
   `[inferred-static 2026-10-04, n=845]`. The 2026-09-09 withdrawal stands for its method, not this one.
 - Built: `[headyaw]` numpad yaw test (`headyaw.inc.h`), installed off `[compile-verified 2026-10-04]`.
   Note `modding-notes/2026-10-04-pd-the-camera-is-decided-in-one-loop-and-the-yaw-test-is-built.md`.
+- **From `/gr` (2026-10-04):** Borderlands 1's UE3 VR mod saves the view, writes the head pose, draws
+  once, then RESTORES the saved values `[reported 2026-10-04]`; our hook never restores. If the yaw
+  spins or the walking direction turns, the fix is a matching restore after drawing, not a different
+  write point `[hypothesis]`. Same source: drawing twice per frame corrupted the heap there.
+  Topic `external-research/topics/2026-10-04-bl1gotyvr-writes-the-view-just-before-draw-and-restores-it.md`.
+- **⭐⭐ THE HOOK TURNS THE VIEW** `[verified-live 2026-10-07, n=1 launch, 4 key presses]`. Installed at
+  `0x008BEFE8` first time; the probe found `MKPlayerController_Monkey`; numpad 6 ×3 turned the drawn
+  view 15° per press (screenshots), the game's own yaw held at 6.5° while ours read 21.5 / 36.5 / 51.5
+  (diff = offset, **no spin, no feedback**), numpad 5 snapped back to the identical frame. So the step
+  order in this section is right: the write after the camera loop is what drawing uses. While walking
+  with +45° held, the game's camera swung on its own (6.5 → 101.5 → 39°) and our diff stayed exactly
+  45 every line — the offset rides on top of a moving camera without accumulating `[verified-live
+  2026-10-07, n=1]`. **Whether walking follows the drawn view or the game's view is NOT settled** (the
+  game's camera turns as Monkey walks, which masks it). Evidence `dev-archive/recon/2026-10-07-headyaw-turns-the-view/`.
 
 ## 10. Dead ends
 
