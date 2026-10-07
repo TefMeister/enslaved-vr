@@ -976,6 +976,12 @@ static scene renders exactly two images, so same-eye pairs are byte-identical). 
   2 s walk with no offset, so earlier swings were not feedback. With +45° and restore, the game yaw held
   steady while walking and the screen slid sideways — fits walking along the game's direction `[hypothesis, n=1]`
   (turret fire, weak test). Note `modding-notes/2026-10-07-lm-the-restore-keeps-walking-the-games.md`.
+- **Head pose feed built, off** (`[headxr]`, 2026-10-07 `/pd`): a pose-only OpenXR thread (own D3D11 device,
+  empty frames; cut down from Hard Reset's simulator-proven `hxr.c`) feeds head yaw (relative to straight
+  ahead, numpad 5 recentres) and pitch into the hook; pitch written at `Camera+0x370` and restored like yaw.
+  OpenXR → UE3: UE3 yaw = −(OpenXR yaw about +Y), pitch same sign; pitch sum clamped ±89°
+  `[verified-numerically 2026-10-07, n=14]`; the DLL `[compile-verified 2026-10-07]`; not run. Note
+  `modding-notes/2026-10-07-pd-head-yaw-and-pitch-from-openxr.md`.
 
 ## 10. Dead ends
 
