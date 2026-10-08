@@ -1,0 +1,864 @@
+[headyaw] installed at 0x008BEFE8 -> trampoline 06160000. Numpad 6/4 = +/-15 deg, 5 = zero.
+[headyaw] restore installed at 0x008BDE30 (UWorld::Tick entry) -> trampoline 061E0000.
+[headxr] ON: headset thread started (own D3D11 device, pose only, no picture).
+[headxr] runtime for this game only: D:\claude video game stuff\tools\OpenXR-Simulator\openxr_simulator-32.json
+[headxr] session created; waiting for the runtime to start it.
+[headxr] session running.
+[headxr] pose 1: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 60 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headxr] stage 2, poses 74, headset frames 73 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 120 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headxr] stage 2, poses 193, headset frames 192 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 180 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headxr] stage 2, poses 315, headset frames 314 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 240 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headxr] stage 2, poses 485, headset frames 484 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 300 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headxr] stage 2, poses 606, headset frames 605 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 360 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headxr] stage 2, poses 728, headset frames 727 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 420 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headxr] stage 2, poses 849, headset frames 848 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headxr] pose 900: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 480 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headxr] stage 2, poses 973, headset frames 972 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 540 offset 0.0 deg | hook ran 0, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | ok
+[headxr] stage 2, poses 1096, headset frames 1095 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 0, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 600 offset 0.0 deg | hook ran 50, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 1256, headset frames 1255 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 51, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 660 offset 0.0 deg | hook ran 111, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 1332, headset frames 1331 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 111, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 720 offset 0.0 deg | hook ran 170, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 1392, headset frames 1391 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 171, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 780 offset 0.0 deg | hook ran 231, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 1452, headset frames 1451 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 231, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 840 offset 0.0 deg | hook ran 291, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 1512, headset frames 1511 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 291, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 900 offset 0.0 deg | hook ran 304, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 1620, headset frames 1619 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 304, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 960 offset 0.0 deg | hook ran 376, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 1740, headset frames 1739 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 376, restored 0, skipped 0 (cache no longer ours)
+[headxr] pose 1800: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 1020 offset 0.0 deg | hook ran 485, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 1861, headset frames 1860 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 485, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1080 offset 0.0 deg | hook ran 555, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 1980, headset frames 1979 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 556, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1140 offset 0.0 deg | hook ran 679, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 2100, headset frames 2099 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 680, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1200 offset 0.0 deg | hook ran 796, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 2276, headset frames 2275 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 796, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1260 offset 0.0 deg | hook ran 858, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 2355, headset frames 2354 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 858, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1320 offset 0.0 deg | hook ran 918, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 2415, headset frames 2414 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 918, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1380 offset 0.0 deg | hook ran 978, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 2475, headset frames 2474 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 978, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1440 offset 0.0 deg | hook ran 1038, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 2535, headset frames 2534 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1038, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1500 offset 0.0 deg | hook ran 1098, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 2595, headset frames 2594 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1098, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1560 offset 0.0 deg | hook ran 1158, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 2655, headset frames 2654 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1158, restored 0, skipped 0 (cache no longer ours)
+[headxr] pose 2700: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 1620 offset 0.0 deg | hook ran 1218, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 2715, headset frames 2714 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1218, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1680 offset 0.0 deg | hook ran 1278, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 2775, headset frames 2774 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1278, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1740 offset 0.0 deg | hook ran 1338, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 2835, headset frames 2834 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1338, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1800 offset 0.0 deg | hook ran 1398, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 2896, headset frames 2895 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1398, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1860 offset 0.0 deg | hook ran 1458, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 2956, headset frames 2955 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1458, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1920 offset 0.0 deg | hook ran 1518, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3015, headset frames 3014 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1518, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 1980 offset 0.0 deg | hook ran 1578, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3076, headset frames 3075 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1578, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2040 offset 0.0 deg | hook ran 1638, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3135, headset frames 3134 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1638, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2100 offset 0.0 deg | hook ran 1698, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3195, headset frames 3194 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1698, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2160 offset 0.0 deg | hook ran 1758, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3256, headset frames 3255 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1758, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2220 offset 0.0 deg | hook ran 1818, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3316, headset frames 3315 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1818, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2280 offset 0.0 deg | hook ran 1878, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3376, headset frames 3375 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1878, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2340 offset 0.0 deg | hook ran 1938, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3436, headset frames 3435 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1938, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2400 offset 0.0 deg | hook ran 1998, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3496, headset frames 3495 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 1998, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2460 offset 0.0 deg | hook ran 2058, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3556, headset frames 3555 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2058, restored 0, skipped 0 (cache no longer ours)
+[headxr] pose 3600: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 2520 offset 0.0 deg | hook ran 2118, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3616, headset frames 3615 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2118, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2580 offset 0.0 deg | hook ran 2178, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3676, headset frames 3675 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2178, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2640 offset 0.0 deg | hook ran 2238, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3736, headset frames 3735 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2238, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2700 offset 0.0 deg | hook ran 2298, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3796, headset frames 3795 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2298, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2760 offset 0.0 deg | hook ran 2358, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3856, headset frames 3855 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2358, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2820 offset 0.0 deg | hook ran 2418, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3916, headset frames 3915 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2418, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2880 offset 0.0 deg | hook ran 2478, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 3976, headset frames 3975 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2478, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 2940 offset 0.0 deg | hook ran 2538, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4036, headset frames 4035 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2538, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3000 offset 0.0 deg | hook ran 2598, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4096, headset frames 4095 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2598, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3060 offset 0.0 deg | hook ran 2658, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4156, headset frames 4155 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2658, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3120 offset 0.0 deg | hook ran 2718, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4216, headset frames 4215 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2718, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3180 offset 0.0 deg | hook ran 2778, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4276, headset frames 4275 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2778, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3240 offset 0.0 deg | hook ran 2838, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4336, headset frames 4335 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2838, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3300 offset 0.0 deg | hook ran 2898, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4398, headset frames 4397 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2898, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3360 offset 0.0 deg | hook ran 2958, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4459, headset frames 4458 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 2958, restored 0, skipped 0 (cache no longer ours)
+[headxr] pose 4500: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 3420 offset 0.0 deg | hook ran 3018, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4519, headset frames 4518 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3018, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3480 offset 0.0 deg | hook ran 3078, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4579, headset frames 4578 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3078, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3540 offset 0.0 deg | hook ran 3138, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4639, headset frames 4638 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3138, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3600 offset 0.0 deg | hook ran 3198, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4699, headset frames 4698 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3198, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3660 offset 0.0 deg | hook ran 3258, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4759, headset frames 4758 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3258, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3720 offset 0.0 deg | hook ran 3318, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4820, headset frames 4819 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3318, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3780 offset 0.0 deg | hook ran 3378, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4880, headset frames 4879 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3378, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3840 offset 0.0 deg | hook ran 3438, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 4939, headset frames 4938 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3438, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3900 offset 0.0 deg | hook ran 3498, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 5000, headset frames 4999 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3498, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 3960 offset 0.0 deg | hook ran 3558, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 5060, headset frames 5059 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3558, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4020 offset 0.0 deg | hook ran 3618, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 5120, headset frames 5119 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3618, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4080 offset 0.0 deg | hook ran 3678, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 5180, headset frames 5179 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3678, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4140 offset 0.0 deg | hook ran 3738, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 5240, headset frames 5239 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3738, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4200 offset 0.0 deg | hook ran 3798, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 5301, headset frames 5300 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3798, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4260 offset 0.0 deg | hook ran 3858, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 5365, headset frames 5364 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3858, restored 0, skipped 0 (cache no longer ours)
+[headxr] pose 5400: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 4320 offset 0.0 deg | hook ran 3917, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 5439, headset frames 5438 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3917, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4380 offset 0.0 deg | hook ran 3978, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 5499, headset frames 5498 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 3978, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4440 offset 0.0 deg | hook ran 4038, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 5559, headset frames 5558 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4038, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4500 offset 0.0 deg | hook ran 4098, wrote 0 | game yaw 0.0 -> after ours 0.0 (diff 0.0) | no controller yet (Probe=1?)
+[headxr] stage 2, poses 5702, headset frames 5701 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4098, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4560 offset 0.0 deg | hook ran 4158, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 5762, headset frames 5761 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4158, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4620 offset 0.0 deg | hook ran 4218, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 5822, headset frames 5821 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4218, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4680 offset 0.0 deg | hook ran 4278, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 5882, headset frames 5881 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4278, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4740 offset 0.0 deg | hook ran 4338, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 5943, headset frames 5942 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4338, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4800 offset 0.0 deg | hook ran 4398, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6003, headset frames 6002 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4398, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4860 offset 0.0 deg | hook ran 4458, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6063, headset frames 6062 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4458, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4920 offset 0.0 deg | hook ran 4518, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6123, headset frames 6122 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4518, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 4980 offset 0.0 deg | hook ran 4578, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6183, headset frames 6182 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4578, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5040 offset 0.0 deg | hook ran 4638, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6243, headset frames 6242 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4638, restored 0, skipped 0 (cache no longer ours)
+[headxr] pose 6300: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 5100 offset 0.0 deg | hook ran 4698, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6303, headset frames 6302 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4698, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5160 offset 0.0 deg | hook ran 4758, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6363, headset frames 6362 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4758, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5220 offset 0.0 deg | hook ran 4818, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6423, headset frames 6422 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4818, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5280 offset 0.0 deg | hook ran 4878, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6483, headset frames 6482 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4878, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5340 offset 0.0 deg | hook ran 4938, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6543, headset frames 6542 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4938, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5400 offset 0.0 deg | hook ran 4998, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6603, headset frames 6602 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 4998, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5460 offset 0.0 deg | hook ran 5058, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6663, headset frames 6662 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5058, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5520 offset 0.0 deg | hook ran 5118, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6723, headset frames 6722 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5118, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5580 offset 0.0 deg | hook ran 5178, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6783, headset frames 6782 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5178, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5640 offset 0.0 deg | hook ran 5238, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6843, headset frames 6842 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5238, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5700 offset 0.0 deg | hook ran 5298, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6903, headset frames 6902 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5298, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5760 offset 0.0 deg | hook ran 5358, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 6963, headset frames 6962 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5358, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5820 offset 0.0 deg | hook ran 5418, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7023, headset frames 7022 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5418, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5880 offset 0.0 deg | hook ran 5478, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7083, headset frames 7082 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5478, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 5940 offset 0.0 deg | hook ran 5538, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7143, headset frames 7142 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5538, restored 0, skipped 0 (cache no longer ours)
+[headxr] pose 7200: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 6000 offset 0.0 deg | hook ran 5598, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7203, headset frames 7202 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5598, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6060 offset 0.0 deg | hook ran 5658, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7263, headset frames 7262 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5658, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6120 offset 0.0 deg | hook ran 5718, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7323, headset frames 7322 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5718, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6180 offset 0.0 deg | hook ran 5778, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7383, headset frames 7382 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5778, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6240 offset 0.0 deg | hook ran 5837, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7453, headset frames 7452 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5838, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6300 offset 0.0 deg | hook ran 5898, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7513, headset frames 7512 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5898, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6360 offset 0.0 deg | hook ran 5958, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7573, headset frames 7572 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 5958, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6420 offset 0.0 deg | hook ran 6018, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7633, headset frames 7632 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6018, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6480 offset 0.0 deg | hook ran 6078, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7693, headset frames 7692 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6078, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6540 offset 0.0 deg | hook ran 6138, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7753, headset frames 7752 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6138, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6600 offset 0.0 deg | hook ran 6198, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7813, headset frames 7812 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6198, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6660 offset 0.0 deg | hook ran 6258, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7873, headset frames 7872 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6258, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6720 offset 0.0 deg | hook ran 6318, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7933, headset frames 7932 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6318, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6780 offset 0.0 deg | hook ran 6378, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 7993, headset frames 7992 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6378, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6840 offset 0.0 deg | hook ran 6438, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8054, headset frames 8053 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6438, restored 0, skipped 0 (cache no longer ours)
+[headxr] pose 8100: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 6900 offset 0.0 deg | hook ran 6498, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8114, headset frames 8113 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6498, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 6960 offset 0.0 deg | hook ran 6558, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8174, headset frames 8173 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6558, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7020 offset 0.0 deg | hook ran 6618, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8234, headset frames 8233 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6618, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7080 offset 0.0 deg | hook ran 6678, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8294, headset frames 8293 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6678, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7140 offset 0.0 deg | hook ran 6738, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8354, headset frames 8353 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6738, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7200 offset 0.0 deg | hook ran 6798, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8414, headset frames 8413 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6798, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7260 offset 0.0 deg | hook ran 6858, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8474, headset frames 8473 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6858, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7320 offset 0.0 deg | hook ran 6918, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8534, headset frames 8533 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6918, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7380 offset 0.0 deg | hook ran 6978, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8594, headset frames 8593 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 6978, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7440 offset 0.0 deg | hook ran 7038, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8676, headset frames 8675 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7038, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7500 offset 0.0 deg | hook ran 7098, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8736, headset frames 8735 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7098, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7560 offset 0.0 deg | hook ran 7158, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8795, headset frames 8794 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7158, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7620 offset 0.0 deg | hook ran 7218, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8855, headset frames 8854 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7218, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7680 offset 0.0 deg | hook ran 7278, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8916, headset frames 8915 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7278, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7740 offset 0.0 deg | hook ran 7338, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 8975, headset frames 8974 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7338, restored 0, skipped 0 (cache no longer ours)
+[headxr] pose 9000: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 7800 offset 0.0 deg | hook ran 7398, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9035, headset frames 9034 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7398, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7860 offset 0.0 deg | hook ran 7458, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9095, headset frames 9094 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7458, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7920 offset 0.0 deg | hook ran 7518, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9155, headset frames 9154 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7518, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 7980 offset 0.0 deg | hook ran 7578, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9215, headset frames 9214 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7578, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8040 offset 0.0 deg | hook ran 7638, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9276, headset frames 9275 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7638, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8100 offset 0.0 deg | hook ran 7698, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9335, headset frames 9334 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7698, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8160 offset 0.0 deg | hook ran 7758, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9396, headset frames 9395 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7758, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8220 offset 0.0 deg | hook ran 7818, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9455, headset frames 9454 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7818, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8280 offset 0.0 deg | hook ran 7878, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9515, headset frames 9514 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7878, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8340 offset 0.0 deg | hook ran 7938, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9576, headset frames 9575 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7938, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8400 offset 0.0 deg | hook ran 7998, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9635, headset frames 9634 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 7998, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8460 offset 0.0 deg | hook ran 8058, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9695, headset frames 9694 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8058, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8520 offset 0.0 deg | hook ran 8118, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9756, headset frames 9755 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8118, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8580 offset 0.0 deg | hook ran 8178, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9816, headset frames 9815 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8178, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8640 offset 0.0 deg | hook ran 8238, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9876, headset frames 9875 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8238, restored 0, skipped 0 (cache no longer ours)
+[headxr] pose 9900: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 8700 offset 0.0 deg | hook ran 8298, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9935, headset frames 9934 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8298, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8760 offset 0.0 deg | hook ran 8358, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 9996, headset frames 9995 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8358, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8820 offset 0.0 deg | hook ran 8418, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10055, headset frames 10054 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8418, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8880 offset 0.0 deg | hook ran 8478, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10117, headset frames 10116 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8478, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 8940 offset 0.0 deg | hook ran 8538, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10177, headset frames 10176 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8538, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9000 offset 0.0 deg | hook ran 8598, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10237, headset frames 10236 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8598, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9060 offset 0.0 deg | hook ran 8658, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10297, headset frames 10296 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8658, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9120 offset 0.0 deg | hook ran 8718, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10357, headset frames 10356 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8718, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9180 offset 0.0 deg | hook ran 8778, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10417, headset frames 10416 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8778, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9240 offset 0.0 deg | hook ran 8838, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10477, headset frames 10476 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8838, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9300 offset 0.0 deg | hook ran 8898, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10537, headset frames 10536 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8898, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9360 offset 0.0 deg | hook ran 8958, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10597, headset frames 10596 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 8958, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9420 offset 0.0 deg | hook ran 9018, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10657, headset frames 10656 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9018, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9480 offset 0.0 deg | hook ran 9078, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10717, headset frames 10716 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9078, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9540 offset 0.0 deg | hook ran 9138, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10777, headset frames 10776 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9138, restored 0, skipped 0 (cache no longer ours)
+[headxr] pose 10800: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 9600 offset 0.0 deg | hook ran 9198, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10837, headset frames 10836 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9198, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9660 offset 0.0 deg | hook ran 9258, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10897, headset frames 10896 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9258, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9720 offset 0.0 deg | hook ran 9318, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 10961, headset frames 10960 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9318, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9780 offset 0.0 deg | hook ran 9378, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 11021, headset frames 11020 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9378, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9840 offset 0.0 deg | hook ran 9438, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 11081, headset frames 11080 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9438, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9900 offset 0.0 deg | hook ran 9498, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 11141, headset frames 11141 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9498, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 9960 offset 0.0 deg | hook ran 9558, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 11202, headset frames 11201 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9558, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 10020 offset 0.0 deg | hook ran 9618, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 11262, headset frames 11261 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9618, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 10080 offset 0.0 deg | hook ran 9678, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 11322, headset frames 11321 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9678, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 10140 offset 0.0 deg | hook ran 9738, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 11382, headset frames 11381 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9738, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 10200 offset 0.0 deg | hook ran 9798, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 11442, headset frames 11441 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9798, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 10260 offset 0.0 deg | hook ran 9858, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 11502, headset frames 11501 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9858, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 10320 offset 0.0 deg | hook ran 9918, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 11562, headset frames 11561 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9918, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 10380 offset 0.0 deg | hook ran 9978, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 11622, headset frames 11621 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 9978, restored 0, skipped 0 (cache no longer ours)
+[headyaw] frame 10440 offset 0.0 deg | hook ran 10038, wrote 0 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 11682, headset frames 11681 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10038, restored 0, skipped 0 (cache no longer ours)
+[headxr] pose 11700: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 10500 offset 0.0 deg | hook ran 10098, wrote 4 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 11744, headset frames 11744 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10098, restored 3, skipped 0 (cache no longer ours)
+[headyaw] frame 10560 offset 0.0 deg | hook ran 10158, wrote 64 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 11805, headset frames 11804 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10158, restored 63, skipped 0 (cache no longer ours)
+[headyaw] frame 10620 offset 0.0 deg | hook ran 10218, wrote 124 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 11865, headset frames 11864 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10218, restored 123, skipped 0 (cache no longer ours)
+[headyaw] frame 10680 offset 0.0 deg | hook ran 10278, wrote 184 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 11925, headset frames 11924 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10278, restored 183, skipped 0 (cache no longer ours)
+[headyaw] frame 10740 offset 0.0 deg | hook ran 10338, wrote 244 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 11987, headset frames 11986 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10338, restored 243, skipped 0 (cache no longer ours)
+[headyaw] frame 10800 offset 0.0 deg | hook ran 10398, wrote 304 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12047, headset frames 12046 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10398, restored 303, skipped 0 (cache no longer ours)
+[headyaw] frame 10860 offset 0.0 deg | hook ran 10458, wrote 364 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12107, headset frames 12106 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10458, restored 363, skipped 0 (cache no longer ours)
+[headyaw] frame 10920 offset 0.0 deg | hook ran 10518, wrote 424 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12167, headset frames 12166 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10518, restored 423, skipped 0 (cache no longer ours)
+[headyaw] frame 10980 offset 0.0 deg | hook ran 10578, wrote 484 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12227, headset frames 12226 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10578, restored 483, skipped 0 (cache no longer ours)
+[headyaw] frame 11040 offset 0.0 deg | hook ran 10638, wrote 544 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12286, headset frames 12286 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10638, restored 543, skipped 0 (cache no longer ours)
+[headyaw] frame 11100 offset 0.0 deg | hook ran 10698, wrote 604 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12347, headset frames 12346 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10698, restored 603, skipped 0 (cache no longer ours)
+[headyaw] frame 11160 offset 0.0 deg | hook ran 10758, wrote 664 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12407, headset frames 12406 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10758, restored 663, skipped 0 (cache no longer ours)
+[headyaw] frame 11220 offset 0.0 deg | hook ran 10818, wrote 724 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12467, headset frames 12466 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10818, restored 723, skipped 0 (cache no longer ours)
+[headyaw] frame 11280 offset 0.0 deg | hook ran 10878, wrote 784 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12527, headset frames 12526 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10878, restored 783, skipped 0 (cache no longer ours)
+[headyaw] frame 11340 offset 0.0 deg | hook ran 10938, wrote 844 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12587, headset frames 12586 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10938, restored 843, skipped 0 (cache no longer ours)
+[headxr] pose 12600: head yaw -30.0 pitch 0.0 deg
+[headyaw] frame 11400 offset 0.0 deg | hook ran 10998, wrote 904 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12647, headset frames 12646 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 10998, restored 903, skipped 0 (cache no longer ours)
+[headyaw] frame 11460 offset 0.0 deg | hook ran 11058, wrote 964 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12707, headset frames 12706 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 11058, restored 963, skipped 0 (cache no longer ours)
+[headyaw] frame 11520 offset 0.0 deg | hook ran 11118, wrote 1024 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12767, headset frames 12766 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 11118, restored 1023, skipped 0 (cache no longer ours)
+[headyaw] frame 11580 offset 0.0 deg | hook ran 11178, wrote 1084 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12827, headset frames 12826 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 11178, restored 1083, skipped 0 (cache no longer ours)
+[headyaw] frame 11640 offset 0.0 deg | hook ran 11238, wrote 1144 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12887, headset frames 12886 | head yaw -30.0 (from straight ahead -30.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 11238, restored 1143, skipped 0 (cache no longer ours)
+[headyaw] frame 11700 offset 0.0 deg | hook ran 11298, wrote 1204 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 12948, headset frames 12947 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 11298, restored 1203, skipped 0 (cache no longer ours)
+[headyaw] frame 11760 offset 0.0 deg | hook ran 11358, wrote 1264 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 13008, headset frames 13007 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 11358, restored 1263, skipped 0 (cache no longer ours)
+[headyaw] frame 11820 offset 0.0 deg | hook ran 11418, wrote 1324 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 13068, headset frames 13067 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 11418, restored 1323, skipped 0 (cache no longer ours)
+[headyaw] frame 11880 offset 0.0 deg | hook ran 11478, wrote 1384 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 13128, headset frames 13127 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 11478, restored 1383, skipped 0 (cache no longer ours)
+[headyaw] frame 11940 offset 0.0 deg | hook ran 11538, wrote 1444 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 13189, headset frames 13188 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 11538, restored 1443, skipped 0 (cache no longer ours)
+[headyaw] frame 12000 offset 0.0 deg | hook ran 11598, wrote 1504 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 13249, headset frames 13248 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 11598, restored 1503, skipped 0 (cache no longer ours)
+[headyaw] frame 12060 offset 0.0 deg | hook ran 11658, wrote 1564 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 13309, headset frames 13308 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 11658, restored 1563, skipped 0 (cache no longer ours)
+[headyaw] frame 12120 offset 0.0 deg | hook ran 11718, wrote 1624 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 13369, headset frames 13368 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 11718, restored 1623, skipped 0 (cache no longer ours)
+[headyaw] frame 12180 offset 0.0 deg | hook ran 11778, wrote 1684 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 13437, headset frames 13436 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 11778, restored 1683, skipped 0 (cache no longer ours)
+[headyaw] frame 12240 offset 0.0 deg | hook ran 11838, wrote 1744 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 13497, headset frames 13496 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 11838, restored 1743, skipped 0 (cache no longer ours)
+[headxr] pose 13500: head yaw -30.0 pitch 20.0 deg
+[headyaw] frame 12300 offset 0.0 deg | hook ran 11898, wrote 1804 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 13557, headset frames 13556 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 11898, restored 1803, skipped 0 (cache no longer ours)
+[headyaw] frame 12360 offset 0.0 deg | hook ran 11958, wrote 1864 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 13620, headset frames 13619 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 11958, restored 1863, skipped 0 (cache no longer ours)
+[headyaw] frame 12420 offset 0.0 deg | hook ran 12018, wrote 1924 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 13680, headset frames 13679 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 12018, restored 1923, skipped 0 (cache no longer ours)
+[headyaw] frame 12480 offset 0.0 deg | hook ran 12078, wrote 1984 | game yaw 6.5 -> after ours -23.5 (diff -30.0) | ok
+[headxr] stage 2, poses 13740, headset frames 13739 | head yaw -30.0 (from straight ahead -30.0) pitch 20.0 | game pitch -9.3 -> after ours 10.7
+[headyaw] restore: tick-start ran 12078, restored 1983, skipped 0 (cache no longer ours)
+[headyaw] frame 12540 offset 0.0 deg | hook ran 12138, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 13801, headset frames 13800 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12138, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 12600 offset 0.0 deg | hook ran 12198, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 13861, headset frames 13860 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12198, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 12660 offset 0.0 deg | hook ran 12258, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 13921, headset frames 13920 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12258, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 12720 offset 0.0 deg | hook ran 12318, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 13981, headset frames 13980 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12318, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 12780 offset 0.0 deg | hook ran 12378, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14041, headset frames 14040 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12378, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 12840 offset 0.0 deg | hook ran 12438, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14101, headset frames 14100 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12438, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 12900 offset 0.0 deg | hook ran 12498, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14161, headset frames 14160 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12498, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 12960 offset 0.0 deg | hook ran 12558, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14221, headset frames 14220 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12558, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13020 offset 0.0 deg | hook ran 12618, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14281, headset frames 14280 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12618, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13080 offset 0.0 deg | hook ran 12678, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14341, headset frames 14340 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12678, restored 2027, skipped 0 (cache no longer ours)
+[headxr] pose 14400: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 13140 offset 0.0 deg | hook ran 12738, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14401, headset frames 14400 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12738, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13200 offset 0.0 deg | hook ran 12798, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14461, headset frames 14460 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12798, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13260 offset 0.0 deg | hook ran 12858, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14521, headset frames 14520 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12858, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13320 offset 0.0 deg | hook ran 12918, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14581, headset frames 14580 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12918, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13380 offset 0.0 deg | hook ran 12978, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14641, headset frames 14640 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 12978, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13440 offset 0.0 deg | hook ran 13038, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14701, headset frames 14700 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13038, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13500 offset 0.0 deg | hook ran 13098, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14762, headset frames 14761 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13098, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13560 offset 0.0 deg | hook ran 13158, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14824, headset frames 14823 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13158, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13620 offset 0.0 deg | hook ran 13217, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14899, headset frames 14898 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13217, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13680 offset 0.0 deg | hook ran 13278, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 14959, headset frames 14958 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13278, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13740 offset 0.0 deg | hook ran 13338, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 15019, headset frames 15018 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13338, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13800 offset 0.0 deg | hook ran 13398, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 15079, headset frames 15078 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13398, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13860 offset 0.0 deg | hook ran 13458, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 15139, headset frames 15138 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13458, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13920 offset 0.0 deg | hook ran 13518, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 15199, headset frames 15198 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13518, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 13980 offset 0.0 deg | hook ran 13578, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 15259, headset frames 15258 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13578, restored 2027, skipped 0 (cache no longer ours)
+[headxr] pose 15300: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 14040 offset 0.0 deg | hook ran 13638, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 15319, headset frames 15318 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13638, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 14100 offset 0.0 deg | hook ran 13697, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 15391, headset frames 15390 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13697, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 14160 offset 0.0 deg | hook ran 13758, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 15451, headset frames 15450 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13758, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 14220 offset 0.0 deg | hook ran 13818, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 15512, headset frames 15511 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13818, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 14280 offset 0.0 deg | hook ran 13878, wrote 2027 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 15575, headset frames 15574 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 13878, restored 2027, skipped 0 (cache no longer ours)
+[headyaw] frame 14340 offset 0.0 deg | hook ran 13938, wrote 2079 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 15638, headset frames 15637 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 13938, restored 2078, skipped 0 (cache no longer ours)
+[headyaw] frame 14400 offset 0.0 deg | hook ran 13998, wrote 2139 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 15698, headset frames 15697 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 13998, restored 2138, skipped 0 (cache no longer ours)
+[headyaw] frame 14460 offset 0.0 deg | hook ran 14058, wrote 2199 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 15758, headset frames 15757 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14058, restored 2198, skipped 0 (cache no longer ours)
+[headyaw] frame 14520 offset 0.0 deg | hook ran 14118, wrote 2259 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 15818, headset frames 15817 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14118, restored 2258, skipped 0 (cache no longer ours)
+[headyaw] frame 14580 offset 0.0 deg | hook ran 14178, wrote 2319 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 15878, headset frames 15877 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14178, restored 2318, skipped 0 (cache no longer ours)
+[headyaw] frame 14640 offset 0.0 deg | hook ran 14237, wrote 2378 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 15952, headset frames 15951 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14237, restored 2377, skipped 0 (cache no longer ours)
+[headyaw] frame 14700 offset 0.0 deg | hook ran 14298, wrote 2439 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16012, headset frames 16011 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14298, restored 2438, skipped 0 (cache no longer ours)
+[headyaw] frame 14760 offset 0.0 deg | hook ran 14358, wrote 2499 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16072, headset frames 16071 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14358, restored 2498, skipped 0 (cache no longer ours)
+[headyaw] frame 14820 offset 0.0 deg | hook ran 14418, wrote 2559 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16132, headset frames 16131 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14418, restored 2558, skipped 0 (cache no longer ours)
+[headyaw] frame 14880 offset 0.0 deg | hook ran 14478, wrote 2619 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16192, headset frames 16191 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14478, restored 2618, skipped 0 (cache no longer ours)
+[headxr] pose 16200: head yaw 30.0 pitch -15.0 deg
+[headyaw] frame 14940 offset 0.0 deg | hook ran 14538, wrote 2679 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16252, headset frames 16251 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14538, restored 2678, skipped 0 (cache no longer ours)
+[headyaw] frame 15000 offset 0.0 deg | hook ran 14598, wrote 2739 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16312, headset frames 16311 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14598, restored 2738, skipped 0 (cache no longer ours)
+[headyaw] frame 15060 offset 0.0 deg | hook ran 14658, wrote 2799 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16372, headset frames 16371 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14658, restored 2798, skipped 0 (cache no longer ours)
+[headyaw] frame 15120 offset 0.0 deg | hook ran 14718, wrote 2859 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16432, headset frames 16431 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14718, restored 2858, skipped 0 (cache no longer ours)
+[headyaw] frame 15180 offset 0.0 deg | hook ran 14778, wrote 2919 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16492, headset frames 16491 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14778, restored 2918, skipped 0 (cache no longer ours)
+[headyaw] frame 15240 offset 0.0 deg | hook ran 14838, wrote 2979 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16552, headset frames 16551 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14838, restored 2978, skipped 0 (cache no longer ours)
+[headyaw] frame 15300 offset 0.0 deg | hook ran 14898, wrote 3039 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16612, headset frames 16611 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14898, restored 3038, skipped 0 (cache no longer ours)
+[headyaw] frame 15360 offset 0.0 deg | hook ran 14958, wrote 3099 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16672, headset frames 16671 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 14958, restored 3098, skipped 0 (cache no longer ours)
+[headyaw] frame 15420 offset 0.0 deg | hook ran 15018, wrote 3159 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16733, headset frames 16732 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 15018, restored 3158, skipped 0 (cache no longer ours)
+[headyaw] frame 15480 offset 0.0 deg | hook ran 15078, wrote 3219 | game yaw 6.5 -> after ours 36.5 (diff 30.0) | ok
+[headxr] stage 2, poses 16793, headset frames 16792 | head yaw 30.0 (from straight ahead 30.0) pitch -15.0 | game pitch -9.3 -> after ours -24.3
+[headyaw] restore: tick-start ran 15078, restored 3218, skipped 0 (cache no longer ours)
+[headyaw] frame 15540 offset 0.0 deg | hook ran 15138, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 16854, headset frames 16853 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15138, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 15600 offset 0.0 deg | hook ran 15198, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 16913, headset frames 16912 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15198, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 15660 offset 0.0 deg | hook ran 15258, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 16973, headset frames 16972 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15258, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 15720 offset 0.0 deg | hook ran 15318, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 17034, headset frames 17033 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15318, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 15780 offset 0.0 deg | hook ran 15378, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 17094, headset frames 17093 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15378, restored 3256, skipped 0 (cache no longer ours)
+[headxr] pose 17100: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 15840 offset 0.0 deg | hook ran 15438, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 17154, headset frames 17153 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15438, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 15900 offset 0.0 deg | hook ran 15498, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 17214, headset frames 17213 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15498, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 15960 offset 0.0 deg | hook ran 15558, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 17273, headset frames 17272 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15558, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 16020 offset 0.0 deg | hook ran 15618, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 17333, headset frames 17332 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15618, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 16080 offset 0.0 deg | hook ran 15678, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 17393, headset frames 17392 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15678, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 16140 offset 0.0 deg | hook ran 15738, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 17456, headset frames 17455 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15738, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 16200 offset 0.0 deg | hook ran 15798, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | ok
+[headxr] stage 2, poses 17516, headset frames 17515 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15798, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 16260 offset 0.0 deg | hook ran 15829, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | controller gone
+[headxr] stage 2, poses 17607, headset frames 17606 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15829, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 16320 offset 0.0 deg | hook ran 15890, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | controller gone
+[headxr] stage 2, poses 17667, headset frames 17666 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15890, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 16380 offset 0.0 deg | hook ran 15950, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | controller gone
+[headxr] stage 2, poses 17727, headset frames 17726 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 15950, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 16440 offset 0.0 deg | hook ran 16009, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | controller gone
+[headxr] stage 2, poses 17787, headset frames 17786 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 16010, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 16500 offset 0.0 deg | hook ran 16070, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | controller gone
+[headxr] stage 2, poses 17847, headset frames 17846 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 16070, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 16560 offset 0.0 deg | hook ran 16129, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | controller gone
+[headxr] stage 2, poses 17912, headset frames 17911 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 16130, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 16620 offset 0.0 deg | hook ran 16189, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | controller gone
+[headxr] stage 2, poses 17973, headset frames 17972 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 16190, restored 3256, skipped 0 (cache no longer ours)
+[headxr] pose 18000: head yaw 0.0 pitch 0.0 deg
+[headyaw] frame 16680 offset 0.0 deg | hook ran 16249, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | controller gone
+[headxr] stage 2, poses 18032, headset frames 18031 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 16250, restored 3256, skipped 0 (cache no longer ours)
+[headyaw] frame 16740 offset 0.0 deg | hook ran 16309, wrote 3256 | game yaw 6.5 -> after ours 6.5 (diff 0.0) | controller gone
+[headxr] stage 2, poses 18093, headset frames 18092 | head yaw 0.0 (from straight ahead 0.0) pitch 0.0 | game pitch 0.0 -> after ours 0.0
+[headyaw] restore: tick-start ran 16310, restored 3256, skipped 0 (cache no longer ours)

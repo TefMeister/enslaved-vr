@@ -980,8 +980,14 @@ static scene renders exactly two images, so same-eye pairs are byte-identical). 
   empty frames; cut down from Hard Reset's simulator-proven `hxr.c`) feeds head yaw (relative to straight
   ahead, numpad 5 recentres) and pitch into the hook; pitch written at `Camera+0x370` and restored like yaw.
   OpenXR → UE3: UE3 yaw = −(OpenXR yaw about +Y), pitch same sign; pitch sum clamped ±89°
-  `[verified-numerically 2026-10-07, n=14]`; the DLL `[compile-verified 2026-10-07]`; not run. Note
+  `[verified-numerically 2026-10-07, n=14]`; the DLL `[compile-verified 2026-10-07]`. Note
   `modding-notes/2026-10-07-pd-head-yaw-and-pitch-from-openxr.md`.
+- **⭐ Head pose feed WORKS LIVE** (2026-10-08 `/lm`, OpenXR simulator, `[headxr] Enabled=1`): session ran
+  beside the game, no failures; simulator +30 yaw → view turns LEFT (the simulator follows OpenXR +yaw = left,
+  our sign flip is right), −30 → right, diff exactly 30; pitch +20 up, −15 down; head back to 0 → the game's
+  view back `[verified-live 2026-10-08, n=2 turns, n=2 tilts]`. The game's own chase-cam pitch here is −9.3 and
+  ours ADDS to it, steady, no pile-up. ⚠️ The log's "game pitch 0.0" while head pitch is 0 is a placeholder
+  (the read is skipped when `pOff == 0`), not a reading. Note `modding-notes/2026-10-08-lm-the-head-turns-and-tilts-the-view.md`.
 
 ## 10. Dead ends
 
