@@ -44,6 +44,6 @@ pinpointed. Thank you.
 ## Get credited, or ask us to stop
 
 - If you should be credited here and are not, or are credited incorrectly,
-  email us at **(an issue on this repository)** and we will fix it as soon as possible.
+  open an issue on this repository and we will fix it as soon as possible.
 - We honour correction and removal requests from the actual rights holders of
   anything used here, promptly, via the same address.
