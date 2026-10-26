@@ -1,6 +1,8 @@
 # Research index
 
-**Last `/gr` pass: 2026-10-04 (estate sweep) — CHECK-IN.** Inbox empty. For the new `[headyaw]` test: BL1GOTYVR (UE3) writes the head pose into the view just before drawing and restores it afterwards; one topic.
+**Last `/gr` pass: 2026-10-26 (estate sweep) — CHECK-IN.** Inbox empty. Nothing new: no VR mod for Enslaved and no UE3-wide VR injector found (UEVR still covers UE4/UE5 only); the D3D10 window question stays ours.
+
+_Previous: **Last `/gr` pass: 2026-10-04 (estate sweep) — CHECK-IN.** Inbox empty. For the new `[headyaw]` test: BL1GOTYVR (UE3) writes the head pose into the view just before drawing and restores it afterwards; one topic._
 
 _Previous: **Last `/gr` pass: 2026-09-29 (estate sweep) — CHECK-IN.** Inbox empty. For the DX10 road Tefa chose: nobody has windowed the DX10 mode publicly (the DxWnd success was DX9); our own DX10 proxy has to force the window at swap-chain creation._
 
