@@ -1,6 +1,8 @@
 # Research index
 
-**Last `/gr` pass: 2026-11-07 (estate sweep) — CHECK-IN.** Inbox empty; watch check only (web and GitHub search): no Enslaved VR mod found. Nothing new.
+**Last `/gr` pass: 2026-11-14 (check-ins beside the Keeper's sweep of the same day) — CHECK-IN.** Inbox empty; watch check only: no VR mod found. Nothing new.
+
+_Previous: **Last `/gr` pass: 2026-11-07 (estate sweep) — CHECK-IN.** Inbox empty; watch check only (web and GitHub search): no Enslaved VR mod found. Nothing new._
 
 _Previous: **Last `/gr` pass: 2026-10-26 (estate sweep) — CHECK-IN.** Inbox empty. Nothing new: no VR mod for Enslaved and no UE3-wide VR injector found (UEVR still covers UE4/UE5 only); the D3D10 window question stays ours._
 
